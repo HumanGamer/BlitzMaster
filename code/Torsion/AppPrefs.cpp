@@ -10,7 +10,7 @@
 #include <wx/docview.h>
 
 #include "XmlFile.h"
-
+#include <string>
 #ifdef _DEBUG 
    #define new DEBUG_NEW 
 #endif 
@@ -72,6 +72,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
 
 	Xml.FindElem( "TorsionPrefs" );
 	Xml.IntoElem();
+	wxString test = m_DefaultFont.GetNativeFontInfoDesc();
 
    wxString fontInfo = Xml.GetStringElem( "DefaultFont", m_DefaultFont.GetNativeFontInfoDesc() );
    m_DefaultFont.SetNativeFontInfo( fontInfo );
@@ -116,7 +117,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
    wxRect desktop( wxScreenDC().GetSize() );
 
    Xml.FindElem( "Position" );
-	m_Position = StringToRect( Xml.GetData().c_str() );
+	m_Position = StringToRect( "0 0 0 0" );
    {
       if ( !desktop.Inside( m_Position.GetTopLeft() ) )
          m_Position.SetTopLeft( wxPoint( 0, 0 ) );
@@ -326,10 +327,11 @@ bool AppPrefs::Save( const wxString& Path )
    Xml.AddBoolElem( "ShowTabsAndSpaces", GetTabsAndSpaces() );
    Xml.AddBoolElem( "ShowLineBreaks", GetLineBreaks() );
    Xml.AddBoolElem( "ShowLineNumbers", GetLineNumbers() );
-
+  
    Xml.AddArrayStringElems( "FileHistory", "File", m_FileHistory );
+   
    Xml.AddArrayStringElems( "ProjectHistory", "Project", m_ProjectHistory );
-
+   
    Xml.AddArrayStringElems( "FindHistory", "String", m_FindStrings );
    Xml.AddArrayStringElems( "FindTypes", "Type", m_FindTypes );
    Xml.AddArrayStringElems( "FindPaths", "Path", m_FindPaths );
@@ -358,7 +360,8 @@ bool AppPrefs::Save( const wxString& Path )
    Xml.AddBoolElem( "CheckForUpdates", m_CheckForUpdates );
 
    Xml.AddElem( "ExternalTools" );
-	Xml.IntoElem();
+   Xml.IntoElem();
+   
    for ( size_t i=0; i < m_ToolCommands.GetCount(); i++ ) 
    {
       const ToolCommand& cmd = m_ToolCommands[i];
@@ -375,9 +378,9 @@ bool AppPrefs::Save( const wxString& Path )
    }
    Xml.OutOfElem();
 
-   std::string Buffer( Xml.GetDoc() );
-	File.Write( Buffer.c_str(), Buffer.length() );
-
+   std::string Buffer = Xml.GetDoc();
+   File.Write(Buffer.c_str(), Buffer.length());
+  
    return true;
 }
 

@@ -5,17 +5,42 @@
 #ifndef TORSION_XMLFILE_H
 #define TORSION_XMLFILE_H
 #pragma once
+#include <string>
+#include "tinyxml2.h"
+//#include "MarkupSTL.h"
+using namespace tinyxml2;
 
-#include "MarkupSTL.h"
-
-
-class XmlFile : public CMarkupSTL
+class XmlFile
 {
 public:
    XmlFile();
    XmlFile( const wxChar* buffer );
 
+   std::string GetDoc();
+
+   bool SaveFile(const wxString & path);
+
+   wxString GetError();
+
+   bool SetDoc(const wxChar * buffer);
+
+   void ResetMainPos();
+
+   bool FindElem(const wxString & name);
+
+   bool IntoElem();
+
+   bool OutOfElem();
+
+   wxString GetData();
+
+   bool AddAttrib(const wxString & name, const wxString & value);
+
+   wxString GetAttrib(const wxString & name);
+
    wxString GetStringElem( const wxString& name, const wxString& value );
+  
+   void AddElem(const wxString& name, const wxString& value = "");
 
    wxPoint GetPointElem( const wxString& name, const wxPoint& value );
    void AddPointElem( const wxString& name, const wxPoint& value );
@@ -47,7 +72,11 @@ public:
 protected:
 
    static wxChar s_Temp[MAX_PATH];
-
+private:
+	tinyxml2::XMLDocument doc;
+	XMLElement* currentParentElement = nullptr;
+	XMLElement* currentElement = nullptr;
+	XMLError error = XMLError::XML_SUCCESS;
 };
 
 inline bool XmlFile::StringToBool( const wxChar* boolean )

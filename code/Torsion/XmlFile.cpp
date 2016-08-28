@@ -15,23 +15,140 @@
 wxChar XmlFile::s_Temp[MAX_PATH];
 
 
-XmlFile::XmlFile() :
-   CMarkupSTL()
+XmlFile::XmlFile()
 {
+	error = doc.Parse("");
 }
 
-XmlFile::XmlFile( const wxChar* buffer ) :
-   CMarkupSTL( buffer )
+XmlFile::XmlFile( const wxChar* buffer )
 {
+	error = doc.Parse(buffer);
+}
+
+std::string XmlFile::GetDoc()
+{
+	XMLPrinter printer;
+	doc.Print(&printer);
+	return printer.CStr();
+}
+
+bool XmlFile::SaveFile(const wxString& path)
+{
+	error = doc.SaveFile(path);
+	return error == 0;
+}
+
+wxString XmlFile::GetError()
+{
+	return doc.GetErrorStr1();
+}
+
+bool XmlFile::SetDoc(const wxChar* buffer)
+{
+	XMLError error = doc.Parse(buffer);
+	return !error;
+}
+
+void XmlFile::ResetMainPos()
+{
+	currentElement = nullptr;
+}
+
+bool XmlFile::FindElem(const wxString& name = "")
+{
+	bool found = false;
+	if (currentParentElement == nullptr && currentElement == nullptr)
+	{
+		currentElement = doc.RootElement();
+		found = true;
+	}
+	else if (currentElement != nullptr)
+	{
+		auto element = currentElement->NextSiblingElement(name);
+		if (element != nullptr)
+		{
+			currentElement = element;
+			found = true;
+		}
+	}
+	else if (currentParentElement != nullptr)
+	{
+		auto element = currentParentElement->FirstChildElement(name);
+		if (element != nullptr)
+		{
+			currentElement = element;
+			found = true;
+		}
+	}
+
+	return found;
+}
+
+bool XmlFile::IntoElem()
+{
+	if (currentElement != nullptr)
+	{
+		currentParentElement = currentElement;
+		currentElement = nullptr;
+	}
+	return currentParentElement != nullptr;
+}
+
+bool XmlFile::OutOfElem()
+{
+	if (currentParentElement != nullptr)
+		currentElement = currentParentElement;
+	else
+		currentElement = doc.RootElement();
+	if (currentElement->Parent() != nullptr)
+		currentParentElement = currentElement->Parent()->ToElement();
+	return currentElement != doc.RootElement();
+}
+
+wxString XmlFile::GetData()
+{
+	return currentElement->GetText();
+}
+
+bool XmlFile::AddAttrib(const wxString& name, const wxString& value)
+{
+	if (currentElement != nullptr)
+	{
+		currentElement->SetAttribute(name, value);
+		return true;
+	}
+
+	return false;
+}
+
+wxString XmlFile::GetAttrib(const wxString& name)
+{
+	return currentElement->Attribute(name);
+}
+
+void XmlFile::AddElem(const wxString& name, const wxString& value)
+{
+	if (!doc.RootElement())
+	{
+		currentElement = doc.NewElement(name);
+		doc.InsertFirstChild(currentElement);
+	}
+	else
+	{
+		XMLElement *node = doc.NewElement(name);
+		node->SetText(value);
+		currentElement = (currentParentElement->InsertEndChild(node))->ToElement();
+	}
 }
 
 wxString XmlFile::GetStringElem( const wxString& name, const wxString& value )
 {
    wxString result = value;
-   if ( FindElem( name.c_str() ) ) {
+   if (FindElem(name.c_str())) {
       result = GetData().c_str();
    }
-	ResetMainPos();
+
+   ResetMainPos();
    return result;
 }
 
@@ -68,7 +185,8 @@ void XmlFile::AddIntElem( const wxString& name, int value )
 int XmlFile::GetIntAttrib( const wxString& element, const wxString& attrib, int value )
 {
    int result = value;
-   if ( FindElem( element.c_str() ) ) {
+
+   if (FindElem(element.c_str())) {
       wxString value( GetAttrib( attrib.c_str() ).c_str() );
       if ( !value.IsEmpty() ) {
          result = StringToInt( value );
@@ -91,8 +209,8 @@ void XmlFile::AddColorElem( const wxString& name, const wxColour& value )
 wxColour XmlFile::GetColorAttrib( const wxString& element, const wxString& attrib, const wxColour& color )
 {
    wxColour result( color );
-   if ( FindElem( element.c_str() ) ) {
-      wxString value( GetAttrib( attrib.c_str() ).c_str() );
+   if (FindElem(element.c_str())) {
+      wxString value( GetAttrib(attrib.c_str() ).c_str() );
       if ( !value.IsEmpty() ) {
          result = StringToColor( value );
       }
@@ -165,7 +283,7 @@ wxString XmlFile::PointToString( const wxPoint& value )
 int XmlFile::GetArrayStringElems( wxArrayString& output, const wxString& name, const wxString& elemName )
 {
    int count = -1;
-   if ( FindElem( name ) && IntoElem() ) {
+   if ( FindElem(name) && IntoElem() ) {
 
       count = 0;
       while ( FindElem( elemName ) ) {

@@ -570,7 +570,7 @@ void ProjectDoc::SaveOptions()
 
    char temp[MAX_PATH];
 
-	CMarkupSTL Xml;
+	XmlFile Xml;
 	Xml.AddElem( "TorsionProjectOptions" );
 	Xml.IntoElem();
 
