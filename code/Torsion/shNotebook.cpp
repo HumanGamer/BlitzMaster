@@ -736,9 +736,9 @@ void shNotebook::OnPaint( wxPaintEvent& event )
    wxASSERT( to.ToRGB() == wxColour( 190, 235, 199 ) );
    */
    const ColourHLS from( wxColour( 236, 233, 216 ) );
-   wxASSERT( from.ToRGB() == wxColour( 236, 233, 216 ) );
+   //wxASSERT( from.ToRGB() == wxColour( 236, 233, 216 ) );
    const ColourHLS to( wxColour( 255, 251, 233 ) );
-   wxASSERT( to.ToRGB() == wxColour( 255, 251, 233 ) );
+   //wxASSERT( to.ToRGB() == wxColour( 255, 251, 233 ) );
    const float satScale = to.m_Saturation / from.m_Saturation;
    const float lumScale = to.m_Luminance / from.m_Luminance;
    ColourHLS hls( btnface );

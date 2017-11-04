@@ -168,6 +168,20 @@ wxCUSTOM_TYPE_INFO(wxDateTime, wxToStringConverter<wxDateTime> , wxFromStringCon
         #define WX_TIMEZONE wxGetTimeZone()
     #elif defined(__DARWIN__)
         #define WX_GMTOFF_IN_TM
+	#elif defined(_WIN32)
+		#include <sys/timeb.h>
+		static long wxGetTimeZone()
+		{
+			static long timezone = MAXLONG; // invalid timezone
+			if (timezone == MAXLONG)
+			{
+				struct timeb tb;
+				ftime(&tb);
+				timezone = tb.timezone;
+			}
+			return timezone;
+		}
+		#define WX_TIMEZONE wxGetTimeZone()
     #else // unknown platform - try timezone
 		#define WX_TIMEZONE _get_timezone(0)
     #endif

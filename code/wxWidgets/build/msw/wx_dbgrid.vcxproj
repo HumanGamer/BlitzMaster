@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Debug|Win32">
+      <Configuration>DLL Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Release|Win32">
+      <Configuration>DLL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Unicode Debug|Win32">
+      <Configuration>DLL Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Unicode Release|Win32">
+      <Configuration>DLL Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Debug|Win32">
+      <Configuration>DLL Universal Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Release|Win32">
+      <Configuration>DLL Universal Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Unicode Debug|Win32">
+      <Configuration>DLL Universal Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Unicode Release|Win32">
+      <Configuration>DLL Universal Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Debug|Win32">
+      <Configuration>Universal Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Release|Win32">
+      <Configuration>Universal Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Unicode Debug|Win32">
+      <Configuration>Universal Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Unicode Release|Win32">
+      <Configuration>Universal Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>dbgrid</ProjectName>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{E4EAECFB-0AEB-4EBF-8697-F29473FDD01E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswdll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivdll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswuddll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswd\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivd\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswudll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivud\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswddll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivuddll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswud\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswuniv\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_msw\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivu\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivudll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswu\dbgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">
+    <OutDir>.\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivddll\dbgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\msw;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswdll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswdll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswdll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmsw26_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregex.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmsw26_adv.lib;..\..\lib\vc_dll\wxbase26_odbc.lib;..\..\lib\vc_dll\wxmsw26_core.lib;..\..\lib\vc_dll\wxbase26.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmsw26_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmsw26_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmsw26_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;WXDLLNAME=wxmsw26_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\msw;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswuniv;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivdll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivdll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivdll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmswuniv26_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregex.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmswuniv26_adv.lib;..\..\lib\vc_dll\wxbase26_odbc.lib;..\..\lib\vc_dll\wxmswuniv26_core.lib;..\..\lib\vc_dll\wxbase26.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmswuniv26_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmswuniv26_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmswuniv26_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;__WXUNIVERSAL__;WXDLLNAME=wxmswuniv26_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswuniv;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswuddll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswuddll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswuddll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmsw26ud_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmsw26ud_adv.lib;..\..\lib\vc_dll\wxbase26ud_odbc.lib;..\..\lib\vc_dll\wxmsw26ud_core.lib;..\..\lib\vc_dll\wxbase26ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmsw26ud_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmsw26ud_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmsw26ud_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmsw26ud_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswd\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswd\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswd\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmsw26d_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmsw26d_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswunivd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivd\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivd\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivd\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmswuniv26d_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmswuniv26d_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswudll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswudll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswudll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmsw26u_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmsw26u_adv.lib;..\..\lib\vc_dll\wxbase26u_odbc.lib;..\..\lib\vc_dll\wxmsw26u_core.lib;..\..\lib\vc_dll\wxbase26u.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmsw26u_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmsw26u_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmsw26u_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;_UNICODE;WXDLLNAME=wxmsw26u_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswunivud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivud\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivud\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivud\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmswuniv26ud_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmswuniv26ud_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswddll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswddll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswddll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmsw26d_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexd.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmsw26d_adv.lib;..\..\lib\vc_dll\wxbase26d_odbc.lib;..\..\lib\vc_dll\wxmsw26d_core.lib;..\..\lib\vc_dll\wxbase26d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmsw26d_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmsw26d_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmsw26d_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXDEBUG__;WXDLLNAME=wxmsw26d_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivuddll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivuddll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivuddll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmswuniv26ud_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmswuniv26ud_adv.lib;..\..\lib\vc_dll\wxbase26ud_odbc.lib;..\..\lib\vc_dll\wxmswuniv26ud_core.lib;..\..\lib\vc_dll\wxbase26ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmswuniv26ud_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmswuniv26ud_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmswuniv26ud_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmswuniv26ud_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswud;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswud\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswud\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswud\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmsw26ud_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmsw26ud_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswuniv;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswuniv\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswuniv\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswuniv\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmswuniv26_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmswuniv26_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\msw;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_msw\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_msw\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_msw\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmsw26_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmsw26_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswunivu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivu\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivu\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivu\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmswuniv26u_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmswuniv26u_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivudll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivudll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivudll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmswuniv26u_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmswuniv26u_adv.lib;..\..\lib\vc_dll\wxbase26u_odbc.lib;..\..\lib\vc_dll\wxmswuniv26u_core.lib;..\..\lib\vc_dll\wxbase26u.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmswuniv26u_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmswuniv26u_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmswuniv26u_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXDLLNAME=wxmswuniv26u_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_lib\mswu;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswu\wxprec_dbgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswu\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswu\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_lib\wxmsw26u_dbgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\lib\vc_lib\wxmsw26u_dbgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivddll\wxprec_dbgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivddll\dbgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivddll\dbgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\lib\vc_dll\wxmswuniv26d_dbgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexd.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;oleacc.lib;odbc32.lib;..\..\lib\vc_dll\wxmswuniv26d_adv.lib;..\..\lib\vc_dll\wxbase26d_odbc.lib;..\..\lib\vc_dll\wxmswuniv26d_core.lib;..\..\lib\vc_dll\wxbase26d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\lib\vc_dll\wxmswuniv26d_dbgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\lib\vc_dll/wxmswuniv26d_dbgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\lib\vc_dll\wxmswuniv26d_dbgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\lib\vc_dll/wx_dbgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXDLLNAME=wxmswuniv26d_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\lib\vc_dll\mswunivd;..\..\src\tiff;..\..\src\jpeg;..\..\src\png;..\..\src\zlib;..\..\src\regex;..\..\src\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\common\dbgrid.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msw\dummy.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\msw\version.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmsw26ud_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">__WXMSW__;_UNICODE;WXDLLNAME=wxmsw26u_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmswuniv26ud_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXDLLNAME=wxmswuniv26u_dbgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_DBGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">\Projects\Sickhead Games\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\wx\dbgrid.h" />
+    <CustomBuild Include="..\..\include\wx\msw\setup.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Creating ..\..\lib\vc_dll\mswd\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswd\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">..\..\lib\vc_dll\mswd\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">Creating ..\..\lib\vc_dll\msw\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\msw\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">..\..\lib\vc_dll\msw\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Creating ..\..\lib\vc_dll\mswud\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswud\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">..\..\lib\vc_dll\mswud\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">Creating ..\..\lib\vc_dll\mswu\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswu\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">..\..\lib\vc_dll\mswu\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Creating ..\..\lib\vc_dll\mswunivd\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswunivd\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">..\..\lib\vc_dll\mswunivd\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">Creating ..\..\lib\vc_dll\mswuniv\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswuniv\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">..\..\lib\vc_dll\mswuniv\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Creating ..\..\lib\vc_dll\mswunivud\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswunivud\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">..\..\lib\vc_dll\mswunivud\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">Creating ..\..\lib\vc_dll\mswunivu\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_dll\mswunivu\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">..\..\lib\vc_dll\mswunivu\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Creating ..\..\lib\vc_lib\mswd\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswd\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\vc_lib\mswd\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Creating ..\..\lib\vc_lib\msw\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\msw\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\vc_lib\msw\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Creating ..\..\lib\vc_lib\mswud\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswud\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">..\..\lib\vc_lib\mswud\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Creating ..\..\lib\vc_lib\mswu\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswu\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">..\..\lib\vc_lib\mswu\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Creating ..\..\lib\vc_lib\mswunivd\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswunivd\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">..\..\lib\vc_lib\mswunivd\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">Creating ..\..\lib\vc_lib\mswuniv\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswuniv\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">..\..\lib\vc_lib\mswuniv\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Creating ..\..\lib\vc_lib\mswunivud\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswunivud\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">..\..\lib\vc_lib\mswunivud\wx\setup.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">Creating ..\..\lib\vc_lib\mswunivu\wx\setup.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">copy "%(FullPath)" ..\..\lib\vc_lib\mswunivu\wx\setup.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">..\..\lib\vc_lib\mswunivu\wx\setup.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

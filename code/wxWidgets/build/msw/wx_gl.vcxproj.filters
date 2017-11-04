@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MSW Sources">
+      <UniqueIdentifier>{b041c6f7-3ba8-4e54-b949-cecc41d5b285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{b5ec29d8-7d75-4d74-835c-7e904ad6d29a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Headers">
+      <UniqueIdentifier>{ed47df38-1b4d-4ec2-9b04-c87e7f581d18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\msw\dummy.cpp">
+      <Filter>MSW Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msw\glcanvas.cpp">
+      <Filter>MSW Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\msw\version.rc">
+      <Filter>MSW Sources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\wx\msw\glcanvas.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\include\wx\msw\setup.h">
+      <Filter>Setup Headers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

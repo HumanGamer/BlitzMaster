@@ -11,7 +11,7 @@
 #endif 
 
 
-ConnectDlg::ConnectDlg( wxWindow* parent, wxSocketClient* server, 
+ConnectDlg::ConnectDlg( wxWindow* parent, wxSocketClient** server, 
                         wxIPV4address* address, const wxString& password, 
                         bool connectNow )
    :  wxDialog( (wxWindow*)parent, (wxWindowID)wxID_ANY, wxString( "Connecting" ) ),
@@ -32,7 +32,7 @@ END_EVENT_TABLE()
 
 void ConnectDlg::OnInitDialog( wxInitDialogEvent& event )
 {
-   wxASSERT( m_Server );
+   //wxASSERT( m_Server );
    wxASSERT( m_Address );
 
    CentreOnParent();
@@ -102,22 +102,31 @@ void ConnectDlg::OnConnect( wxCommandEvent& event )
    // We do a connection with the wait disabled which means
    // that it will return a 'lost' event shortly after.  This
    // lost connection is retried in the event handler.
-   wxASSERT( m_Server );
-   m_Server->Discard();
-   m_Server->Close();
-   m_Server->SetEventHandler( *this, ID_SOCKET_EVENT );
-   m_Server->SetNotify( wxSOCKET_CONNECTION_FLAG | wxSOCKET_LOST_FLAG );
-	m_Server->Notify( true );
-   m_Server->Connect( *m_Address, false );
+   //wxASSERT( m_Server );
+
+   *m_Server = new wxSocketClient(wxSOCKET_NOWAIT);
+   wxSocketClient* server = *m_Server;
+   server->Notify(false);
+
+   server->Discard();
+   server->Close();
+   server->SetEventHandler( *this, ID_SOCKET_EVENT );
+   server->SetNotify( wxSOCKET_CONNECTION_FLAG | wxSOCKET_LOST_FLAG );
+   server->Notify( true );
+   server->Connect( *m_Address, false );
 }
 
 void ConnectDlg::OnCancel( wxCommandEvent& event )
 {
    // Stop the server connection.
-   wxASSERT( m_Server );
-   m_Server->Notify( false );
-   m_Server->Discard();
-   m_Server->Close();
+	//wxASSERT(m_Server);
+	if (*m_Server)
+	{
+		wxSocketClient* server = *m_Server;
+		server->Notify(false);
+		server->Discard();
+		server->Close();
+	}
 
    if ( m_Connecting && !m_ConnectNow ) 
    {
@@ -143,20 +152,34 @@ void ConnectDlg::OnSocketEvent( wxSocketEvent& event )
 {
    wxLogDebug( "ConnectDlg::OnSocketEvent!\n" );
 
-   wxASSERT( m_Server );
-   wxASSERT( m_Server == event.GetSocket() );
+   wxASSERT( *m_Server );
+   wxASSERT( *m_Server == event.GetSocket() );
+
+   wxSocketClient* server = *m_Server;
 
 	if ( event.GetSocketEvent() == wxSOCKET_LOST ) 
    {      
    	// The connection timed out... try to connect again.
-      m_Server->Close();
-      m_Server->Connect( *m_Address, false );
+		server->Close();
+
+		// Matt: Make sure to re-create it!
+	  *m_Server = new wxSocketClient(wxSOCKET_NOWAIT);
+	  server = *m_Server;
+	  server->Notify(false);
+
+	  server->Discard();
+	  server->Close();
+	  server->SetEventHandler(*this, ID_SOCKET_EVENT);
+	  server->SetNotify(wxSOCKET_CONNECTION_FLAG | wxSOCKET_LOST_FLAG);
+	  server->Notify(true);
+
+      server->Connect( *m_Address, false );
 	} 
    else if ( event.GetSocketEvent() == wxSOCKET_CONNECTION ) 
    {
       // We connected... disable notifications and 
       // shutdown this dialog.
-      m_Server->Notify( false );
+      server->Notify( false );
       EndModal( wxID_OK );
    }
    else

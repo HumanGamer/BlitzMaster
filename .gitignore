@@ -3,3 +3,10 @@
 *.lo
 *.o
 *.obj
+*.aps
+*.vcxproj.user
+.vs
+Debug
+Release
+/InstallTorsion.exe
+msbuild.log

@@ -4,7 +4,7 @@
 
 [Setup]
 AppName=Torsion
-AppVerName=Torsion 1.1.3496
+AppVerName=Torsion 1.1.3929
 AppPublisher= Sickhead Games, LLC
 AppPublisherURL=http://www.sickheadgames.com/
 AppSupportURL=https://github.com/SickheadGames/Torsion/issues
@@ -33,9 +33,10 @@ WizardSmallImageFile=installerimagesmall_a.bmp
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "..\media\torsion_p.exe"; DestName: "torsion.exe";  DestDir: "{app}"; Flags: ignoreversion
-Source: "..\media\msvcr71.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\media\msvcp71.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "..\media\torsion_p.exe"; DestName: "torsion.exe";  DestDir: "{app}"; Flags: ignoreversion
+Source: "..\media\torsion.exe"; DestName: "torsion.exe";  DestDir: "{app}"; Flags: ignoreversion
+;Source: "..\media\msvcr71.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "..\media\msvcp71.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\torsion.chm"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\torsion_exports.cs"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\torsion_precompile.cs"; DestDir: "{app}"; Flags: ignoreversion

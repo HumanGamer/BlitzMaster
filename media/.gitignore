@@ -1,0 +1,6 @@
+*.chm
+*.exe
+*.map
+*.pdb
+*.ilk
+/preferences.xml

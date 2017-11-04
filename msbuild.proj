@@ -20,15 +20,15 @@
 <!-- Misc properties we need -->
 <PropertyGroup>
 
-	<ASPCompiler>"C:\Program Files\ASProtect SKE 2.2 Release\ASProtect.exe"</ASPCompiler>
-	<ASPProject>"$(MSBuildProjectDirectory)\media\Torsion.aspr2"</ASPProject>
+	<!--<ASPCompiler>"C:\Program Files\ASProtect SKE 2.2 Release\ASProtect.exe"</ASPCompiler>
+	<ASPProject>"$(MSBuildProjectDirectory)\media\Torsion.aspr2"</ASPProject>-->
 
 	<HelpCompiler>"$(MSBuildProjectDirectory)\bin\HTMLHelpWorkshop\HHC.exe"</HelpCompiler>
 	<HelpProject>Torsion.hhp</HelpProject>
 	<HelpWorkingDir>docs</HelpWorkingDir>
 
 	<InstallCompiler>"$(MSBuildProjectDirectory)\bin\InnoSetup\ISCC.exe"</InstallCompiler>
-	<InstallScript>torsion.iss</InstallScript>
+	<InstallScript>Torsion.iss</InstallScript>
 	<InstallWorkingDir>installer</InstallWorkingDir>
 
 </PropertyGroup>
@@ -43,9 +43,9 @@
 	/> -->
 
 	<!-- Run the trial protection on the executable -->
-	<Exec 
+	<!--<Exec 
 		Command="$(ASPCompiler) -process $(ASPProject)"
-	/>
+	/>-->
 
 	<CallTarget Targets="HelpFile"/>
 

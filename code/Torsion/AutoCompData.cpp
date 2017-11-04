@@ -429,6 +429,11 @@ int AutoCompData::BuildMemberList( const wxString& name, wxString& list ) const
       }
 
       const wxString& base = found->GetBase();
+
+	   // Matt: Fix Infinite Loop Possibility
+	  if (found->GetName() == found->GetBase())
+		  break;
+
       if ( base.IsEmpty() )
          break;
 

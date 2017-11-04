@@ -100,7 +100,7 @@ void AboutDlg::CreateControls()
    wxStaticText* itemStaticText4 = new wxStaticText( itemDialog1, abID_VERSION, _("v0.1.1000 \"1st Alpha\""), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT );
    itemBoxSizer2->Add(itemStaticText4, 0, wxALIGN_RIGHT|wxLEFT|wxRIGHT|wxADJUST_MINSIZE, 7);
 
-   m_RegInfo = new wxStaticText( itemDialog1, wxID_ANY, _("Unregistered"), wxDefaultPosition, wxDefaultSize, wxALIGN_CENTRE );
+   m_RegInfo = new wxStaticText( itemDialog1, wxID_ANY, _("Open Source Edition"), wxDefaultPosition, wxDefaultSize, wxALIGN_CENTRE );
    m_RegInfo->SetFont(wxFont(8, wxSWISS, wxNORMAL, wxBOLD, false, _T("Tahoma")));
    itemBoxSizer2->Add(m_RegInfo, 0, wxGROW|wxTOP|wxBOTTOM|wxADJUST_MINSIZE, 2);
 

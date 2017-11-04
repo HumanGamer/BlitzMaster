@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common Sources">
+      <UniqueIdentifier>{3b02d0ea-0991-4c98-b424-5065a4fcf85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Sources">
+      <UniqueIdentifier>{bf8ea988-e1de-44b2-838c-743d100f2001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{d7ffb32f-33f4-4bc0-a732-9cc66704dc90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{97383f3d-6f9d-4d07-b432-9f3d80ba09d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\common\mediactrlcmn.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msw\dummy.cpp">
+      <Filter>MSW Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msw\mediactrl.cpp">
+      <Filter>MSW Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\msw\version.rc">
+      <Filter>MSW Sources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\wx\mediactrl.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\include\wx\msw\setup.h">
+      <Filter>Setup Headers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

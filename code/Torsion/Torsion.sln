@@ -1,8 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Torsion", "Torsion.vcxproj", "{6A1EC3A9-9AB3-4F16-B983-0145510FD809}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92FB9898-F36D-47A6-8BFE-6770C5FA4682} = {92FB9898-F36D-47A6-8BFE-6770C5FA4682}
+		{D1C528B6-AA02-4D29-9D61-DC08E317A70D} = {D1C528B6-AA02-4D29-9D61-DC08E317A70D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stc", "..\wxWidgets\contrib\build\stc\stc.vcxproj", "{92FB9898-F36D-47A6-8BFE-6770C5FA4682}"
 EndProject
@@ -53,6 +57,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Debug|x64.ActiveCfg = Debug|Win32
+		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Debug|x64.Build.0 = Debug|Win32
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Debug|x86.ActiveCfg = Debug|Win32
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Debug|x86.Build.0 = Debug|Win32
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Debug-Dll|x64.ActiveCfg = Release|Win32
@@ -131,6 +136,7 @@ Global
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Universal Unicode Release|x86.ActiveCfg = Release|Win32
 		{6A1EC3A9-9AB3-4F16-B983-0145510FD809}.Universal Unicode Release|x86.Build.0 = Release|Win32
 		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Debug|x64.ActiveCfg = Debug|Win32
+		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Debug|x64.Build.0 = Debug|Win32
 		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Debug|x86.ActiveCfg = Debug|Win32
 		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Debug|x86.Build.0 = Debug|Win32
 		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Debug-Dll|x64.ActiveCfg = Universal Unicode Release|Win32
@@ -196,8 +202,8 @@ Global
 		{92FB9898-F36D-47A6-8BFE-6770C5FA4682}.Universal Unicode Release|x86.Build.0 = Universal Unicode Release|Win32
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x64.ActiveCfg = Debug-Dll|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x64.Build.0 = Debug-Dll|x64
-		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x86.ActiveCfg = Debug-Dll|Win32
-		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x86.Build.0 = Debug-Dll|Win32
+		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug|x86.Build.0 = Debug|Win32
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug-Dll|x64.ActiveCfg = Debug-Dll|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug-Dll|x64.Build.0 = Debug-Dll|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Debug-Dll|x86.ActiveCfg = Debug-Dll|Win32
@@ -240,8 +246,8 @@ Global
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.DLL Universal Unicode Release|x86.Build.0 = Debug-Dll|Win32
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x64.ActiveCfg = Release-Lib|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x64.Build.0 = Release-Lib|x64
-		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x86.ActiveCfg = Release-Lib|Win32
-		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x86.Build.0 = Release-Lib|Win32
+		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x86.ActiveCfg = Release|Win32
+		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release|x86.Build.0 = Release|Win32
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release-Dll|x64.ActiveCfg = Release-Dll|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release-Dll|x64.Build.0 = Release-Dll|x64
 		{D1C528B6-AA02-4D29-9D61-DC08E317A70D}.Release-Dll|x86.ActiveCfg = Release-Dll|Win32
@@ -277,5 +283,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42F67207-F944-4562-B879-A96425145D7C}
 	EndGlobalSection
 EndGlobal

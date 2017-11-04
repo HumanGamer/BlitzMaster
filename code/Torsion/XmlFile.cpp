@@ -40,7 +40,8 @@ bool XmlFile::SaveFile(const wxString& path)
 
 wxString XmlFile::GetError()
 {
-	return doc.GetErrorStr1();
+	//return doc.GetErrorStr1();
+	return doc.ErrorStr();
 }
 
 bool XmlFile::SetDoc(const wxChar* buffer)
@@ -60,7 +61,7 @@ bool XmlFile::FindElem(const wxString& name = "")
 	if (currentParentElement == nullptr && currentElement == nullptr)
 	{
 		currentElement = doc.RootElement();
-		found = true;
+		found = currentElement != NULL;
 	}
 	else if (currentElement != nullptr)
 	{
@@ -68,7 +69,7 @@ bool XmlFile::FindElem(const wxString& name = "")
 		if (element != nullptr)
 		{
 			currentElement = element;
-			found = true;
+			found = currentElement != NULL;
 		}
 	}
 	else if (currentParentElement != nullptr)
@@ -77,7 +78,7 @@ bool XmlFile::FindElem(const wxString& name = "")
 		if (element != nullptr)
 		{
 			currentElement = element;
-			found = true;
+			found = currentElement != NULL;
 		}
 	}
 

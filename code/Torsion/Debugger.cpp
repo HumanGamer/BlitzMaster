@@ -134,12 +134,13 @@ bool Debugger::Connect( const wxString& Address, int Port, const wxString& Passw
 	address.Hostname( Address );
 	address.Service( Port );
    wxASSERT( m_Server == NULL );
-	m_Server = new wxSocketClient( wxSOCKET_NOWAIT );
-	m_Server->Notify( false );
+   //m_Server = new wxSocketClient(wxSOCKET_NOWAIT);
+   //m_Server->Notify(false);
+   m_Server = NULL;
 
    // Launch the connection dialog which will do this 
    // in an idle loop so that we cancel as well.
-   ConnectDlg dlg( tsGetMainFrame(), m_Server, &address, Password, !cmd.IsEmpty() );
+   ConnectDlg dlg( tsGetMainFrame(), &m_Server, &address, Password, !cmd.IsEmpty() );
    if ( dlg.ShowModal() != wxID_OK ) 
    {
 		Stop();

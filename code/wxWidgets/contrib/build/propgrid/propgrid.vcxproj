@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Debug|Win32">
+      <Configuration>DLL Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Release|Win32">
+      <Configuration>DLL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Unicode Debug|Win32">
+      <Configuration>DLL Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Unicode Release|Win32">
+      <Configuration>DLL Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Debug|Win32">
+      <Configuration>DLL Universal Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Release|Win32">
+      <Configuration>DLL Universal Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Unicode Debug|Win32">
+      <Configuration>DLL Universal Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL Universal Unicode Release|Win32">
+      <Configuration>DLL Universal Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Debug|Win32">
+      <Configuration>Universal Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Release|Win32">
+      <Configuration>Universal Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Unicode Debug|Win32">
+      <Configuration>Universal Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Universal Unicode Release|Win32">
+      <Configuration>Universal Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{6BFB37A5-3D82-4A52-8678-34E57D363496}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswudll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswddll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswdll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswuddll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivuddll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivudll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivd\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivddll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivu\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswd\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswuniv\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_dll\</OutDir>
+    <IntDir>.\vc_mswunivdll\propgrid\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_msw\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswunivud\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswud\propgrid\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\..\..\src\propgrid\..\..\..\lib\vc_lib\</OutDir>
+    <IntDir>.\vc_mswu\propgrid\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswudll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswudll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswudll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270u_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmsw27u_core.lib;wxbase27u.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270u_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmsw270u_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw27u_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;_UNICODE;WXDLLNAME=wxmsw270u_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswddll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswddll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswddll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270d_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexd.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmsw27d_core.lib;wxbase27d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270d_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmsw270d_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw27d_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXDEBUG__;WXDLLNAME=wxmsw270d_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\msw;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswdll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswdll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswdll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregex.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmsw27_core.lib;wxbase27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmsw270_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw27_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;WXDLLNAME=wxmsw270_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\msw;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswuddll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswuddll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswuddll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270ud_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmsw27ud_core.lib;wxbase27ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw270ud_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmsw270ud_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmsw27ud_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmsw270ud_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivuddll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivuddll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivuddll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270ud_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmswuniv27ud_core.lib;wxbase27ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270ud_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmswuniv270ud_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv27ud_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmswuniv270ud_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivudll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivudll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivudll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270u_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmswuniv27u_core.lib;wxbase27u.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270u_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmswuniv270u_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv27u_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXDLLNAME=wxmswuniv270u_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswunivd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivd\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivd\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivd\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27d_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27d_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivddll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivddll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivddll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270d_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexd.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmswuniv27d_core.lib;wxbase27d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270d_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmswuniv270d_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv27d_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXDLLNAME=wxmswuniv270d_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswunivd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswunivu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivu\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivu\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivu\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27u_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27u_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswd;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswd\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswd\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswd\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27d_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27d_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswuniv;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswuniv\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswuniv\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswuniv\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswuniv;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivdll\wxprec_propgriddll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivdll\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivdll\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270_propgrid_vc_custom.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregex.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;odbc32.lib;wxmswuniv27_core.lib;wxbase27.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv270_propgrid_vc_custom.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\src\propgrid\..\..\..\lib\vc_dll/wxmswuniv270_propgrid_vc_custom.pdb</ProgramDatabaseFile>
+      <ImportLibrary>..\..\src\propgrid\..\..\..\lib\vc_dll\wxmswuniv27_propgrid.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\..\src\propgrid\..\..\..\lib\vc_dll/propgrid.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>__WXMSW__;__WXUNIVERSAL__;WXDLLNAME=wxmswuniv270_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_dll\mswuniv;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\msw;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_msw\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_msw\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_msw\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswunivud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswunivud\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswunivud\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswunivud\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27ud_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmswuniv27ud_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswud;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswud\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswud\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswud\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27ud_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27ud_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\src\propgrid\..\..\..\lib\vc_lib\mswu;..\..\src\propgrid\..\..\..\include;..\..\src\propgrid\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;__WXMSW__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>wx/wxprec.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>vc_mswu\wxprec_propgridlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\vc_mswu\propgrid/</AssemblerListingLocation>
+      <ObjectFileName>.\vc_mswu\propgrid/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27u_propgrid.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\src\propgrid\..\..\..\lib\vc_lib\wxmsw27u_propgrid.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\msw\dummy.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\advprops.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\extras.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\manager.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\odcombo.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\propgrid.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\propgrid\props.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">WIN32;_USRDLL;DLL_EXPORTS;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">WIN32;_USRDLL;DLL_EXPORTS;__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;_UNICODE</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">WIN32;_LIB;_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">WIN32;_LIB;__WXMSW__;__WXUNIVERSAL__;_UNICODE</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\src\msw\version.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmsw270ud_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">__WXMSW__;_UNICODE;WXDLLNAME=wxmsw270u_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Unicode Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">_DEBUG;__WXMSW__;__WXUNIVERSAL__;__WXDEBUG__;_UNICODE;WXDLLNAME=wxmswuniv270ud_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">__WXMSW__;__WXUNIVERSAL__;_UNICODE;WXDLLNAME=wxmswuniv270u_propgrid_vc_custom;WXUSINGDLL;WXMAKINGDLL_PROPGRID</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL Universal Unicode Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Debug|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Universal Unicode Release|Win32'">\Projects\Torsion\code\wxWidgets\src\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

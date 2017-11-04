@@ -13,14 +13,14 @@ class ConnectDlg : public wxDialog
 {
    protected:
 
-      wxSocketClient*   m_Server;
+      wxSocketClient**   m_Server;
       wxIPV4address*    m_Address;
       wxString          m_Password;
       bool              m_Connecting;
 
    public:
 
-      ConnectDlg( wxWindow* parent, wxSocketClient* server, wxIPV4address* address, const wxString& password, bool connectNow );
+      ConnectDlg( wxWindow* parent, wxSocketClient** server, wxIPV4address* address, const wxString& password, bool connectNow );
 
       enum {
          ID_CONNECT = wxID_HIGHEST,
