@@ -1,5 +1,0 @@
-E:/Repositories/Torsion/build/CMakeFiles/tinyxml2.dir
-E:/Repositories/Torsion/build/CMakeFiles/Torsion.dir
-E:/Repositories/Torsion/build/CMakeFiles/INSTALL.dir
-E:/Repositories/Torsion/build/CMakeFiles/ALL_BUILD.dir
-E:/Repositories/Torsion/build/CMakeFiles/ZERO_CHECK.dir
