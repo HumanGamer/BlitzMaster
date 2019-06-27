@@ -182,7 +182,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
    m_Token = SSTOKEN_WHITESPACE;
 
    wxChar ch;
-   bool blockComment;
+   //bool blockComment;
 
    if ( !m_Stream ) {
 
@@ -213,7 +213,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
       // test to see if we need to break out of it.
       if ( m_Token == SSTOKEN_COMMENT ) {
 
-         if ( ch == '\n' && !blockComment ) {
+         if ( ch == '\n') {// && !blockComment ) {
 
             if ( skipComments ) {
 
@@ -226,7 +226,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
 
          m_Value += ch;
 
-         if (  blockComment &&
+         /*if (  blockComment &&
                m_Value.Len() > 3 &&
                m_Value.Last() == '/' &&
                m_Value.GetChar( m_Value.Len() - 2 ) == '*' )
@@ -239,7 +239,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
             }            
 
             break;
-         }
+         }*/
       }
 
       else if (   m_Token == SSTOKEN_STRING ||
@@ -258,39 +258,40 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
          if ( ch != '\r' )
             m_Value += ch;
 
-         if ( ( ch == '\"' || ch == '\'' ) && m_Value[ m_Value.Len() - 2 ] != '\\' )
-            break;
+         //if ( ( ch == '\"' || ch == '\'' ) && m_Value[ m_Value.Len() - 2 ] != '\\' )
+         //   break;
       }
 
       else if (   m_Token == SSTOKEN_WORD || 
                   m_Token == SSTOKEN_GLOBAL || 
                   m_Token == SSTOKEN_LOCAL ) {
 
-         if (  !IsWordChar( ch ) &&
-               !( ch == ':' && m_Stream->Peek() == ':' ) &&
-               !( m_Value.Last() == ':' && ch == ':' && m_Stream->Peek() != ':' ) &&
-               !( m_Value == "switch" && ch == '$' ) ) {
+         if (  !IsWordChar( ch )) { // &&
+               //!( ch == ':' && m_Stream->Peek() == ':' ) &&
+               //!( m_Value.Last() == ':' && ch == ':' && m_Stream->Peek() != ':' ) &&
+               //!( m_Value == "switch" && ch == '$' ) ) {
 
             m_Stream->SeekI( -1, wxFromCurrent );
 
             ch = m_Value[0];
-            if ( ch == '%' || ch == '$' )
-            {
+            //if ( ch == '%' || ch == '$' )
+            //{
                // Do nothing... this is not a reserved
                // word or special operator.  This block
                // skips the next two if statements.
-            }
+            //}
 
             // Did we get a reserved word?
-            else if ( IsReservedWord( m_Value ) )
+            //else
+             if ( IsReservedWord( m_Value ) )
                m_Token = SSTOKEN_RESERVED;
 
             // Did we maybe get the special operators; TAB,
             // NL, SPC?  Note the case matters!
-            else if ( m_Value == "TAB" ||
+            /*else if ( m_Value == "TAB" ||
                       m_Value == "NL" ||
                       m_Value == "SPC" )
-               m_Token = SSTOKEN_OPERATOR;
+               m_Token = SSTOKEN_OPERATOR;*/
 
             break;
          }
@@ -328,19 +329,19 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
          continue;
 
       // Look for comments.
-      if ( ch == '/' && m_Stream->Peek() == '/' ) {
+      if ( ch == ';') {// && m_Stream->Peek() == '/' ) {
 
          m_Token = SSTOKEN_COMMENT;
-         blockComment = false;
+         //blockComment = false;
          m_Value = ch;
       }
-      else if ( ch == '/' && m_Stream->Peek() == '*' ) {
+      /*else if ( ch == '/' && m_Stream->Peek() == '*' ) {
 
          m_Token = SSTOKEN_COMMENT;
          blockComment = true;
          m_Value = ch;
          m_Value << m_Stream->GetC();
-      }
+      }*/
 
       // Look for strings.
       else if ( ch == '\"' ) {
@@ -372,7 +373,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
          m_Value = ch;
       }
 
-      else if ( ch == '$' && IsWordChar( m_Stream->Peek() ) ) 
+      /*else if ( ch == '$' && IsWordChar( m_Stream->Peek() ) ) 
       {
          m_Token = SSTOKEN_GLOBAL;
          m_Value = ch;
@@ -382,7 +383,7 @@ const SSTOKEN& ScriptScanner::Step( bool skipComments )
       {
          m_Token = SSTOKEN_LOCAL;
          m_Value = ch;
-      }
+      }*/
 
       else if ( !isspace( (wxUChar)ch ) ) 
       {

@@ -118,8 +118,8 @@ void FindResultsCtrl::UpdatePrefs()
    StyleSetBackground( wxSTC_STYLE_DEFAULT, tsGetPrefs().GetBgColor() );
    SetCaretForeground( tsGetPrefs().GetDefaultColor() );
 
-	StyleSetForeground( wxSTC_TCS_DEFAULT, tsGetPrefs().GetDefaultColor() );
-	StyleSetBackground( wxSTC_TCS_DEFAULT, tsGetPrefs().GetBgColor() );
+	StyleSetForeground( wxSTC_B_DEFAULT, tsGetPrefs().GetDefaultColor() );
+	StyleSetBackground( wxSTC_B_DEFAULT, tsGetPrefs().GetBgColor() );
 
    SetSelBackground( 1, tsGetPrefs().GetSelBgColor() );
    SetSelForeground( 1, tsGetPrefs().GetSelColor() );

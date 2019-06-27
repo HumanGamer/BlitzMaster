@@ -294,7 +294,7 @@ void ScriptCtrl::SetStyle( int style, const wxColour& fore, const wxColour& back
 bool ScriptCtrl::InitializePrefs() 
 {
    // Set the lexer language
-   SetLexer( wxSTC_LEX_TCS );
+   SetLexer( wxSTC_LEX_BLITZBASIC );
 
    // Clear the zoom keys and mouse mapping.
    CmdKeyClear( wxSTC_KEY_ADD, wxSTC_SCMOD_CTRL );
@@ -343,6 +343,7 @@ bool ScriptCtrl::InitializePrefs()
    ShowLineNumbers( tsGetPrefs().GetLineNumbers() );
 
    // Setup code folding.
+  // TODO: Folding for BlitzBasic
    StyleSetChangeable( wxSTC_TCS_FOLDED, false );
    IndicatorSetStyle( 2, wxSTC_INDIC_BOX );
    SetProperty( "fold.comment", "1" );
@@ -900,11 +901,11 @@ bool ScriptCtrl::ListMembers( bool forced )
    }
    const int style = GetStyleAt( pos-1 );
 
-   if (  style == wxSTC_TCS_COMMENT ||
-         style == wxSTC_TCS_COMMENTLINE ||
-         style == wxSTC_TCS_COMMENTDOC ||
-         style == wxSTC_TCS_STRING ||
-         style == wxSTC_TCS_STRINGEOL )
+   if (  style == wxSTC_B_COMMENT ||
+         //style == wxSTC_TCS_COMMENTLINE ||
+         //style == wxSTC_TCS_COMMENTDOC ||
+         style == wxSTC_B_STRING ||
+         style == wxSTC_B_STRINGEOL )
    {
       if ( forced )
          tsBellEx( wxICON_INFORMATION );
@@ -1180,11 +1181,11 @@ bool ScriptCtrl::ParameterInfo( bool forced )
       // Get the style... we can pick a bracket inside
       // a comment or string.
       const int style = GetStyleAt( start );
-      if (  style == wxSTC_TCS_COMMENT ||
-            style == wxSTC_TCS_COMMENTLINE ||
-            style == wxSTC_TCS_COMMENTDOC ||
-            style == wxSTC_TCS_STRING ||
-            style == wxSTC_TCS_STRINGEOL )
+      if (  style == wxSTC_B_COMMENT ||
+            //style == wxSTC_TCS_COMMENTLINE ||
+            //style == wxSTC_TCS_COMMENTDOC ||
+            style == wxSTC_B_STRING ||
+            style == wxSTC_B_STRINGEOL )
          continue;
 
       // If it's not an open bracket then skip it.
@@ -1341,11 +1342,11 @@ wxString ScriptCtrl::GetIdentifierAt( int pos, bool* isFunction )
 
    // Skip if we're in a comment or string.
    const int style = GetStyleAt( pos );
-   if (  style == wxSTC_TCS_COMMENT ||
-         style == wxSTC_TCS_COMMENTLINE ||
-         style == wxSTC_TCS_COMMENTDOC ||
-         style == wxSTC_TCS_STRING ||
-         style == wxSTC_TCS_STRINGEOL )
+   if (  style == wxSTC_B_COMMENT ||
+         //style == wxSTC_TCS_COMMENTLINE ||
+         //style == wxSTC_TCS_COMMENTDOC ||
+         style == wxSTC_B_STRING ||
+         style == wxSTC_B_STRINGEOL )
       return wxEmptyString;
 
    // TODO: This function could probably use the syntax
@@ -1383,7 +1384,7 @@ wxString ScriptCtrl::GetIdentifierAt( int pos, bool* isFunction )
    
    // If we're leading with a number then
    // this cannot be a good identifier.
-   if ( wxIsdigit( word[0] ) && style != wxSTC_TCS_VAR )
+   if ( wxIsdigit( word[0] ))// && style != wxSTC_TCS_VAR )
       return wxEmptyString;
    
    // Look for junk infront of the word.
@@ -2821,22 +2822,22 @@ void ScriptCtrl::UpdatePrefs( bool refresh )
    SetCaretForeground( tsGetPrefs().GetDefaultColor() );
 
    // Set the colors for the TorqueScript types.
-   SetStyle( wxSTC_TCS_DEFAULT, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_COMMENT, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_COMMENTLINEDOC, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_COMMENTLINE, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_NUMBER, tsGetPrefs().GetNumberColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_STRING, tsGetPrefs().GetStringColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_CHARACTER, tsGetPrefs().GetStringColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_IDENTIFIER, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_OPERATOR, tsGetPrefs().GetOperatorsColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_VAR, tsGetPrefs().GetLocalsColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_GLOBALVAR, tsGetPrefs().GetGlobalsColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_STRINGEOL, tsGetPrefs().GetBraceMatchErrColor(), tsGetPrefs().GetBraceMatchBgColor() );
-   SetStyle( wxSTC_TCS_WORD, tsGetPrefs().GetReservedColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_WORD2, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_GLOBALCLASS, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
-   SetStyle( wxSTC_TCS_FOLDED, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetMarginColor() );
+   SetStyle( wxSTC_B_DEFAULT, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_COMMENT, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_COMMENTLINEDOC, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_COMMENTLINE, tsGetPrefs().GetCommentColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_NUMBER, tsGetPrefs().GetNumberColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_STRING, tsGetPrefs().GetStringColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_CHARACTER, tsGetPrefs().GetStringColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_IDENTIFIER, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_OPERATOR, tsGetPrefs().GetOperatorsColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_VAR, tsGetPrefs().GetLocalsColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_GLOBALVAR, tsGetPrefs().GetGlobalsColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_STRINGEOL, tsGetPrefs().GetBraceMatchErrColor(), tsGetPrefs().GetBraceMatchBgColor() );
+   SetStyle( wxSTC_B_KEYWORD, tsGetPrefs().GetReservedColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_KEYWORD2, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
+   //SetStyle( wxSTC_TCS_GLOBALCLASS, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
+  // SetStyle( wxSTC_TCS_FOLDED, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetMarginColor() );
 
    // Set the keywords up... note that the functions and var words
    // are fetched from the autocomp system which builds these from 
@@ -2978,11 +2979,11 @@ void ScriptCtrl::CommentSel( bool comment )
 
       if ( comment )
       {
-         text = white + "//" + text; 
+         text = white + ";" + text; 
       }
       else
       {
-         if ( text.StartsWith( "//" ) )
+         if ( text.StartsWith( ";" ) )
             text.Remove( 0, 2 );    
          text.Prepend( white );
       }

@@ -229,25 +229,16 @@ AutoCompPage* AutoCompThread::ScanFile( const wxString& path, ScriptScanner& sc 
       // Grab the value for processing below.
       if ( sc.GetToken() == SSTOKEN_COMMENT )
       {
-         if (  sc.GetValue().StartsWith( "///" ) ||
-               sc.GetValue().StartsWith( "//!" ) ||
-               sc.GetValue().StartsWith( "/*!" ) ||
-               sc.GetValue().StartsWith( "/**" ) ) 
+         if (  sc.GetValue().StartsWith( ";!" ) ) 
          {
             // Add it, but strip the comment marks.
             Comment << sc.GetValue().Mid( 3 );
-            int end = Comment.Find( "*/" );
-            if ( end != -1 )
-            {
-               Comment = Comment.Mid( 0, end );
-               Comment.Trim();
-            }
          } 
          else
             Comment.Empty();
       }
 
-      else if (   sc.GetToken() == SSTOKEN_LOCAL ||
+      /*else if (   sc.GetToken() == SSTOKEN_LOCAL ||
                   sc.GetToken() == SSTOKEN_GLOBAL )
       {
          AutoCompVar* var = NULL;
@@ -472,9 +463,7 @@ AutoCompPage* AutoCompThread::ScanFile( const wxString& path, ScriptScanner& sc 
             // A comment above the var?
             if ( sc.GetToken() == SSTOKEN_COMMENT ) {
 
-               if (  sc.GetValue().StartsWith( "///" ) ||
-                     sc.GetValue().StartsWith( "//!" ) ||
-                     sc.GetValue().StartsWith( "/*!" ) ) {
+               if (  sc.GetValue().StartsWith( ";!" ) ) {
 
                   // Add it, but strip the comment marks.
                   Comment << sc.GetValue().Mid( 3 );
@@ -531,7 +520,7 @@ AutoCompPage* AutoCompThread::ScanFile( const wxString& path, ScriptScanner& sc 
                objects.pop();
             }
          }
-      }
+      }*/
       else
          Comment.Empty();
 
