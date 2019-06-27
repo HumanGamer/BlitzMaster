@@ -10,3 +10,4 @@ Debug
 Release
 /InstallTorsion.exe
 msbuild.log
+build
