@@ -2443,29 +2443,8 @@ void RunIntegrated(wxString cmd)
         MessageBox.ShowModal();
         CloseHandle(g_hChildStd_OUT_Rd);
         CloseHandle(g_hChildStd_OUT_Wr);
+        return;
     }
-    else
-    {
-        // Close handles to the child process and its primary thread.
-        // Some applications might keep these handles to monitor the status
-        // of the child process, for example.
-
-        //CloseHandle(piProcInfo.hProcess);
-        //CloseHandle(piProcInfo.hThread);
-    }
-
-    // Successfully created the process.  Wait for it to finish.
-    //WaitForSingleObject(piProcInfo.hProcess, INFINITE);
-
-    /*DWORD processExitCode = 0;
-    while (1)
-    {
-        GetExitCodeProcess(piProcInfo.hProcess, &processExitCode);
-        if (processExitCode != STILL_ACTIVE)
-            break;
-        else
-            Sleep(1);
-    }*/
 
     // Read output from the child process's pipe for STDOUT
     // and write to the parent process's pipe for STDOUT.
@@ -2473,6 +2452,7 @@ void RunIntegrated(wxString cmd)
     {
         DWORD dwRead, dwWritten;
         CHAR chBuf[4096];
+        wxString lastOutput;
         BOOL bSuccess = FALSE;
         //HANDLE hParentStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -2495,6 +2475,8 @@ void RunIntegrated(wxString cmd)
 
                 chBuf[dwRead] = '\0';
 
+                lastOutput = chBuf;
+
                 tsGetMainFrame()->GetOutputPanel()->AppendText(chBuf);
             }
         }
@@ -2502,9 +2484,67 @@ void RunIntegrated(wxString cmd)
         if (exitCode == -1)
         {
             // Compile error
-            const char* compileError = chBuf;
+            wxString compileError = lastOutput;
+            wxString file;
 
-            wxMessageDialog MessageBox(tsGetMainFrame(), compileError, "Error", wxOK);
+            if (compileError[0] == '"')
+            {
+                int start = 0;
+                int end = 0;
+                for (int i = 1; i < compileError.Len(); i++)
+                {
+                    if (compileError[i] == '"')
+                    {
+                        end = i + 1;
+                        break;
+                    }
+                    else
+                    {
+                        file = file.Append(compileError[i]);
+                    }
+                }
+
+                compileError = compileError.SubString(end + 1, compileError.Len() - 1);
+            } else
+            {
+                file = compileError.SubString(0, compileError.Index(':'));
+            }
+
+            int tokenIndex = 0;
+            int lineNumber;
+            int colNumber;
+            wxString errorText;
+
+            wxStringTokenizer tokenizer(compileError, ":");
+            while (tokenizer.HasMoreTokens())
+            {
+                wxString token = tokenizer.GetNextToken();
+                // process token here
+                switch(tokenIndex)
+                {
+                case 0:
+                    lineNumber = wxAtoi(token);
+                    break;
+                case 1:
+                    colNumber = wxAtoi(token);
+                    break;
+                case 2:
+                case 3:
+                    break;
+                case 4:
+                    errorText = token;
+                    break;
+                default:
+                    break;
+                }
+
+                tokenIndex++;
+            }
+
+            char buf[128];
+            wxString finalError = errorText + "\n\n" + file + "\nLine: " + wxString(_itoa(lineNumber, buf, 10)) + ":" + wxString(_itoa(colNumber, buf, 10));
+
+            wxMessageDialog MessageBox(tsGetMainFrame(), finalError, "Error", wxOK);
             MessageBox.ShowModal();
         }
 
