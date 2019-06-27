@@ -46,28 +46,28 @@ class ProjectDoc : public wxDocument
 	   void SetWorkingDir( const wxString& dir );
       const wxString& GetWorkingDir() const { return m_WorkingDir; }
 
-	   wxString GetExportsFilePath() const;
+	   //wxString GetExportsFilePath() const;
 
-      const wxString&   GetAddress() const   { return m_Address; }
-      const wxString&   GetPassword() const  { return m_Password; }
-      int               GetPort() const      { return m_Port; }
+      //const wxString&   GetAddress() const   { return m_Address; }
+      //const wxString&   GetPassword() const  { return m_Password; }
+      //int               GetPort() const      { return m_Port; }
 
-      void SetAddress( const wxString& address ) { m_Address = address; }
-      void SetPassword( const wxString& password ) { m_Password = password; }
-      void SetPort( int port ) { m_Port = port; }
+      //void SetAddress( const wxString& address ) { m_Address = address; }
+      //void SetPassword( const wxString& password ) { m_Password = password; }
+      //void SetPort( int port ) { m_Port = port; }
 
-      void SetEntryScript( const wxString& script );
-      const wxString& GetEntryScript() const { return m_EntryScript; }
+      //void SetEntryScript( const wxString& script );
+      //const wxString& GetEntryScript() const { return m_EntryScript; }
 
-      void SetDebugHook( const wxString& hook );
-      const wxString& GetDebugHook() const { return m_DebugHook; }
+      //void SetDebugHook( const wxString& hook );
+      //const wxString& GetDebugHook() const { return m_DebugHook; }
 
-      void SetMods( const wxArrayString& mods );
-      const wxArrayString& GetMods() const { return m_Mods; }
-      void SetModsString( const wxString& mods );
-      wxString GetModsString() const;
-      bool IsMod( const wxString& mod ) const;
-      wxString GetModPath( const wxString& FullPath ) const;
+      //void SetMods( const wxArrayString& mods );
+      //const wxArrayString& GetMods() const { return m_Mods; }
+      //void SetModsString( const wxString& mods );
+      //wxString GetModsString() const;
+      //bool IsMod( const wxString& mod ) const;
+      //wxString GetModPath( const wxString& FullPath ) const;
 
       void SetScannerExts( const wxArrayString& exts );
       void SetScannerExtsString( const wxString& exts );
@@ -76,18 +76,18 @@ class ProjectDoc : public wxDocument
 
 	   const wxString GetExecuteCommand( const wxString& config, bool withArgs = true ) const;
 
-      const wxString GetEntryScriptPath() const;
+      //const wxString GetEntryScriptPath() const;
 
-      wxString GetSearchUrl( const wxString& name ) const;
-      static wxString GetDefaultSearchUrl( const wxString& name );
+      //wxString GetSearchUrl( const wxString& name ) const;
+      //static wxString GetDefaultSearchUrl( const wxString& name );
 
-      const wxString& GetSearchUrl() const { return m_SearchURL; }
-      const wxString& GetSearchProduct() const { return m_SearchProduct; }
-      const wxString& GetSearchVersion() const { return m_SearchVersion; }
+      //const wxString& GetSearchUrl() const { return m_SearchURL; }
+      //const wxString& GetSearchProduct() const { return m_SearchProduct; }
+      //const wxString& GetSearchVersion() const { return m_SearchVersion; }
       
-      void SetSearchUrl( const wxString& url );
-      void SetSearchProduct( const wxString& product );
-      void SetSearchVersion( const wxString& version );
+      //void SetSearchUrl( const wxString& url );
+      //void SetSearchProduct( const wxString& product );
+      //void SetSearchVersion( const wxString& version );
 
       const wxString MakeReleativeTo( const wxString& FilePath ) const;
       const wxString MakeAbsoluteTo( const wxString& FilePath ) const;
@@ -95,7 +95,7 @@ class ProjectDoc : public wxDocument
       //bool HasExports() const;
 
       void SetExecModifiedScripts( bool exec );
-      bool ExecModifiedScripts() const { return m_ExecModifiedScripts; }
+      //bool ExecModifiedScripts() const { return m_ExecModifiedScripts; }
 
       const wxString& GetLastConfigName() const { return m_LastConfig; }
       void SetLastConfigName( const wxString& config ) { m_LastConfig = config; }
@@ -139,31 +139,31 @@ class ProjectDoc : public wxDocument
 
       void BreakpointNotify( BreakpointEvent& event );
 
-      static const wxString sm_SearchURL;
-      static const wxString sm_DebugHookBegin;
-      static const wxString sm_DebugHookEnd;
-      static const wxString sm_DefaultHook;
+      //static const wxString sm_SearchURL;
+      //static const wxString sm_DebugHookBegin;
+      //static const wxString sm_DebugHookEnd;
+      //static const wxString sm_DefaultHook;
 
       wxString	   m_Name;
 	   wxString	   m_WorkingDir;
 
       wxString    m_LastConfig;
 
-      wxArrayString m_Mods;
+      //wxArrayString m_Mods;
       wxArrayString m_ScannerExts;
 
-      bool        m_ExecModifiedScripts;
+      //bool        m_ExecModifiedScripts;
 
-      wxString	   m_SearchURL;
-      wxString	   m_SearchProduct;
-      wxString	   m_SearchVersion;
+      //wxString	   m_SearchURL;
+      //wxString	   m_SearchProduct;
+      //wxString	   m_SearchVersion;
 
-      wxString	   m_Address;
-	   int			m_Port;
-	   wxString	   m_Password;
+      //wxString	   m_Address;
+	   //int			m_Port;
+	   //wxString	   m_Password;
 
-      wxString    m_EntryScript;
-	   wxString	   m_DebugHook;
+      //wxString    m_EntryScript;
+	   //wxString	   m_DebugHook;
 
       ProjectConfigArray   m_Configs;
 

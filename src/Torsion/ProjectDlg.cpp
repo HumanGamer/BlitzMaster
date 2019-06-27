@@ -236,14 +236,14 @@ int ProjectDlg::ShowModal( ProjectDoc* projectDoc )
 
    id = m_PropGrid->Append( wxDirProperty(wxT("Base Directory"), wxPG_LABEL, m_Project->GetWorkingDir()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("Typically the folder where the executable and entry script are located.") );
-   id = m_PropGrid->Append( wxStringProperty(wxT("Entry Script"), wxPG_LABEL, m_Project->GetEntryScript()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("The first script loaded by the executable.  Normally this is main.cs.") );
+   //id = m_PropGrid->Append( wxStringProperty(wxT("Entry Script"), wxPG_LABEL, m_Project->GetEntryScript()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("The first script loaded by the executable.  Normally this is main.cs.") );
    id = m_PropGrid->Append( wxStringProperty(wxT("Script Scanner Extensions"), wxPG_LABEL, m_Project->GetScannerExtsString()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("A semicolon separated list of script file extensions the code completion scanner should process when generating the ScriptSense database.") );
-   id = m_PropGrid->Append( wxStringProperty(wxT("Mods"), wxPG_LABEL, m_Project->GetModsString()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("An optional semicolon separated list of mods to include in the project tree and scan for inclusion in the ScriptSense database.") );
+   //id = m_PropGrid->Append( wxStringProperty(wxT("Mods"), wxPG_LABEL, m_Project->GetModsString()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("An optional semicolon separated list of mods to include in the project tree and scan for inclusion in the ScriptSense database.") );
 
-   m_PropGrid->Append( wxPropertyCategory(wxT("Debugging")) );
+   /*m_PropGrid->Append( wxPropertyCategory(wxT("Debugging")) );
    id = m_PropGrid->Append( wxStringProperty(wxT("Address"), wxPG_LABEL, m_Project->GetAddress()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("The IP address or DNS name of the debug target machine.  You normally use 127.0.0.1 for debugging on the local machine.") );
    id = m_PropGrid->Append( wxStringProperty(wxT("Password"), wxPG_LABEL, m_Project->GetPassword()) );
@@ -261,7 +261,7 @@ int ProjectDlg::ShowModal( ProjectDoc* projectDoc )
    id = m_PropGrid->Append( wxStringProperty(wxT("Product"), wxPG_LABEL, m_Project->GetSearchProduct()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("The Elixir product string.  This is typically TGE, TGEA, or TGB.") );
    id = m_PropGrid->Append( wxStringProperty(wxT("Version"), wxPG_LABEL, m_Project->GetSearchVersion()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("The product version.  Use HEAD for the latest product documentation.") );
+   m_PropGrid->SetPropertyHelpString( id, wxT("The product version.  Use HEAD for the latest product documentation.") );*/
    
    // Let's use checkboxes instead of a choice list.
    m_PropGrid->SetPropertyAttributeAll(wxPG_BOOL_USE_CHECKBOX,(long)1);
@@ -352,19 +352,19 @@ void ProjectDlg::OnOkClick( wxCommandEvent& event )
    wxASSERT( m_Project );
    m_Project->SetName( name );
    m_Project->SetWorkingDir( baseDir );
-   m_Project->SetEntryScript( m_PropGrid->GetPropertyValue( "General.Entry Script" ) );
+   //m_Project->SetEntryScript( m_PropGrid->GetPropertyValue( "General.Entry Script" ) );
    m_Project->SetScannerExtsString( m_PropGrid->GetPropertyValue( "General.Script Scanner Extensions" ) );
-   m_Project->SetModsString( m_PropGrid->GetPropertyValue( "General.Mods" ) );
+   //m_Project->SetModsString( m_PropGrid->GetPropertyValue( "General.Mods" ) );
 
-   m_Project->SetAddress( m_PropGrid->GetPropertyValue( "Debugging.Address" ) );
+   /*m_Project->SetAddress( m_PropGrid->GetPropertyValue( "Debugging.Address" ) );
    m_Project->SetPort( m_PropGrid->GetPropertyValue( "Debugging.Port" ).GetLong() );
-   m_Project->SetPassword( m_PropGrid->GetPropertyValue( "Debugging.Password" ) );
-   m_Project->SetExecModifiedScripts( m_PropGrid->GetPropertyValueAsBool( "Debugging.Reload Modified Scripts" ) );
-   m_Project->SetDebugHook( m_PropGrid->GetPropertyValue( "Debugging.Hook Code" ) );
+   m_Project->SetPassword( m_PropGrid->GetPropertyValue( "Debugging.Password" ) );*/
+   //m_Project->SetExecModifiedScripts( m_PropGrid->GetPropertyValueAsBool( "Debugging.Reload Modified Scripts" ) );
+   //m_Project->SetDebugHook( m_PropGrid->GetPropertyValue( "Debugging.Hook Code" ) );
    
-   m_Project->SetSearchUrl( m_PropGrid->GetPropertyValue( "Elixir.Search URL" ) );
+   /*m_Project->SetSearchUrl( m_PropGrid->GetPropertyValue( "Elixir.Search URL" ) );
    m_Project->SetSearchProduct( m_PropGrid->GetPropertyValue( "Elixir.Product" ) );
-   m_Project->SetSearchVersion( m_PropGrid->GetPropertyValue( "Elixir.Version" ) );
+   m_Project->SetSearchVersion( m_PropGrid->GetPropertyValue( "Elixir.Version" ) );*/
    m_Project->SetConfigs( m_Configs );
 
    wxDialog::OnOK( event );

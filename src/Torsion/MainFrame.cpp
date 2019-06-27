@@ -2949,7 +2949,7 @@ void MainFrame::OnCallStackActivated(wxListEvent& event)
 
 void MainFrame::OnHelp(wxHelpEvent& event)
 {
-    wxString text = GetSelectedText(true);
+    /*wxString text = GetSelectedText(true);
     if (text.IsEmpty())
         m_HelpController.DisplayContents();
 
@@ -2963,7 +2963,7 @@ void MainFrame::OnHelp(wxHelpEvent& event)
     if (query.IsEmpty())
         wxBell();
     else
-        wxLaunchDefaultBrowser(uri.BuildURI());
+        wxLaunchDefaultBrowser(uri.BuildURI());*/
 }
 
 void MainFrame::OnHelp(wxCommandEvent& event)

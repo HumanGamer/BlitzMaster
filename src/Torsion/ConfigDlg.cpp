@@ -137,10 +137,10 @@ int ConfigDlg::ShowModal( ProjectConfig* config, ProjectConfigArray* configs, co
    m_PropGrid->SetPropertyHelpString( id, wxT("The unique configuration name.") );
    
    wxString exe = m_Config->GetExe();
-   id = m_PropGrid->Append( wxFileProperty(wxT("Executable"), wxPG_LABEL, exe ) );
+   id = m_PropGrid->Append( wxFileProperty(wxT("Entry Script"), wxPG_LABEL, exe ) );
    m_PropGrid->SetPropertyHelpString( id, wxT("The entry point script for this configuration.") );
-   m_PropGrid->SetPropertyAttribute(wxT("Executable"), wxPG_FILE_INITIAL_PATH, m_BaseDir );
-   m_PropGrid->SetPropertyAttribute(wxT("Executable"), wxPG_FILE_WILDCARD,
+   m_PropGrid->SetPropertyAttribute(wxT("Entry Script"), wxPG_FILE_INITIAL_PATH, m_BaseDir );
+   m_PropGrid->SetPropertyAttribute(wxT("Entry Script"), wxPG_FILE_WILDCARD,
                                  wxT("BlitzBasic Script files (*.bb)|*.bb"));
 
    id = m_PropGrid->Append( wxStringProperty(wxT("Arguments"), wxPG_LABEL, m_Config->GetArgs()) );
@@ -265,7 +265,7 @@ void ConfigDlg::OnOkClick( wxCommandEvent& event )
       }
    }
 
-   wxString exec = m_PropGrid->GetPropertyValue( "General.Executable" );
+   wxString exec = m_PropGrid->GetPropertyValue( "General.Entry Script" );
    {
       wxFileName absolute( exec );
 

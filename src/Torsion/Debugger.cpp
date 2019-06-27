@@ -49,132 +49,136 @@ const bool Debugger::IsRunning() const
 
 bool Debugger::Start( const wxString& configName, const wxString& cmd )
 {
-	wxASSERT( tsGetMainFrame() );
-   wxASSERT( !IsRunning() );
+	//wxASSERT( tsGetMainFrame() );
+ //  wxASSERT( !IsRunning() );
 
-   ProjectDoc* Project = tsGetMainFrame()->GetProjectDoc();
-   wxASSERT( Project );
+ //  ProjectDoc* Project = tsGetMainFrame()->GetProjectDoc();
+ //  wxASSERT( Project );
 
-   const ProjectConfig* config = Project->GetConfig( configName );
-   wxASSERT( config );
+ //  const ProjectConfig* config = Project->GetConfig( configName );
+ //  wxASSERT( config );
 
-   // Grab the settings from the project.
-   wxString Address  = Project->GetAddress();
-   wxString Password = Project->GetPassword();
-   int Port          = Project->GetPort();
+ //  // Grab the settings from the project.
+ //  wxString Address  = Project->GetAddress();
+ //  wxString Password = Project->GetPassword();
+ //  int Port          = Project->GetPort();
 
-   // Grab the exe and arguments for launching the executable.
-	wxString exe = config->GetExe();
-   wxString args = config->GetArgs();
+ //  // Grab the exe and arguments for launching the executable.
+	//wxString exe = config->GetExe();
+ //  wxString args = config->GetArgs();
 
-   // If we don't have a command line act like we 
-   // requested a remote connection.
-   if ( exe.IsEmpty() )
-      return Connect( Address, Port, Password, wxEmptyString );
+ //  // If we don't have a command line act like we 
+ //  // requested a remote connection.
+ //  if ( exe.IsEmpty() )
+ //     return Connect( Address, Port, Password, wxEmptyString );
 
-   // Try to inject the debugger hook if we can.
-	/*if ( config->InjectDebugger() && !Project->SetDebugHook( Port, Password ) ) 
-   {
-      // If we cannot inject the debug hook we have
-      // to let the user do this himself.  So fall
-      // back once again to a remote connection.  Warn
-      // the user first so that they can maybe correct
-      // the issue.
-		wxMessageDialog dlg( NULL,
-         "The entry script could not be updated to inject the debug hook "
-         "because it was locked, read only, or didn't exist.  Either disable "
-         "OneClick Debugging in this configuration or correct the problem "
-         "with your entry script file.", "Error", wxOK | wxICON_ERROR );
-		dlg.ShowModal();
+ //  // Try to inject the debugger hook if we can.
+	///*if ( config->InjectDebugger() && !Project->SetDebugHook( Port, Password ) ) 
+ //  {
+ //     // If we cannot inject the debug hook we have
+ //     // to let the user do this himself.  So fall
+ //     // back once again to a remote connection.  Warn
+ //     // the user first so that they can maybe correct
+ //     // the issue.
+	//	wxMessageDialog dlg( NULL,
+ //        "The entry script could not be updated to inject the debug hook "
+ //        "because it was locked, read only, or didn't exist.  Either disable "
+ //        "OneClick Debugging in this configuration or correct the problem "
+ //        "with your entry script file.", "Error", wxOK | wxICON_ERROR );
+	//	dlg.ShowModal();
 
-      return false;
-   }*/
+ //     return false;
+ //  }*/
 
-   // Get the working the working directory.
-	wxString workingDir = Project->GetWorkingDir();
+ //  // Get the working the working directory.
+	//wxString workingDir = Project->GetWorkingDir();
 
-   // Launch the executable!
-   wxASSERT( !m_Process->isRunning() );
-	if ( !m_Process->exec( "open", workingDir, exe, args, tsSW_SHOWNORMAL ) )
-   {
-		wxMessageDialog MessageBox( NULL, "Executable launch failed!", "Error", wxOK | wxICON_ERROR );
-		MessageBox.ShowModal();
+ //  // Launch the executable!
+ //  wxASSERT( !m_Process->isRunning() );
+	//if ( !m_Process->exec( "open", workingDir, exe, args, tsSW_SHOWNORMAL ) )
+ //  {
+	//	wxMessageDialog MessageBox( NULL, "Executable launch failed!", "Error", wxOK | wxICON_ERROR );
+	//	MessageBox.ShowModal();
 
-      //if ( config->InjectDebugger() )
-        // Project->RemoveDebugHook();
+ //     //if ( config->InjectDebugger() )
+ //       // Project->RemoveDebugHook();
 
-      return false;
-	}
+ //     return false;
+	//}
 
-   // Connect automaticly using the requested command.
-   //
-   // TODO: We need to rework the connection parameters.  Lets
-   // do the following...
-   //
-   // 1. Only store the port and password as part of the project settings.
-   // 2. 127.0.0.1/localhost is always used for one-click-debugging.
-   // 3. Store the address/port/password for remote connections in app prefs.
-   //
-   return Connect( "127.0.0.1", Port, Password, cmd );
+ //  // Connect automaticly using the requested command.
+ //  //
+ //  // TODO: We need to rework the connection parameters.  Lets
+ //  // do the following...
+ //  //
+ //  // 1. Only store the port and password as part of the project settings.
+ //  // 2. 127.0.0.1/localhost is always used for one-click-debugging.
+ //  // 3. Store the address/port/password for remote connections in app prefs.
+ //  //
+ //  return Connect( "127.0.0.1", Port, Password, cmd );
+
+    return false;
 }
 
 bool Debugger::Connect( const wxString& Address, int Port, const wxString& Password, const wxString& cmd )
 {
-	wxASSERT( tsGetMainFrame() );
-   wxASSERT( tsGetMainFrame()->GetProjectDoc() );
+	//wxASSERT( tsGetMainFrame() );
+ //  wxASSERT( tsGetMainFrame()->GetProjectDoc() );
 
-	m_AtBreakpoint = false;
+	//m_AtBreakpoint = false;
 
-	// Connect to the running server.
-	wxIPV4address address;
-	address.Hostname( Address );
-	address.Service( Port );
-   wxASSERT( m_Server == NULL );
-   //m_Server = new wxSocketClient(wxSOCKET_NOWAIT);
-   //m_Server->Notify(false);
-   m_Server = NULL;
+	//// Connect to the running server.
+	//wxIPV4address address;
+	//address.Hostname( Address );
+	//address.Service( Port );
+ //  wxASSERT( m_Server == NULL );
+ //  //m_Server = new wxSocketClient(wxSOCKET_NOWAIT);
+ //  //m_Server->Notify(false);
+ //  m_Server = NULL;
 
-   // Launch the connection dialog which will do this 
-   // in an idle loop so that we cancel as well.
-   ConnectDlg dlg( tsGetMainFrame(), &m_Server, &address, Password, !cmd.IsEmpty() );
-   if ( dlg.ShowModal() != wxID_OK ) 
-   {
-		Stop();
-      return false;
-   }
+ //  // Launch the connection dialog which will do this 
+ //  // in an idle loop so that we cancel as well.
+ //  ConnectDlg dlg( tsGetMainFrame(), &m_Server, &address, Password, !cmd.IsEmpty() );
+ //  if ( dlg.ShowModal() != wxID_OK ) 
+ //  {
+	//	Stop();
+ //     return false;
+ //  }
 
-   // Sometimes we can get an ok, but have been disconnected!
-	if ( !m_Server || !m_Server->IsConnected() ) 
-   {
-		Stop();
+ //  // Sometimes we can get an ok, but have been disconnected!
+	//if ( !m_Server || !m_Server->IsConnected() ) 
+ //  {
+	//	Stop();
 
-		wxMessageDialog dlg( NULL, "Connection to executable failed!", "Error", wxOK );
-		dlg.ShowModal();
-		return false;
-	}
+	//	wxMessageDialog dlg( NULL, "Connection to executable failed!", "Error", wxOK );
+	//	dlg.ShowModal();
+	//	return false;
+	//}
 
-   // Save the connection settings back to the project.
-   ProjectDoc* Project = tsGetMainFrame()->GetProjectDoc();
-   wxASSERT( Project );
-   Project->SetAddress( address.IPAddress() );
-   Project->SetPassword( dlg.GetPassword() );
-   Project->SetPort( address.Service() );
+ //  // Save the connection settings back to the project.
+ //  ProjectDoc* Project = tsGetMainFrame()->GetProjectDoc();
+ //  wxASSERT( Project );
+ //  Project->SetAddress( address.IPAddress() );
+ //  Project->SetPassword( dlg.GetPassword() );
+ //  Project->SetPort( address.Service() );
 
-   // Start up the debugger.
-   m_InputBuffer.Clear();
+ //  // Start up the debugger.
+ //  m_InputBuffer.Clear();
 
-   m_Server->SetNotify( wxSOCKET_INPUT_FLAG | wxSOCKET_LOST_FLAG );
-   m_Server->SetEventHandler( *this, tsID_SOCKET_EVENT );
-	m_Server->Notify( true );
+ //  m_Server->SetNotify( wxSOCKET_INPUT_FLAG | wxSOCKET_LOST_FLAG );
+ //  m_Server->SetEventHandler( *this, tsID_SOCKET_EVENT );
+	//m_Server->Notify( true );
 
-   // Send the password, the initial breakpoints, then a continue
-   // to kickstart the "enhanced" debug server... the old server
-   // will ignore this and just start up in a weird state.
-	_SendLine( Project->GetPassword() );
-	_WriteBreakpoints( tsGetMainFrame()->GetProjectDoc()->GetBreakpoints() );
-   _SendLine( cmd.IsEmpty() ? "CONTINUE" : cmd );
+ //  // Send the password, the initial breakpoints, then a continue
+ //  // to kickstart the "enhanced" debug server... the old server
+ //  // will ignore this and just start up in a weird state.
+	//_SendLine( Project->GetPassword() );
+	//_WriteBreakpoints( tsGetMainFrame()->GetProjectDoc()->GetBreakpoints() );
+ //  _SendLine( cmd.IsEmpty() ? "CONTINUE" : cmd );
 
-	return IsRunning();
+	//return IsRunning();
+
+    return false;
 }
 
 void Debugger::_SendLine( const wxString& Line )
@@ -246,7 +250,7 @@ void Debugger::Continue( const wxString& Command )
 
    // Check for changed script files and ask about reloading them.
    ScriptDocArray scripts;
-   if (  project->ExecModifiedScripts() &&
+   /*if (  project->ExecModifiedScripts() &&
          tsGetMainFrame()->GetChangedScripts( scripts ) > 0 )
    {
       // Do we have any scripts that have the reload modified flag?
@@ -291,7 +295,7 @@ void Debugger::Continue( const wxString& Command )
          for ( int i=0; i < scripts.GetCount(); i++ )
             scripts[i]->ClearReloadModified();
       }
-   }
+   }*/
 
    // Write the command...
 	_SendLine( Command );

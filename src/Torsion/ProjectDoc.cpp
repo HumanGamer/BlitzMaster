@@ -28,25 +28,25 @@ WX_DEFINE_OBJARRAY(FileInfoArray);
 
 IMPLEMENT_DYNAMIC_CLASS( ProjectDoc, wxDocument )
 
-const wxString ProjectDoc::sm_SearchURL = "http://tdn.garagegames.com/elixir/search.php";
+/*const wxString ProjectDoc::sm_SearchURL = "http://tdn.garagegames.com/elixir/search.php";
 
 const wxString ProjectDoc::sm_DebugHookBegin = "// BEGIN TORSION";
 const wxString ProjectDoc::sm_DebugHookEnd   = "// END TORSION";
-const wxString ProjectDoc::sm_DefaultHook = "dbgSetParameters( #port#, \"#password#\", true );";
+const wxString ProjectDoc::sm_DefaultHook = "dbgSetParameters( #port#, \"#password#\", true );";*/
 
 
 ProjectDoc::ProjectDoc()
    :  wxDocument(),
-      m_Name( "Untitled" ),
-      m_Address( "127.0.0.1" ),
+      m_Name( "Untitled" )//,
+      /*m_Address( "127.0.0.1" ),
       m_Port( 6060 ),
       m_Password( "password" ),
       m_EntryScript( "main.bb" ),
       m_DebugHook( sm_DefaultHook ),
       m_SearchURL( wxEmptyString ), //sm_SearchURL ),
       m_SearchProduct( "TGE" ),
-      m_SearchVersion( "HEAD" ),
-      m_ExecModifiedScripts( true )
+      m_SearchVersion( "HEAD" ),*/
+      //m_ExecModifiedScripts( true )
 {
    SetScannerExtsString( "bb;bmx" );
 }
@@ -62,7 +62,7 @@ void ProjectDoc::CopyDocument( const ProjectDoc* doc )
    m_Name         = doc->m_Name;
    m_WorkingDir   = doc->m_WorkingDir;
    m_Configs      = doc->m_Configs;
-   m_Address         = doc->m_Address;
+   /*m_Address         = doc->m_Address;
    m_Port            = doc->m_Port;
    m_Password        = doc->m_Password;
    m_EntryScript     = doc->m_EntryScript;
@@ -70,10 +70,10 @@ void ProjectDoc::CopyDocument( const ProjectDoc* doc )
    m_SearchURL       = doc->m_SearchURL;
    m_SearchProduct   = doc->m_SearchProduct;
    m_SearchVersion   = doc->m_SearchVersion;
-   m_Mods            = doc->m_Mods;
+   m_Mods            = doc->m_Mods;*/
    m_ScannerExts     = doc->m_ScannerExts;
    m_LastConfig      = doc->m_LastConfig;
-   m_ExecModifiedScripts   = doc->m_ExecModifiedScripts;
+   //m_ExecModifiedScripts   = doc->m_ExecModifiedScripts;
 
    Modify( true );   
    UpdateAllViews();
@@ -213,9 +213,9 @@ bool ProjectDoc::OnSaveDocument( const wxString& filename )
 	Xml.IntoElem();
 	Xml.AddElem( "Name", m_Name );
 	Xml.AddElem( "WorkingDir", working.GetFullPath() );
-   Xml.AddElem( "EntryScript", m_EntryScript );
-   Xml.AddElem( "DebugHook", m_DebugHook );   
-   Xml.AddArrayStringElems( "Mods", "Folder", m_Mods );
+   //Xml.AddElem( "EntryScript", m_EntryScript );
+   //Xml.AddElem( "DebugHook", m_DebugHook );   
+   //Xml.AddArrayStringElems( "Mods", "Folder", m_Mods );
    Xml.AddElem( "ScannerExts", GetScannerExtsString() );
 
    Xml.AddElem( "Configs" );
@@ -241,11 +241,11 @@ bool ProjectDoc::OnSaveDocument( const wxString& filename )
    //Xml.AddBoolElem( "OneClickDebugging", m_AllowDebugHook );
    //Xml.AddBoolElem( "Precompile", m_Precompile );
 
-   Xml.AddElem( "SearchURL", m_SearchURL );
-   Xml.AddElem( "SearchProduct", m_SearchProduct );
-   Xml.AddElem( "SearchVersion", m_SearchVersion );
+   //Xml.AddElem( "SearchURL", m_SearchURL );
+   //Xml.AddElem( "SearchProduct", m_SearchProduct );
+   //Xml.AddElem( "SearchVersion", m_SearchVersion );
 
-   Xml.AddBoolElem( "ExecModifiedScripts", m_ExecModifiedScripts );
+   //Xml.AddBoolElem( "ExecModifiedScripts", m_ExecModifiedScripts );
 
    // Store it.
    std::string Buffer( Xml.GetDoc() );
@@ -299,11 +299,11 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
 	working.MakeAbsolute( filePath );
    m_WorkingDir = working.GetFullPath();
 	Xml.ResetMainPos();
-   m_EntryScript = Xml.GetStringElem( "EntryScript", "main.bb" );
-   m_DebugHook = Xml.GetStringElem( "DebugHook", sm_DefaultHook );
+   //m_EntryScript = Xml.GetStringElem( "EntryScript", "main.bb" );
+   //m_DebugHook = Xml.GetStringElem( "DebugHook", sm_DefaultHook );
 
-   m_Mods.Clear();
-   Xml.GetArrayStringElems( m_Mods, "Mods", "Folder" );
+   //m_Mods.Clear();
+   //Xml.GetArrayStringElems( m_Mods, "Mods", "Folder" );
 
    m_ScannerExts.Clear();
    wxString exts = Xml.GetStringElem( "ScannerExts", "bb;bmx" );
@@ -350,11 +350,11 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
    //m_AllowDebugHook = Xml.GetBoolElem( "OneClickDebugging", true );
    //m_Precompile = Xml.GetBoolElem( "Precompile", true );
 
-   m_SearchURL = Xml.GetStringElem( "SearchURL", wxEmptyString ); //sm_SearchURL );
-   m_SearchProduct = Xml.GetStringElem( "SearchProduct", "TGE" );
-   m_SearchVersion = Xml.GetStringElem( "SearchVersion", "HEAD" );
+   //m_SearchURL = Xml.GetStringElem( "SearchURL", wxEmptyString ); //sm_SearchURL );
+   //m_SearchProduct = Xml.GetStringElem( "SearchProduct", "TGE" );
+   //m_SearchVersion = Xml.GetStringElem( "SearchVersion", "HEAD" );
 
-   m_ExecModifiedScripts = Xml.GetBoolElem( "ExecModifiedScripts", true );
+   //m_ExecModifiedScripts = Xml.GetBoolElem( "ExecModifiedScripts", true );
 
    SetFilename( filename, true );
    SetTitle( wxFileNameFromPath( filename ) );
@@ -380,7 +380,7 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
    else
       BuildExportsDB();*/
 
-   tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
+   //tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
 
    UpdateAllViews();
 
@@ -403,8 +403,8 @@ bool ProjectDoc::OnNewDocument()
 
    // Setup the autocomplete stuff.
    //BuildExportsDB();
-   wxASSERT( tsGetAutoComp() );
-   tsGetAutoComp()->LoadExports( GetExportsFilePath() );
+   //wxASSERT( tsGetAutoComp() );
+   //tsGetAutoComp()->LoadExports( GetExportsFilePath() );
 
    // Let all the views know that the exports
    // have changed and that they should update
@@ -414,7 +414,7 @@ bool ProjectDoc::OnNewDocument()
    tsGetMainFrame()->SendHintToAllViews( &hint, true );
 
    // TODO: Deal with failure here!
-   tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
+   //tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
 
    return true;
 }
@@ -444,9 +444,9 @@ void ProjectDoc::LoadOptions()
 
    Xml.IntoElem();
 
-   m_Address = Xml.GetStringElem( "Address", "127.0.0.1" );
-   m_Password = Xml.GetStringElem( "Password", "password" );
-   m_Port = Xml.GetIntElem( "Port", 6060 );
+   //m_Address = Xml.GetStringElem( "Address", "127.0.0.1" );
+   //m_Password = Xml.GetStringElem( "Password", "password" );
+   //m_Port = Xml.GetIntElem( "Port", 6060 );
    
    m_LastConfig = Xml.GetStringElem( "LastConfig", wxEmptyString );
 
@@ -570,9 +570,9 @@ void ProjectDoc::SaveOptions()
 	Xml.AddElem( "TorsionProjectOptions" );
 	Xml.IntoElem();
 
-	Xml.AddElem( "Address", m_Address );
-	Xml.AddElem( "Password", m_Password );
-	Xml.AddElem( "Port", itoa( m_Port, temp, 10 ) );
+	//Xml.AddElem( "Address", m_Address );
+	//Xml.AddElem( "Password", m_Password );
+	//Xml.AddElem( "Port", itoa( m_Port, temp, 10 ) );
 
    // Capture what the last selected config is and store it.
    m_LastConfig = tsGetMainFrame()->GetActiveConfigName();
@@ -687,7 +687,7 @@ void ProjectDoc::SaveOptions()
 //   */
 //}
 
-wxString ProjectDoc::GetExportsFilePath() const
+/*wxString ProjectDoc::GetExportsFilePath() const
 {
    wxFileName exports;
    exports.AssignDir( GetWorkingDir() );
@@ -696,7 +696,7 @@ wxString ProjectDoc::GetExportsFilePath() const
    exports.SetFullName( docName.GetFullName() + ".exports" );
 
    return exports.GetFullPath();
-}
+}*/
 
 void ProjectDoc::SetName( const wxString& name )
 {
@@ -710,12 +710,12 @@ void ProjectDoc::SetWorkingDir( const wxString& dir )
 {
 	if ( dir != m_WorkingDir ) {
 		m_WorkingDir = dir;
-      tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
+      //tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
       Modify( true ); 
 	}
 }
 
-void ProjectDoc::SetEntryScript( const wxString& script ) 
+/*void ProjectDoc::SetEntryScript( const wxString& script ) 
 { 
    if ( m_EntryScript != script ) 
    {
@@ -821,7 +821,7 @@ wxString ProjectDoc::GetModPath( const wxString& FullPath ) const
    Path.Assign( projectDir );
    Path.AppendDir( ModFolder );
    return Path.GetFullPath();
-}
+}*/
 
 void ProjectDoc::SetScannerExtsString( const wxString& extensions )
 {
@@ -852,7 +852,7 @@ void ProjectDoc::SetScannerExts( const wxArrayString& exts )
    if ( m_ScannerExts != exts ) 
    {
       m_ScannerExts = exts; 
-      tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
+      //tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
       Modify( true ); 
    }
 }
@@ -868,7 +868,7 @@ wxString ProjectDoc::GetScannerExtsString() const
    return exts;
 }
 
-void ProjectDoc::SetExecModifiedScripts( bool exec )
+/*void ProjectDoc::SetExecModifiedScripts( bool exec )
 {
    if ( m_ExecModifiedScripts != exec ) {
       m_ExecModifiedScripts = exec; 
@@ -898,7 +898,7 @@ void ProjectDoc::SetSearchVersion( const wxString& version )
       m_SearchVersion = version; 
       Modify( true ); 
    }
-}
+}*/
 
 const wxString ProjectDoc::MakeReleativeTo( const wxString& FilePath ) const
 {
@@ -1297,10 +1297,10 @@ void ProjectDoc::DeleteAllBookmarks()
    tsGetMainFrame()->SendHintToAllViews( &hint, true );
 }
 
-const wxString ProjectDoc::GetEntryScriptPath() const
+/*const wxString ProjectDoc::GetEntryScriptPath() const
 {
    return MakeAbsoluteTo( m_EntryScript );
-}
+}*/
 
 /*bool ProjectDoc::SetDebugHook( int port, wxString& password )
 {
@@ -1489,7 +1489,7 @@ void ProjectDoc::RemoveDebugHook()
    file.Close();
 }*/
 
-wxString ProjectDoc::GetSearchUrl( const wxString& name ) const
+/*wxString ProjectDoc::GetSearchUrl( const wxString& name ) const
 {
    if ( m_SearchURL.IsEmpty() )
       return wxEmptyString;
@@ -1501,19 +1501,19 @@ wxString ProjectDoc::GetSearchUrl( const wxString& name ) const
    url << "&version=" << version;
    url << "&name=" << name;
    return url;
-}
+}*/
 
-wxString ProjectDoc::GetDefaultSearchUrl( const wxString& name )
-{
-   return wxEmptyString;
-
-   // TODO: Enable once Elixir is online.
-   /*
-   wxString url = sm_SearchURL + "?docType=script";
-   url << "&product=TGE";
-   url << "&version=HEAD";
-   url << "&name=" << name;
-   return url;
-   */
-}
+//wxString ProjectDoc::GetDefaultSearchUrl( const wxString& name )
+//{
+//   return wxEmptyString;
+//
+//   // TODO: Enable once Elixir is online.
+//   /*
+//   wxString url = sm_SearchURL + "?docType=script";
+//   url << "&product=TGE";
+//   url << "&version=HEAD";
+//   url << "&name=" << name;
+//   return url;
+//   */
+//}
 

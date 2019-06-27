@@ -2528,11 +2528,11 @@ void ScriptCtrl::OnContextMenu( wxContextMenuEvent& event )
 
          // Ok the tilde means the current script's mod folder
          // is the root of this document.
-         wxString modPath = project->GetModPath( m_FilePath );
+         //wxString modPath = project->GetModPath( m_FilePath );
          m_ExecPath.Clear();
          m_ExecPath << "." << expr.GetMatch( line, 2 );
          wxFileName execPath( m_ExecPath );
-         execPath.MakeAbsolute( modPath );
+         //execPath.MakeAbsolute( modPath );
          m_ExecPath = execPath.GetFullPath();
       }
    } 

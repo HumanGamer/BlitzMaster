@@ -290,8 +290,8 @@ public:
       wxASSERT( m_TreeCtrl );
       wxASSERT( m_Project );
 
-      if ( !m_ShowAllMods && !m_Project->IsMod( dirname ) )
-         return wxDIR_IGNORE;
+      //if ( !m_ShowAllMods && !m_Project->IsMod( dirname ) )
+         //return wxDIR_IGNORE;
 
       wxFileName dir;
       dir.AssignDir( dirname );
@@ -348,8 +348,8 @@ private:
       wxColour color( 0, 0, 0 );
 
       wxASSERT( m_Project );
-      if ( m_ShowAllMods && !m_Project->IsMod( folder ) )
-         color.Set( 255, 0, 0 );
+      //if ( m_ShowAllMods && !m_Project->IsMod( folder ) )
+         //color.Set( 255, 0, 0 );
 
       m_TreeCtrl->SetItemTextColour( item, color );
    }
