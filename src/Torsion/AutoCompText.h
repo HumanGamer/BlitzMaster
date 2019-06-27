@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_AUTOCOMPTEXT_H
-#define TORSION_AUTOCOMPTEXT_H
 #pragma once
 
 /// Note only one AutoCompText can be locked at any time!
@@ -43,5 +37,3 @@ private:
 };
 
 WX_DECLARE_STRING_HASH_MAP( AutoCompText*, AutoCompTextMap );
-
-#endif // TORSION_AUTOCOMPTEXT_H

@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_COLOURHLS_H
-#define TORSION_COLOURHLS_H
 #pragma once
 
 
@@ -49,6 +43,3 @@ public:
    float m_Luminance;   // 0 to 1
 
 };
-
-
-#endif // TORSION_COLOURHLS_H

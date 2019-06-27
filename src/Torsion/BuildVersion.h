@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_BUILDVERSION_H
-#define TORSION_BUILDVERSION_H
 #pragma once
 
 
@@ -31,6 +25,3 @@ inline wxString tsGetFullBuildString()
    out << 'v' << tsBUILDVER_MAJOR << '.' << tsBUILDVER_MINOR << '.' << tsBUILDVER_BUILD << ' ' << tsBUILDVER_NAME;
    return out;
 }
-
-#endif // TORSION_BUILDVERSION_H
-

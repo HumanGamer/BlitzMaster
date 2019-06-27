@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_TOOLCOMMAND_H
-#define TORSION_TOOLCOMMAND_H
 #pragma once
 
 
@@ -102,5 +96,3 @@ protected:
 };
 
 WX_DECLARE_OBJARRAY(ToolCommand, ToolCommandArray);
-
-#endif // TORSION_TOOLCOMMAND_H

@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_FINDTHREAD_H
-#define TORSION_FINDTHREAD_H
 #pragma once
 
 
@@ -36,5 +30,3 @@ protected:
 
    FindThreadInternal* m_Thread;
 };
-
-#endif // TORSION_FINDTHREAD_H

@@ -1,7 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
 #ifndef _PROJECTPANEL_H_
 #define _PROJECTPANEL_H_
 

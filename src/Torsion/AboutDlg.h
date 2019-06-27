@@ -1,9 +1,4 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef _ABOUTDLG_H_
-#define _ABOUTDLG_H_
+#pragma once
 
 #if defined(__GNUG__) && !defined(__APPLE__)
 #pragma interface "AboutDlg.cpp"
@@ -87,6 +82,3 @@ public:
    wxStaticText* m_RegInfo;
 ////@end AboutDlg member variables
 };
-
-#endif
-    // _ABOUTDLG_H_

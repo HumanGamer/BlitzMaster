@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_PROJECTCTRL_H
-#define TORSION_PROJECTCTRL_H
 #pragma once
 
 #include "DirWatcher.h"
@@ -120,5 +114,3 @@ class ProjectCtrl : public wxTreeCtrl
       DECLARE_CLASS( ProjectCtrl )
       DECLARE_EVENT_TABLE()
 };
-
-#endif // TORSION_PROJECTCTRL_H

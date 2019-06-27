@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_XMLFILE_H
-#define TORSION_XMLFILE_H
 #pragma once
 #include <string>
 #include "tinyxml2.h"
@@ -98,5 +92,3 @@ inline wxString XmlFile::IntToString( int value )
 {
    return itoa( value, s_Temp, 10 ); 
 }
-
-#endif // TORSION_XMLFILE_H

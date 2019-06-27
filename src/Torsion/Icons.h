@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_ICONS_H
-#define TORSION_ICONS_H
 #pragma once
 
 
@@ -91,6 +85,3 @@ extern wxBitmap ts_folder_open16;
 extern wxBitmap ts_errornext16;
 extern wxBitmap ts_errorprev16;
 extern wxBitmap ts_outputclear16;
-
-
-#endif // TORSION_ICONS_H

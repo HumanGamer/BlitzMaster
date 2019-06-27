@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_WATCHVAR_H
-#define TORSION_WATCHVAR_H
 #pragma once
 
 class WatchVar;
@@ -71,6 +65,3 @@ protected:
 	bool			m_Expanded;
 	WatchVarArray	m_Vars;	
 };
-
-
-#endif // TORSION_WATCHVAR_H

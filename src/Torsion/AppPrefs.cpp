@@ -1,7 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
 #include "PreCompiled.h"
 #include "AppPrefs.h"
 
@@ -143,7 +139,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
 
    m_FindTypes.Empty();
    if ( Xml.GetArrayStringElems( m_FindTypes, "FindTypes", "Type" ) < 1 )
-      m_FindTypes.Add( "*.cs;*.gui;*.mis;*.t2d" );
+      m_FindTypes.Add( "*.bb;*.bmx" );
 
    m_FindPaths.Empty();
    Xml.GetArrayStringElems( m_FindPaths, "FindPaths", "Path" );
@@ -164,7 +160,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
    m_LastProject = Xml.GetStringElem( "LastProject", wxEmptyString );
 
    m_ScriptExts.Empty();
-   wxString exts = Xml.GetStringElem( "ScriptExtensions", "cs,gui,mis,t2d" );
+   wxString exts = Xml.GetStringElem( "ScriptExtensions", "bb,bmx" );
    SetScriptExtsString( exts );
 
    m_DSOExts.Empty();
@@ -177,7 +173,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
       m_ExcludedFiles.Add( ".dll" );
       m_ExcludedFiles.Add( ".exe" );
       m_ExcludedFiles.Add( ".lnk" );
-      m_ExcludedFiles.Add( ".torsion" );
+      m_ExcludedFiles.Add( ".bproj" );
       m_ExcludedFiles.Add( ".bak" );
       m_ExcludedFiles.Add( ".opt" );  // TODO: Change to options once we fix that
       m_ExcludedFiles.Add( ".exports" );
@@ -192,6 +188,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
       m_ExcludedFolders.Add( "_svn" );
       m_ExcludedFolders.Add( ".svn" );
       m_ExcludedFolders.Add( "cvs" );
+      m_ExcludedFolders.Add( ".git" );
    }
 
    m_TextExts.Empty();
@@ -674,7 +671,7 @@ bool AppPrefs::SetScriptExtsString( const wxString& value )
 
 wxString AppPrefs::GetDefaultScriptExtension() const
 {
-   wxString ext( "cs" );
+   wxString ext( "bb" );
    if ( m_ScriptExts.GetCount() > 0 )
       ext = m_ScriptExts[0];
    return ext;

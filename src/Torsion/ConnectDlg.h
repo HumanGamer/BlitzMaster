@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_CONNECTDLG_H
-#define TORSION_CONNECTDLG_H
 #pragma once
 
 #include <wx/dialog.h>
@@ -44,6 +38,3 @@ class ConnectDlg : public wxDialog
 
       DECLARE_EVENT_TABLE()
 };
-
-
-#endif // TORSION_CONNECTDLG_H

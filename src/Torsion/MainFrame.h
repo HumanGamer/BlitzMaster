@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_MAINFRAME_H
-#define TORSION_MAINFRAME_H
 #pragma once
 
 #include <wx/docmdi.h>
@@ -267,5 +261,3 @@ class MainFrame : public wxDocMDIParentFrame
 };
 
 extern MainFrame* tsGetMainFrame();
-
-#endif // TORSION_MAINFRAME_H

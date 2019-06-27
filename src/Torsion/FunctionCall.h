@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_FUNCTIONCALL_H
-#define TORSION_FUNCTIONCALL_H
 #pragma once
 
 #include "WatchVar.h"
@@ -56,5 +50,3 @@ protected:
 };
 
 WX_DEFINE_ARRAY( FunctionCall*, FunctionCallArray );
-
-#endif // TORSION_FUNCTIONCALL_H

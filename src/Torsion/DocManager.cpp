@@ -1,7 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
 #include "PreCompiled.h"
 #include "DocManager.h"
 
@@ -32,7 +28,7 @@ DocManager::DocManager()
    m_ProjectTemplate = new wxDocTemplate( 
       this, 
       _T( "Project" ),
-      _T( "*.torsion" ), 
+      _T( "*.bproj" ), 
       _T( "" ), 
       _T( "torsion" ), 
       _T( "Project Doc" ), 

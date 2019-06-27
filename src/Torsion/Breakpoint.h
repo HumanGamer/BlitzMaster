@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_BREAKPOINT_H
-#define TORSION_BREAKPOINT_H
 #pragma once
 
 #include <wx/filename.h>
@@ -134,6 +128,3 @@ typedef void (wxEvtHandler::*BreakpointEventFunction)(BreakpointEvent&);
 
 #define EVT_BREAKPOINT_EVENTS(fn) \
     DECLARE_EVENT_TABLE_ENTRY(EVT_COMMAND_BREAKPOINT, wxID_ANY, -1, BreakpointEventHandler(fn), NULL),
-
-
-#endif // TORSION_BREAKPOINT_H

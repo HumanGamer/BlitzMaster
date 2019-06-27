@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_DIRWATCHERWINNT_H
-#define TORSION_DIRWATCHERWINNT_H
 #pragma once
 
 #include "DirWatcher.h"
@@ -39,5 +33,3 @@ class DirWatcherWinNT : public DirWatcherImp
       wxChar*        m_Buffer;
       const size_t   m_BufferSize;
 };
-
-#endif // TORSION_DIRWATCHERWINNT_H

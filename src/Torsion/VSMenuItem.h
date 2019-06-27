@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_VSMENUITEM_H
-#define TORSION_VSMENUITEM_H
 #pragma once
 
 
@@ -21,5 +15,3 @@ class VSMenuItem : public wxMenuItem
       size_t   m_nHeight,
                m_nMinHeight;
 };
-
-#endif // TORSION_VSMENUITEM_H

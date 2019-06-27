@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_TORSIONAPP_H
-#define TORSION_TORSIONAPP_H
 #pragma once
 
 #include "AppPrefs.h"
@@ -74,6 +68,3 @@ DECLARE_APP(TorsionApp);
 inline AppPrefs& tsGetPrefs() { return wxGetApp().GetPreferences(); }
 inline Debugger* tsGetDebugger() { return wxGetApp().GetDebugger(); }
 inline AutoCompManager* tsGetAutoComp() { return wxGetApp().GetAutoCompManager(); }
-
-
-#endif // TORSION_TORSIONAPP_H

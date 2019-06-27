@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_TSMENUBAR_H
-#define TORSION_TSMENUBAR_H
 #pragma once
 
 #include <wx/toolbar.h>
@@ -35,5 +29,3 @@ protected:
 
    DECLARE_EVENT_TABLE()
 };
-
-#endif // TORSION_TSMENUBAR_H

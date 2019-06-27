@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_FILEWATCHER_H
-#define TORSION_FILEWATCHER_H
 #pragma once
 
 
@@ -38,5 +32,3 @@ class FileWatcher
       int            m_Flags;
       wxStructStat   m_LastStatus;
 };
-
-#endif // TORSION_FILEWATCHER_H

@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_BUILDEXPORTSTHREAD_H
-#define TORSION_BUILDEXPORTSTHREAD_H
 #pragma once
 
 #include <wx/thread.h>
@@ -47,5 +41,3 @@ protected:
    virtual void OnExit();
 
 };
-
-#endif // TORSION_BUILDEXPORTSTHREAD_H

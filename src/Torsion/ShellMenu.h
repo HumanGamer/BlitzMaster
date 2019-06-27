@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_SHELLMENU_H
-#define TORSION_SHELLMENU_H
 #pragma once
 
 
@@ -27,5 +21,3 @@ class ShellMenu : public wxMenu
       bool              m_IsInitialized;
       wxFileName        m_File;
 };
-
-#endif // TORSION_SHELLMENU_H

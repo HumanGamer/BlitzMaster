@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_PROJECTDOC_H
-#define TORSION_PROJECTDOC_H
 #pragma once
 
 #include "Breakpoint.h"
@@ -180,5 +174,3 @@ class ProjectDoc : public wxDocument
       int            m_ActiveOpenFile;
       FileInfoArray  m_OpenFiles;
 };
-
-#endif // TORSION_PROJECTDOC_H

@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_SCRIPTCTRL_H
-#define TORSION_SCRIPTCTRL_H
 #pragma once
 
 #include <wx/stc/stc.h>
@@ -190,6 +184,3 @@ class ScriptCtrl : public wxStyledTextCtrl
 
       DECLARE_EVENT_TABLE()
 };
-
-
-#endif // TORSION_SCRIPTCTRL_H

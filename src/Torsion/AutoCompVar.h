@@ -1,9 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
-#ifndef TORSION_AUTOCOMPVAR_H
-#define TORSION_AUTOCOMPVAR_H
 #pragma once
 
 class AutoCompVarArray;
@@ -50,5 +44,3 @@ class AutoCompVar
 };
 
 WX_DEFINE_SORTED_ARRAY( AutoCompVar*, AutoCompVarArray );
-
-#endif // TORSION_AUTOCOMPVAR_H

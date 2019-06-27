@@ -1,7 +1,3 @@
-// Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
-// This file is subject to the terms and conditions defined in
-// file 'LICENSE.txt', which is part of this source code package.
-
 #include "PreCompiled.h"
 #include "ProjectDoc.h"
 
@@ -52,7 +48,7 @@ ProjectDoc::ProjectDoc()
       m_SearchVersion( "HEAD" ),
       m_ExecModifiedScripts( true )
 {
-   SetScannerExtsString( "cs;gui" );
+   SetScannerExtsString( "bb;bmx" );
 }
 
 ProjectDoc::~ProjectDoc()
@@ -303,14 +299,14 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
 	working.MakeAbsolute( filePath );
    m_WorkingDir = working.GetFullPath();
 	Xml.ResetMainPos();
-   m_EntryScript = Xml.GetStringElem( "EntryScript", "main.cs" );
+   m_EntryScript = Xml.GetStringElem( "EntryScript", "main.bb" );
    m_DebugHook = Xml.GetStringElem( "DebugHook", sm_DefaultHook );
 
    m_Mods.Clear();
    Xml.GetArrayStringElems( m_Mods, "Mods", "Folder" );
 
    m_ScannerExts.Clear();
-   wxString exts = Xml.GetStringElem( "ScannerExts", "cs;gui" );
+   wxString exts = Xml.GetStringElem( "ScannerExts", "bb;bmx" );
    SetScannerExtsString( exts );
 
    if ( Xml.FindElem( "Configs" ) ) 
