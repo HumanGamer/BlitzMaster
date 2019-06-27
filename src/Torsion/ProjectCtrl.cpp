@@ -1167,7 +1167,7 @@ void ProjectCtrl::NewFolder( wxTreeItemId item )
    // Create the folder.
    if ( !wxMkdir( folder.GetFullPath() ) )
    {
-      wxMessageDialog dlg( this, "The folder could not be created!", "Torsion", wxOK | wxICON_ERROR );
+      wxMessageDialog dlg( this, "The folder could not be created!", "Torsion for BlitzBasic", wxOK | wxICON_ERROR );
       dlg.ShowModal();
       return;
    }
@@ -1197,7 +1197,7 @@ void ProjectCtrl::NewFile( wxTreeItemId item )
    wxFile dummy( file.GetFullPath(), wxFile::write_excl );
    if ( !dummy.IsOpened() )
    {
-      wxMessageDialog dlg( this, "The file could not be created!", "Torsion", wxOK | wxICON_ERROR );
+      wxMessageDialog dlg( this, "The file could not be created!", "Torsion for BlitzBasic", wxOK | wxICON_ERROR );
       dlg.ShowModal();
       return;
    }

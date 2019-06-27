@@ -30,7 +30,7 @@ DocManager::DocManager()
       _T( "Project" ),
       _T( "*.bproj" ), 
       _T( "" ), 
-      _T( "torsion" ), 
+      _T( "bproj" ), 
       _T( "Project Doc" ), 
       _T( "Project View" ),
       CLASSINFO(ProjectDoc),

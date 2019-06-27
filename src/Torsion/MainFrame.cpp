@@ -427,7 +427,7 @@ bool MainFrame::Create( DocManager* manager, wxFrame* frame, const wxString& tit
       helpMenu->Append( tsID_BUGTRACKER,  _T( "&Bug Report" ) );
       helpMenu->Append( tsID_UPDATECHECK,  _T( "Check New &Version" ) );
 
-      wxMenuItem* item = helpMenu->Append( wxID_ABOUT, _T( "&About Torsion" ) );
+      wxMenuItem* item = helpMenu->Append( wxID_ABOUT, _T( "&About Torsion for BlitzBasic" ) );
       #ifdef __WXMSW__
          wxBitmap bmp;
          bmp.CopyFromIcon( wxIcon( "\"AAAAAAIDI_MAINFRAME\"", wxBITMAP_TYPE_ICO_RESOURCE, 16, 16 ) );
@@ -664,7 +664,7 @@ void MainFrame::OnCloseWindow( wxCloseEvent& event )
       // Look to see if we need to stop the precompile.
       if ( m_PreCompiler ) 
       {
-         wxMessageDialog dlg( this, "Do you want to stop the precompiler?", "Torsion", wxYES_NO | wxICON_QUESTION  );
+         wxMessageDialog dlg( this, "Do you want to stop the precompiler?", "Torsion for BlitzBasic", wxYES_NO | wxICON_QUESTION  );
          if ( dlg.ShowModal() != wxID_YES )
             return;
 
@@ -674,7 +674,7 @@ void MainFrame::OnCloseWindow( wxCloseEvent& event )
    	wxASSERT( tsGetDebugger() );
       if ( tsGetDebugger()->IsRunning() ) 
       {
-         wxMessageDialog dlg( this, "Do you want to stop debugging?", "Torsion", wxYES_NO | wxICON_QUESTION  );
+         wxMessageDialog dlg( this, "Do you want to stop debugging?", "Torsion for BlitzBasic", wxYES_NO | wxICON_QUESTION  );
          if ( dlg.ShowModal() != wxID_YES )
             return;
 
@@ -1236,7 +1236,7 @@ void MainFrame::OnPrecompileDone( wxCommandEvent& event )
    
       if ( m_AfterPrecompile != START_NOTHING )
       {
-         wxMessageDialog MessageBox( this, "There are script errors. Continue?", "Torsion", wxYES_NO | wxNO_DEFAULT | wxICON_EXCLAMATION );
+         wxMessageDialog MessageBox( this, "There are script errors. Continue?", "Torsion for BlitzBasic", wxYES_NO | wxNO_DEFAULT | wxICON_EXCLAMATION );
 		   if ( MessageBox.ShowModal() != wxID_YES )
             return;
       }
@@ -1255,7 +1255,7 @@ void MainFrame::OnPrecompileDone( wxCommandEvent& event )
       // Do we need to warn?
       if ( errors > 0 && m_AfterPrecompile != START_NOTHING )
       {
-         wxMessageDialog MessageBox( this, "There were script errors. Continue?", "Torsion", wxYES_NO | wxNO_DEFAULT | wxICON_EXCLAMATION );
+         wxMessageDialog MessageBox( this, "There were script errors. Continue?", "Torsion for BlitzBasic", wxYES_NO | wxNO_DEFAULT | wxICON_EXCLAMATION );
 		   if ( MessageBox.ShowModal() != wxID_YES )
             return;
       }
@@ -1937,7 +1937,7 @@ ScriptView* MainFrame::OpenFile( const wxString& FullPath, int ZeroBasedLine )
       {
          wxString msg;
          msg << "The file '" << absolutePath << "' does not exist!";
-         wxMessageDialog dlg( this, msg, "Torsion", wxOK | wxICON_STOP );
+         wxMessageDialog dlg( this, msg, "Torsion for BlitzBasic", wxOK | wxICON_STOP );
          dlg.ShowModal();
          return NULL;
       }
@@ -1954,7 +1954,7 @@ ScriptView* MainFrame::OpenFile( const wxString& FullPath, int ZeroBasedLine )
 
          wxString msg;
          msg << "The file '" << absolutePath << "' is not a script or text file type!";
-         wxMessageDialog dlg( this, msg, "Torsion", wxOK | wxICON_STOP );
+         wxMessageDialog dlg( this, msg, "Torsion for BlitzBasic", wxOK | wxICON_STOP );
          dlg.ShowModal();
          return NULL;
       }
@@ -1964,7 +1964,7 @@ ScriptView* MainFrame::OpenFile( const wxString& FullPath, int ZeroBasedLine )
       {
          wxString msg;
          msg << "The file '" << absolutePath << "' could not be opened!";
-         wxMessageDialog dlg( this, msg, "Torsion", wxOK | wxICON_STOP );
+         wxMessageDialog dlg( this, msg, "Torsion for BlitzBasic", wxOK | wxICON_STOP );
          dlg.ShowModal();
          return NULL;
       } 
@@ -2676,11 +2676,11 @@ void MainFrame::UpdateTitle()
    // Add the project title!
 	ProjectDoc* Project = GetProjectDoc();
 	if ( Project ) {
-  		Title << Project->GetName() << " - Torsion";
+  		Title << Project->GetName() << " - Torsion for BlitzBasic";
 	}
    else
    {
-      Title << "Torsion";
+      Title << "Torsion for BlitzBasic";
    }
 
    // Add the mode.

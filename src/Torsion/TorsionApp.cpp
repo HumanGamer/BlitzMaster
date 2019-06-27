@@ -147,7 +147,7 @@ bool TorsionApp::OnInit()
    {
       wxFileName name( cmdLine.GetParam( i ) );
       name = name.GetLongPath();
-      if ( name.GetExt().CmpNoCase( "torsion" ) == 0 )
+      if ( name.GetExt().CmpNoCase( "bproj" ) == 0 )
          Projects.Add( name.GetFullPath() );
       else
          Files.Add( name.GetFullPath() );
@@ -331,14 +331,14 @@ bool TorsionApp::CheckForUpdate( bool noUpdateMsg )
          else
             msg = "You have the most current version.";
 
-         wxMessageDialog dlg( ts_MainFrame, msg, "Torsion", wxOK | wxICON_INFORMATION );
+         wxMessageDialog dlg( ts_MainFrame, msg, "Torsion for BlitzBasic", wxOK | wxICON_INFORMATION );
          dlg.ShowModal();
       }
 
       return false;
    }
 
-   wxMessageDialog dlg( ts_MainFrame, "There is a new version of Torsion available.  Do you want to download it now?", "Torsion", wxYES_NO | wxICON_INFORMATION );
+   wxMessageDialog dlg( ts_MainFrame, "There is a new version of Torsion available.  Do you want to download it now?", "Torsion for BlitzBasic", wxYES_NO | wxICON_INFORMATION );
    if ( dlg.ShowModal() == wxID_YES )
    {
       wxLaunchDefaultBrowser( "http://www.garagegames.com/myAccount/" );
@@ -356,7 +356,7 @@ void TorsionApp::OnFatalException()
    dump.Dump( &address, &data );
 
    if ( wxMessageBox( "Torsion has crashed!  Do you want to submit "
-         "the crash report?", "Torsion", wxYES_NO | wxICON_ERROR ) == wxYES )
+         "the crash report?", "Torsion for BlitzBasic", wxYES_NO | wxICON_ERROR ) == wxYES )
    {
       wxString cmd;
       cmd << "http://mantis.sickheadgames.com/bug_report_page.php?project_id=2&severity=6&";
@@ -375,7 +375,7 @@ void TorsionApp::OnFatalException()
 
 void TorsionApp::RegisterScriptExts()
 {
-   const wxArrayString& exts = m_Prefs.GetScriptExtensions();
+   /*const wxArrayString& exts = m_Prefs.GetScriptExtensions();
 
    for ( int i=0; i < exts.GetCount(); i++ )
    {
@@ -412,12 +412,12 @@ void TorsionApp::RegisterScriptExts()
       extKey << "\\OpenWithList\\torsion.exe";
       wxRegKey openWithList( extKey );
       openWithList.Create();
-   }
+   }*/
 }
 
 void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
 {
-   for ( int i=0; i < exts.GetCount(); i++ )
+   /*for ( int i=0; i < exts.GetCount(); i++ )
    {
       wxString extKey;
       extKey << "HKCR\\." << exts[i];
@@ -445,7 +445,7 @@ void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
       // Delete it if its empty.
       if ( key.IsEmpty() )
          key.DeleteSelf();
-   }
+   }*/
 }
 
 void TorsionApp::OnKeyDown( wxKeyEvent& event )

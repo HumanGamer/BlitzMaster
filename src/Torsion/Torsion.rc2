@@ -36,13 +36,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "ProductName", " Torsion TorqueScript IDE"
+            VALUE "ProductName", " Torsion for BlitzBasic IDE"
             VALUE "ProductVersion", tsBUILDVER_RESSTR
             VALUE "CompanyName", "Sickhead Games, LLC"
-            VALUE "FileDescription", "Torsion TorqueScript IDE"
+            VALUE "FileDescription", "Torsion for BlitzBasic IDE"
             VALUE "OriginalFilename", "Torsion.exe"
             VALUE "FileVersion", tsBUILDVER_RESSTR
-            VALUE "InternalName", "Torsion"
+            VALUE "InternalName", "Torsion for BlitzBasic"
             VALUE "LegalCopyright", "Copyright (C) Sickhead Games, LLC"
         END
     END
