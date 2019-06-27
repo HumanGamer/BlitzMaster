@@ -2430,7 +2430,7 @@ void RunIntegrated(wxString cmd)
         NULL,          // process security attributes
         NULL,          // primary thread security attributes
         TRUE,          // handles are inherited
-        0,             // creation flags
+        CREATE_NO_WINDOW,             // creation flags
         NULL,          // use parent's environment
         NULL,          // use parent's current directory
         &siStartInfo,  // STARTUPINFO pointer
@@ -2450,9 +2450,12 @@ void RunIntegrated(wxString cmd)
         // Some applications might keep these handles to monitor the status
         // of the child process, for example.
 
-        CloseHandle(piProcInfo.hProcess);
-        CloseHandle(piProcInfo.hThread);
+        //CloseHandle(piProcInfo.hProcess);
+        //CloseHandle(piProcInfo.hThread);
     }
+
+    // Successfully created the process.  Wait for it to finish.
+    //WaitForSingleObject(piProcInfo.hProcess, INFINITE);
 
     /*DWORD processExitCode = 0;
     while (1)
@@ -2473,20 +2476,21 @@ void RunIntegrated(wxString cmd)
         BOOL bSuccess = FALSE;
         //HANDLE hParentStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
-        for (;;)
+        DWORD exitCode = 0;
+        bool stillRunning = true;
+        while(stillRunning)
         {
             DWORD bytesAvail = 0;
-            if (!PeekNamedPipe(g_hChildStd_OUT_Rd, NULL, 0, NULL, &bytesAvail, NULL))
-            {
-                wxMessageDialog MessageBox(tsGetMainFrame(), "PeekNamedPipe failed!", "Error", wxOK);
-                MessageBox.ShowModal();
+            do {
+                GetExitCodeProcess(piProcInfo.hProcess, &exitCode);
+                if (exitCode != STILL_ACTIVE)
+                    stillRunning = false;
 
-                CloseHandle(g_hChildStd_OUT_Rd);
-                CloseHandle(g_hChildStd_OUT_Wr);
-                break;
-            }
+                PeekNamedPipe(g_hChildStd_OUT_Rd, NULL, 0, NULL, &bytesAvail, NULL);
+            } while (bytesAvail == 0 && stillRunning);
+                
             if (bytesAvail) {
-                bSuccess = ReadFile(g_hChildStd_OUT_Rd, chBuf, 4096, &dwRead, NULL);
+                bSuccess = ReadFile(g_hChildStd_OUT_Rd, chBuf, bytesAvail, &dwRead, NULL);
                 if (!bSuccess || dwRead == 0) break;
 
                 chBuf[dwRead] = '\0';
@@ -2494,7 +2498,22 @@ void RunIntegrated(wxString cmd)
                 tsGetMainFrame()->GetOutputPanel()->AppendText(chBuf);
             }
         }
+
+        if (exitCode == -1)
+        {
+            // Compile error
+            const char* compileError = chBuf;
+
+            wxMessageDialog MessageBox(tsGetMainFrame(), compileError, "Error", wxOK);
+            MessageBox.ShowModal();
+        }
+
+        //char buf[128];
+        //tsGetMainFrame()->GetOutputPanel()->AppendText(wxString("Exit Code: ") + _itoa(exitCode, buf, 10));
     }
+
+    CloseHandle(piProcInfo.hProcess);
+    CloseHandle(piProcInfo.hThread);
 
     if (g_hChildStd_OUT_Rd)
         CloseHandle(g_hChildStd_OUT_Rd);
