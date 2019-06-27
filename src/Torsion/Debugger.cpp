@@ -73,7 +73,7 @@ bool Debugger::Start( const wxString& configName, const wxString& cmd )
       return Connect( Address, Port, Password, wxEmptyString );
 
    // Try to inject the debugger hook if we can.
-	if ( config->InjectDebugger() && !Project->SetDebugHook( Port, Password ) ) 
+	/*if ( config->InjectDebugger() && !Project->SetDebugHook( Port, Password ) ) 
    {
       // If we cannot inject the debug hook we have
       // to let the user do this himself.  So fall
@@ -88,7 +88,7 @@ bool Debugger::Start( const wxString& configName, const wxString& cmd )
 		dlg.ShowModal();
 
       return false;
-   }
+   }*/
 
    // Get the working the working directory.
 	wxString workingDir = Project->GetWorkingDir();
@@ -100,8 +100,8 @@ bool Debugger::Start( const wxString& configName, const wxString& cmd )
 		wxMessageDialog MessageBox( NULL, "Executable launch failed!", "Error", wxOK | wxICON_ERROR );
 		MessageBox.ShowModal();
 
-      if ( config->InjectDebugger() )
-         Project->RemoveDebugHook();
+      //if ( config->InjectDebugger() )
+        // Project->RemoveDebugHook();
 
       return false;
 	}
@@ -217,8 +217,8 @@ void Debugger::OnStoppedEvent( wxProcessEvent& event )
 
 	// Restore the entry script to it's original state.
 	ProjectDoc* Project = tsGetMainFrame()->GetProjectDoc();
-   if ( Project )
-      Project->RemoveDebugHook();
+   //if ( Project )
+      //Project->RemoveDebugHook();
 
    // Let the fram know we're done so it can clean
    // up toolbars, menus, etc.

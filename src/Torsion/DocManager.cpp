@@ -99,7 +99,7 @@ void DocManager::UpdateScriptFileTemplates()
 
       new wxDocTemplate(
          this, 
-         _T( "TorqueScript" ), 
+         _T( "BlitzBasic Script" ), 
          filter, 
          _T( "" ), 
          ext, 
@@ -118,7 +118,7 @@ void DocManager::UpdateScriptFileTemplates()
    {
       m_ScriptTemplate = new wxDocTemplate(
          this, 
-         _T( "TorqueScript" ), 
+         _T( "BlitzBasic Script" ), 
          allExtsFilter, 
          _T( "" ),
          defaultExt, 

@@ -54,6 +54,7 @@ void BuildExportsThread::_AddProgress( float inc )
 
 wxThread::ExitCode BuildExportsThread::Entry()
 {
+  /*
    //m_LastCwd.Clear();
    m_ExportScript.Clear();
    
@@ -182,7 +183,7 @@ wxThread::ExitCode BuildExportsThread::Entry()
    // data to disk in an xml format.
    //m_Exports->SaveXml( m_ExportsFile );
    //wxDELETE( m_Exports );
-
+   */
    return (ExitCode)1;
 }
 

@@ -35,229 +35,232 @@ class tsMenu;
 
 class MainFrame : public wxDocMDIParentFrame
 {
-   DECLARE_CLASS(MainFrame)
+    DECLARE_CLASS(MainFrame)
 
-   friend class ClientWindow;
+    friend class ClientWindow;
 
-   public:
+public:
 
-      MainFrame();
-      virtual ~MainFrame();
+    MainFrame();
+    virtual ~MainFrame();
 
-      bool Create( DocManager* manager, wxFrame* frame, const wxString& title, const wxPoint& pos, const wxSize& size );
+    bool Create(DocManager* manager, wxFrame* frame, const wxString& title, const wxPoint& pos, const wxSize& size);
 
-      virtual bool Destroy();
+    virtual bool Destroy();
 
-      DocManager *GetDocumentManager() const { return m_DocManager; }
+    DocManager* GetDocumentManager() const { return m_DocManager; }
 
-      ScriptView* OpenFile( const wxString& FullPath, int ZeroBasedLine = -1 );
-      ScriptDoc* GetOpenDoc( const wxString& FullPath );
-      ScriptView* GetOpenView( const wxString& FullPath );
-      ScriptView* GetActiveView() const;
+    ScriptView* OpenFile(const wxString& FullPath, int ZeroBasedLine = -1);
+    ScriptDoc* GetOpenDoc(const wxString& FullPath);
+    ScriptView* GetOpenView(const wxString& FullPath);
+    ScriptView* GetActiveView() const;
 
-      int GetChangedScripts( ScriptDocArray& scripts );
+    int GetChangedScripts(ScriptDocArray& scripts);
 
-      void OnNewProject( wxCommandEvent& event );
-      void OnOpenProject( wxCommandEvent& event );
-      void OnProjectClose( wxCommandEvent& event );
-      void OnUpdateProjectClose( wxUpdateUIEvent& event );
-      void OnNewProjectUpdateUI( wxUpdateUIEvent& event );
-      void OnProjectRefresh( wxCommandEvent& event );
-      void OnMRUProject( wxCommandEvent& event );
+    void OnNewProject(wxCommandEvent& event);
+    void OnOpenProject(wxCommandEvent& event);
+    void OnProjectClose(wxCommandEvent& event);
+    void OnUpdateProjectClose(wxUpdateUIEvent& event);
+    void OnNewProjectUpdateUI(wxUpdateUIEvent& event);
+    void OnProjectRefresh(wxCommandEvent& event);
+    void OnMRUProject(wxCommandEvent& event);
 
-      void OnWindowList( wxCommandEvent& event );
+    void OnWindowList(wxCommandEvent& event);
 
-      bool OpenProject( const wxString& path );
+    bool OpenProject(const wxString& path);
 
-      void OnFileClose( wxCommandEvent& event );
-      void OnUpdateFileClose( wxUpdateUIEvent& event );
-      void OnFileCloseAll( wxCommandEvent& event );
-      void OnUpdateFileCloseAll( wxUpdateUIEvent& event );      
+    void OnFileClose(wxCommandEvent& event);
+    void OnUpdateFileClose(wxUpdateUIEvent& event);
+    void OnFileCloseAll(wxCommandEvent& event);
+    void OnUpdateFileCloseAll(wxUpdateUIEvent& event);
 
-      void OnFileCloseOthers( wxCommandEvent& event );
-      void OnUpdateFileCloseOthers( wxUpdateUIEvent& event );
+    void OnFileCloseOthers(wxCommandEvent& event);
+    void OnUpdateFileCloseOthers(wxUpdateUIEvent& event);
 
-      void OnSaveAll( wxCommandEvent& event );
+    void OnSaveAll(wxCommandEvent& event);
 
-      void OnAbout( wxCommandEvent& event );
-   	void OnSize( wxSizeEvent& event );
-	   void OnSashDrag( wxSashEvent& event );
+    void OnAbout(wxCommandEvent& event);
+    void OnSize(wxSizeEvent& event);
+    void OnSashDrag(wxSashEvent& event);
 
-      void OnHelp( wxCommandEvent& event );
-      void OnHelp( wxHelpEvent& event );
+    void OnHelp(wxCommandEvent& event);
+    void OnHelp(wxHelpEvent& event);
 
-      void OnUpdateCheck( wxCommandEvent& event );
-      void OnBugTracker( wxCommandEvent& event );
+    void OnUpdateCheck(wxCommandEvent& event);
+    void OnBugTracker(wxCommandEvent& event);
 
-      void OnDropFiles( wxDropFilesEvent& event );
+    void OnDropFiles(wxDropFilesEvent& event);
 
-      void OnCloseWindow( wxCloseEvent& event );
+    void OnCloseWindow(wxCloseEvent& event);
 
-      void OnNextView( wxCommandEvent& event );
-      void OnPreviousView( wxCommandEvent& event );
-      void OnUpdateNextView( wxUpdateUIEvent& event );
+    void OnNextView(wxCommandEvent& event);
+    void OnPreviousView(wxCommandEvent& event);
+    void OnUpdateNextView(wxUpdateUIEvent& event);
 
-      void FindDialogShow( wxCommandEvent& event );
-      void FindDialogClose( wxFindDialogEvent& event );
+    void FindDialogShow(wxCommandEvent& event);
+    void FindDialogClose(wxFindDialogEvent& event);
 
-      void OnUpdateScriptFrame( wxUpdateUIEvent& event );
-      void OnUpdateScriptOrProject( wxUpdateUIEvent& event );
-      void OnUpdateDisabled( wxUpdateUIEvent& event ); 
+    void OnUpdateScriptFrame(wxUpdateUIEvent& event);
+    void OnUpdateScriptOrProject(wxUpdateUIEvent& event);
+    void OnUpdateDisabled(wxUpdateUIEvent& event);
 
-      void OnFindInFiles( wxCommandEvent& event );
-      void OnFindOutput( wxCommandEvent& event );
+    void OnFindInFiles(wxCommandEvent& event);
+    void OnFindOutput(wxCommandEvent& event);
 
-      void OnFindSymbol( wxCommandEvent& event );
-      void OnUpdateFindSymbol( wxUpdateUIEvent& event ); 
+    void OnFindSymbol(wxCommandEvent& event);
+    void OnUpdateFindSymbol(wxUpdateUIEvent& event);
 
-      void OnFindComboChanged( wxCommandEvent& event );
-      wxFindReplaceData&   GetFindData() { return m_FindData; }
+    void OnFindComboChanged(wxCommandEvent& event);
+    wxFindReplaceData& GetFindData() { return m_FindData; }
 
-      void StartDebug( const wxString& command, bool doPrecompile );
-      void StartRun( bool doPrecompile );
+    void StartDebug(const wxString& command);//, bool doPrecompile );
+    void StartRun(bool debug);// bool doPrecompile );
 
-      void OnDebugStart( wxCommandEvent& event );
-      void OnDebugStartWithoutDebugging( wxCommandEvent& event );
-	   void OnDebugConnect( wxCommandEvent& event );
-	   void OnDebugStop( wxCommandEvent& event );
-	   void OnDebugRestart( wxCommandEvent& event );
-	   void OnDebugBreak( wxCommandEvent& event );
-      void OnDebugStartBreak( wxCommandEvent& event );
-	   void OnDebugStep( wxCommandEvent& event );
-	   void OnDebugStepOver( wxCommandEvent& event );
-	   void OnDebugStepOut( wxCommandEvent& event );
-	   void OnDebugUpdateUI( wxUpdateUIEvent& event );
-      void UpdateDebugMenu();
+    void OnDebugStart(wxCommandEvent& event);
+    void OnDebugStartWithoutDebugging(wxCommandEvent& event);
+    void OnDebugConnect(wxCommandEvent& event);
+    void OnDebugStop(wxCommandEvent& event);
+    void OnDebugRestart(wxCommandEvent& event);
+    void OnDebugBreak(wxCommandEvent& event);
+    void OnDebugStartBreak(wxCommandEvent& event);
+    void OnDebugStep(wxCommandEvent& event);
+    void OnDebugStepOver(wxCommandEvent& event);
+    void OnDebugStepOut(wxCommandEvent& event);
+    void OnDebugUpdateUI(wxUpdateUIEvent& event);
+    void UpdateDebugMenu();
 
-      void OnReloadScripts( wxCommandEvent& event );
-	   void OnUpdateReloadScripts( wxUpdateUIEvent& event );
+    void OnReloadScripts(wxCommandEvent& event);
+    void OnUpdateReloadScripts(wxUpdateUIEvent& event);
 
-      void OnNewBreakpoint( wxCommandEvent& event );
-      void OnClearAllBreakpoints( wxCommandEvent& event );
-      void OnDisableAllBreakpoints( wxCommandEvent& event );
-      void OnBreakpointUpdateUI( wxUpdateUIEvent& event );
+    void OnNewBreakpoint(wxCommandEvent& event);
+    void OnClearAllBreakpoints(wxCommandEvent& event);
+    void OnDisableAllBreakpoints(wxCommandEvent& event);
+    void OnBreakpointUpdateUI(wxUpdateUIEvent& event);
 
-      void OnUpdateBookmarks( wxUpdateUIEvent& event );
-      
-      void OnCallStackActivated( wxListEvent& event );
+    void OnUpdateBookmarks(wxUpdateUIEvent& event);
 
-      shNotebook* ShowProjectSash( bool show );
+    void OnCallStackActivated(wxListEvent& event);
 
-      void OnProjectProperties( wxCommandEvent& event );
-      void OnProjectPrecompile( wxCommandEvent& event );
-      void UpdatePrecompileMenu();
+    shNotebook* ShowProjectSash(bool show);
 
-      void OnProjectRebuildExports( wxCommandEvent& event );
-      void OnUpdateRebuildExports( wxUpdateUIEvent& event );
+    void OnProjectProperties(wxCommandEvent& event);
+    //void OnProjectPrecompile( wxCommandEvent& event );
+    //void UpdatePrecompileMenu();
 
-      void OnExecTool( wxCommandEvent& event );
-      void OnUpdateTools( wxUpdateUIEvent& event );
-      void OnExternalTools( wxCommandEvent& event );
-      void OnPreferences( wxCommandEvent& event );
-      void UpdateToolsMenu();
+    //void OnProjectRebuildExports( wxCommandEvent& event );
+    //void OnUpdateRebuildExports( wxUpdateUIEvent& event );
 
-      void OnPrecompileDone( wxCommandEvent& event );
-      void OnPrecompileOutput( wxCommandEvent& event );
-      void OnPrecompileStop( wxCommandEvent& event );
-      void OnUpdatePrecompile( wxUpdateUIEvent& event );
+    void OnExecTool(wxCommandEvent& event);
+    void OnUpdateTools(wxUpdateUIEvent& event);
+    void OnExternalTools(wxCommandEvent& event);
+    void OnPreferences(wxCommandEvent& event);
+    void UpdateToolsMenu();
 
-      void DoPrecompile( int eventId );
+    //void OnPrecompileDone( wxCommandEvent& event );
+    //void OnPrecompileOutput( wxCommandEvent& event );
+    //void OnPrecompileStop( wxCommandEvent& event );
+    //void OnUpdatePrecompile( wxUpdateUIEvent& event );
 
-      void OnClearDSOs( wxCommandEvent& event );
-      void OnClearDSO( wxCommandEvent& event );
-      void OnUpdateHasDSO( wxUpdateUIEvent& event );
+    //void DoPrecompile( int eventId );
 
-      void OnShowLeftPane( wxCommandEvent& event );
-      void OnUpdateShowLeftPane( wxUpdateUIEvent& event );
-      void OnShowBottomPane( wxCommandEvent& event );
-      void OnUpdateShowBottomPane( wxUpdateUIEvent& event );
+    void OnClearDSOs(wxCommandEvent& event);
+    void OnClearDSO(wxCommandEvent& event);
+    void OnUpdateHasDSO(wxUpdateUIEvent& event);
 
-      wxMenu* GetEditMenu() { return (wxMenu*)m_EditMenu; }
-      
-      ProjectDoc* GetProjectDoc() { return m_ProjectDoc; }
-      ProjectView* GetProjectView();
+    void OnShowLeftPane(wxCommandEvent& event);
+    void OnUpdateShowLeftPane(wxUpdateUIEvent& event);
+    void OnShowBottomPane(wxCommandEvent& event);
+    void OnUpdateShowBottomPane(wxUpdateUIEvent& event);
 
-      void OnDebugCallTip( const wxString& Expression, const wxString& Value );
+    wxMenu* GetEditMenu() { return (wxMenu*)m_EditMenu; }
 
-      void SetCallStack( const FunctionCallArray& CallStack, int Level );
-	   void SetBreakline( const wxString& Filename, int Line );
-	   void ClearBreaklines();
-	   void OnDebuggerStop();
+    ProjectDoc* GetProjectDoc() { return m_ProjectDoc; }
+    ProjectView* GetProjectView();
 
-      OutputPanel* GetOutputPanel() { return m_OutputPanel; }
-      WatchCtrl* GetWatchWindow() { return m_WatchWindow; }
-      FindResultsCtrl* GetFindWindow() { return m_FindWindow; }
-      BreakpointsPanel* GetBreakpointsPanel() { return m_Breakpoints; }
+    void OnDebugCallTip(const wxString& Expression, const wxString& Value);
 
-      void OnSysColourChanged( wxSysColourChangedEvent& event );
+    void SetCallStack(const FunctionCallArray& CallStack, int Level);
+    void SetBreakline(const wxString& Filename, int Line);
+    void ClearBreaklines();
+    void OnDebuggerStop();
 
-      virtual void DoMenuUpdates(wxMenu* menu);
-      virtual bool ProcessEvent( wxEvent& event );
-      virtual bool MSWTranslateMessage( WXMSG* msg );
-      virtual bool MSWProcessMessage( WXMSG* pMsg );
+    OutputPanel* GetOutputPanel() { return m_OutputPanel; }
+    WatchCtrl* GetWatchWindow() { return m_WatchWindow; }
+    FindResultsCtrl* GetFindWindow() { return m_FindWindow; }
+    BreakpointsPanel* GetBreakpointsPanel() { return m_Breakpoints; }
 
-      virtual wxMDIClientWindow* OnCreateClient();
+    void OnSysColourChanged(wxSysColourChangedEvent& event);
 
-      void UpdateTitle();
+    virtual void DoMenuUpdates(wxMenu* menu);
+    virtual bool ProcessEvent(wxEvent& event);
+    virtual bool MSWTranslateMessage(WXMSG* msg);
+    virtual bool MSWProcessMessage(WXMSG* pMsg);
 
-      void AddFindString( wxString& text );
+    virtual wxMDIClientWindow* OnCreateClient();
 
-      bool        SetActiveConfig( const wxString& config );
-      wxString    GetActiveConfigName() const;
+    void UpdateTitle();
 
-      void SendHintToAllViews( wxObject* hint, bool scriptViewsOnly );
+    void AddFindString(wxString& text);
 
-      tsMenu* GetWindowMenu() const { return m_WindowMenu; }
+    bool        SetActiveConfig(const wxString& config);
+    wxString    GetActiveConfigName() const;
 
-   protected:
+    void SendHintToAllViews(wxObject* hint, bool scriptViewsOnly);
 
-      wxString GetSelectedText( bool AtCursor = false );
-      
-      wxHelpController     m_HelpController;
+    tsMenu* GetWindowMenu() const { return m_WindowMenu; }
 
-      wxComboBox*          m_FindComboBox;
-         
-      wxToolBarToolBase*   m_StartToolButton;
+protected:
 
-      ProjectDoc*          m_ProjectDoc;
-      wxComboBox*          m_ConfigComboBox;
+    wxString GetSelectedText(bool AtCursor = false);
 
-      wxFindReplaceData    m_FindData;
-      FindReplaceDlg*      m_FindReplaceDialog;
-      FindThread*          m_FindThread;
+    wxHelpController     m_HelpController;
 
-      wxSashLayoutWindow*  m_ProjectSash;
-      shNotebook*          m_ProjectNotebook;
+    wxComboBox* m_FindComboBox;
 
-   	wxSashLayoutWindow*	m_BottomSash;
-	   shNotebook*			   m_BottomNotebook;
-	   OutputPanel*			m_OutputPanel;
-      FindResultsCtrl*     m_FindWindow;
-	   wxListView*			   m_CallStack;
-	   BreakpointsPanel*		m_Breakpoints;
-	   //WatchCtrl*			   m_LocalsWindow;
-	   WatchCtrl*			   m_WatchWindow;
+    wxToolBarToolBase* m_StartToolButton;
 
-      tsMenu*              m_EditMenu;
-      tsMenu*              m_DebugMenu;
-      tsMenu*              m_ProjectMenu;
-      tsMenu*              m_WindowMenu;
-      tsMenu*              m_ToolsMenu;
+    ProjectDoc* m_ProjectDoc;
+    wxComboBox* m_ConfigComboBox;
 
-      DocManager*          m_DocManager;
+    wxFindReplaceData    m_FindData;
+    FindReplaceDlg* m_FindReplaceDialog;
+    FindThread* m_FindThread;
 
-      PreCompiler*         m_PreCompiler;
-      bool                 m_PreCompilerStopping;
-      wxString             m_DebugCommand;
-      enum 
-      { 
-         START_NOTHING, 
-         START_DEBUG, 
-         START_RUN
+    wxSashLayoutWindow* m_ProjectSash;
+    shNotebook* m_ProjectNotebook;
 
-      } m_AfterPrecompile;
+    wxSashLayoutWindow* m_BottomSash;
+    shNotebook* m_BottomNotebook;
+    OutputPanel* m_OutputPanel;
+    FindResultsCtrl* m_FindWindow;
+    wxListView* m_CallStack;
+    BreakpointsPanel* m_Breakpoints;
+    //WatchCtrl*			   m_LocalsWindow;
+    WatchCtrl* m_WatchWindow;
 
-      DECLARE_EVENT_TABLE()
+    tsMenu* m_EditMenu;
+    tsMenu* m_DebugMenu;
+    tsMenu* m_ProjectMenu;
+    tsMenu* m_WindowMenu;
+    tsMenu* m_ToolsMenu;
+
+    DocManager* m_DocManager;
+
+    PreCompiler* m_PreCompiler;
+    bool                 m_PreCompilerStopping;
+    wxString             m_DebugCommand;
+
+    wxString             m_BlitzCompiler;
+
+    enum
+    {
+        START_NOTHING,
+        START_DEBUG,
+        START_RUN
+
+    } m_AfterPrecompile;
+
+    DECLARE_EVENT_TABLE()
 };
 
 extern MainFrame* tsGetMainFrame();

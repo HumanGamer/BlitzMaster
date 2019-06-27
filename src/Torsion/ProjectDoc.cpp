@@ -41,7 +41,7 @@ ProjectDoc::ProjectDoc()
       m_Address( "127.0.0.1" ),
       m_Port( 6060 ),
       m_Password( "password" ),
-      m_EntryScript( "main.cs" ),
+      m_EntryScript( "main.bb" ),
       m_DebugHook( sm_DefaultHook ),
       m_SearchURL( wxEmptyString ), //sm_SearchURL ),
       m_SearchProduct( "TGE" ),
@@ -229,10 +229,10 @@ bool ProjectDoc::OnSaveDocument( const wxString& filename )
          wxString exe( m_Configs[i].GetRelativeExe( filePath ) );
          Xml.AddElem( "Executable", exe );
          Xml.AddElem( "Arguments", m_Configs[i].GetArgs() );
-         Xml.AddBoolElem( "HasExports", m_Configs[i].HasExports() );
-         Xml.AddBoolElem( "Precompile", m_Configs[i].Precompile() );
-         Xml.AddBoolElem( "InjectDebugger", m_Configs[i].InjectDebugger() );
-         Xml.AddBoolElem( "UseSetModPaths", m_Configs[i].UseSetModPaths() );
+         //Xml.AddBoolElem( "HasExports", m_Configs[i].HasExports() );
+         //Xml.AddBoolElem( "Precompile", m_Configs[i].Precompile() );
+         //Xml.AddBoolElem( "InjectDebugger", m_Configs[i].InjectDebugger() );
+         //Xml.AddBoolElem( "UseSetModPaths", m_Configs[i].UseSetModPaths() );
 
       Xml.OutOfElem();
    }
@@ -334,10 +334,10 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
          }
          config.SetExe( exe );
          config.SetArgs( Xml.GetStringElem( "Arguments", wxEmptyString ) );
-         config.SetExports( Xml.GetBoolElem( "HasExports", true ) );
-         config.SetPrecompile( Xml.GetBoolElem( "Precompile", true ) );
-         config.SetInjectDebugger( Xml.GetBoolElem( "InjectDebugger", true ) );
-         config.SetUseSetModPaths( Xml.GetBoolElem( "UseSetModPaths", false ) );
+         //config.SetExports( Xml.GetBoolElem( "HasExports", true ) );
+         //config.SetPrecompile( Xml.GetBoolElem( "Precompile", true ) );
+         //config.SetInjectDebugger( Xml.GetBoolElem( "InjectDebugger", true ) );
+         //config.SetUseSetModPaths( Xml.GetBoolElem( "UseSetModPaths", false ) );
 
          m_Configs.Add( config );
 
@@ -364,10 +364,10 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
    LoadOptions();
 
    // Look for debug hooks that were not restored!
-   RemoveDebugHook();
+   //RemoveDebugHook();
 
    // Load exports from xml if it already exists!
-   wxASSERT( tsGetAutoComp() );
+   /*wxASSERT( tsGetAutoComp() );
    if ( tsGetAutoComp()->LoadExports( GetExportsFilePath() ) )
    {
       // Let all the views know that the exports
@@ -378,7 +378,7 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
       tsGetMainFrame()->SendHintToAllViews( &hint, true );
    }
    else
-      BuildExportsDB();
+      BuildExportsDB();*/
 
    tsGetAutoComp()->SetProjectPath( m_WorkingDir, m_Mods, m_ScannerExts );
 
@@ -402,7 +402,7 @@ bool ProjectDoc::OnNewDocument()
    SetFilename( path.GetFullPath(), true );
 
    // Setup the autocomplete stuff.
-   BuildExportsDB();
+   //BuildExportsDB();
    wxASSERT( tsGetAutoComp() );
    tsGetAutoComp()->LoadExports( GetExportsFilePath() );
 
@@ -638,54 +638,54 @@ void ProjectDoc::SaveOptions()
 	File.Write( Buffer.c_str(), Buffer.length() );
 }
 
-void ProjectDoc::BuildExportsDB() const
-{
-   wxASSERT( tsGetAutoComp() );
-   tsGetAutoComp()->ClearExports(); 
-
-   // If we have exports to capture..
-   if ( HasExports() )
-   {
-      wxFileName exportScript( wxGetApp().GetAppPath() );
-      exportScript.SetFullName( "torsion_exports.cs" );
-
-      wxASSERT( tsGetMainFrame() );
-
-      // Start the export process.
-      BuildExportsDlg dlg;
-      dlg.Create( tsGetMainFrame() );
-      if ( dlg.ShowModal(  exportScript.GetFullPath(), 
-                           GetWorkingDir(),
-                           m_Configs ) == wxID_OK )
-      {
-         // Save the exports to disk!
-         AutoCompExports* exports = dlg.TakeExports();
-         wxASSERT( exports );
-         exports->SaveXml( GetExportsFilePath() );
-
-         // Give the results to the autocomp system
-         // and it will take ownership.
-         tsGetAutoComp()->SetExports( exports );
-      }
-   }
-
-   // Let all the views know that the exports
-   // have changed and that they should update
-   // the syntax highlighting.
-   tsPrefsUpdateHint hint;
-   tsGetMainFrame()->SendHintToAllViews( &hint, true );
-
-   //tsGetAutoComp()->Resume();
-
-   /*
-   // TODO: Replace with progress dialog with cancel!
-   wxMessageDialog dlg( tsGetMainFrame(), 
-      "The Torque executable exports file was not found.  Do you wish to generate them now?", 
-      wxTheApp->GetAppName(), wxYES_NO | wxICON_QUESTION );
-   if ( dlg.ShowModal() != wxID_YES )
-      return;
-   */
-}
+//void ProjectDoc::BuildExportsDB() const
+//{
+//   wxASSERT( tsGetAutoComp() );
+//   tsGetAutoComp()->ClearExports(); 
+//
+//   // If we have exports to capture..
+//   if ( HasExports() )
+//   {
+//      wxFileName exportScript( wxGetApp().GetAppPath() );
+//      exportScript.SetFullName( "torsion_exports.cs" );
+//
+//      wxASSERT( tsGetMainFrame() );
+//
+//      // Start the export process.
+//      BuildExportsDlg dlg;
+//      dlg.Create( tsGetMainFrame() );
+//      if ( dlg.ShowModal(  exportScript.GetFullPath(), 
+//                           GetWorkingDir(),
+//                           m_Configs ) == wxID_OK )
+//      {
+//         // Save the exports to disk!
+//         AutoCompExports* exports = dlg.TakeExports();
+//         wxASSERT( exports );
+//         exports->SaveXml( GetExportsFilePath() );
+//
+//         // Give the results to the autocomp system
+//         // and it will take ownership.
+//         tsGetAutoComp()->SetExports( exports );
+//      }
+//   }
+//
+//   // Let all the views know that the exports
+//   // have changed and that they should update
+//   // the syntax highlighting.
+//   tsPrefsUpdateHint hint;
+//   tsGetMainFrame()->SendHintToAllViews( &hint, true );
+//
+//   //tsGetAutoComp()->Resume();
+//
+//   /*
+//   // TODO: Replace with progress dialog with cancel!
+//   wxMessageDialog dlg( tsGetMainFrame(), 
+//      "The Torque executable exports file was not found.  Do you wish to generate them now?", 
+//      wxTheApp->GetAppName(), wxYES_NO | wxICON_QUESTION );
+//   if ( dlg.ShowModal() != wxID_YES )
+//      return;
+//   */
+//}
 
 wxString ProjectDoc::GetExportsFilePath() const
 {
@@ -968,7 +968,7 @@ bool ProjectDoc::SetConfigs( const ProjectConfigArray& configs )
    return false;
 }
 
-bool ProjectDoc::HasExports() const
+/*bool ProjectDoc::HasExports() const
 {
    bool exports = false;
 
@@ -976,7 +976,7 @@ bool ProjectDoc::HasExports() const
       exports |= m_Configs[i].HasExports();
 
    return exports;
-}
+}*/
 
 void ProjectDoc::BreakpointNotify( BreakpointEvent& event )
 {
@@ -1302,7 +1302,7 @@ const wxString ProjectDoc::GetEntryScriptPath() const
    return MakeAbsoluteTo( m_EntryScript );
 }
 
-bool ProjectDoc::SetDebugHook( int port, wxString& password )
+/*bool ProjectDoc::SetDebugHook( int port, wxString& password )
 {
    // To be safe... always try to remove any
    // existing hook that may have been left
@@ -1487,7 +1487,7 @@ void ProjectDoc::RemoveDebugHook()
    }
 
    file.Close();
-}
+}*/
 
 wxString ProjectDoc::GetSearchUrl( const wxString& name ) const
 {

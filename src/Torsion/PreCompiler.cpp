@@ -45,7 +45,7 @@ protected:
    wxString m_ActiveScript;
    wxArrayString m_Mods;
    bool     m_ClearDSOs;
-   bool     m_SetModPaths;
+   //bool     m_SetModPaths;
    wxEvtHandler*  m_OutputWnd;
 
    wxFileName m_Script;
@@ -162,7 +162,7 @@ PreCompiler::~PreCompiler()
    }
 }
 
-bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const wxArrayString& mods, const wxString& activeScript, bool clearDSOs, bool setModPaths, wxEvtHandler* outputWnd )
+bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const wxArrayString& mods, const wxString& activeScript, bool clearDSOs/*, bool setModPaths*/, wxEvtHandler* outputWnd )
 {
    wxASSERT( !m_Thread );
 
@@ -186,7 +186,7 @@ bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const w
    m_Thread->m_ExcludedFolders = tsGetPrefs().GetExcludedFolders();
    m_Thread->m_DSOExts = tsGetPrefs().GetDSOExts();
    m_Thread->m_OutputWnd = outputWnd;
-   m_Thread->m_SetModPaths = setModPaths;
+   //m_Thread->m_SetModPaths = setModPaths;
 
    m_Thread->SetPriority( WXTHREAD_DEFAULT_PRIORITY );
 
@@ -290,7 +290,7 @@ wxThread::ExitCode PreCompilerThread::Entry()
    }
 
    // Set the mod paths!
-   if ( m_SetModPaths )
+   /*if ( m_SetModPaths )
    {
       wxArrayString found;
       wxString paths;
@@ -309,7 +309,7 @@ wxThread::ExitCode PreCompilerThread::Entry()
       cmd << "setModPaths( \"" << paths << "\" );";
       ++insert;
       scriptFile.InsertLine( cmd, insert );
-   }
+   }*/
    
    // Add the scripts!
    for ( int i=0; i < m_Scripts.GetCount(); i++ )

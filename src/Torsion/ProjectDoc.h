@@ -92,7 +92,7 @@ class ProjectDoc : public wxDocument
       const wxString MakeReleativeTo( const wxString& FilePath ) const;
       const wxString MakeAbsoluteTo( const wxString& FilePath ) const;
 
-      bool HasExports() const;
+      //bool HasExports() const;
 
       void SetExecModifiedScripts( bool exec );
       bool ExecModifiedScripts() const { return m_ExecModifiedScripts; }
@@ -128,10 +128,10 @@ class ProjectDoc : public wxDocument
       bool        GetSavedYet() const  { return m_savedYet; }
 
 
-      bool SetDebugHook( int port, wxString& password );
-      void RemoveDebugHook();
+      //bool SetDebugHook( int port, wxString& password );
+      //void RemoveDebugHook();
 
-      void BuildExportsDB() const;
+      //void BuildExportsDB() const;
 
    protected:
 

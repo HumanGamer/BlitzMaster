@@ -71,7 +71,7 @@ public:
 
     int ShowModal( ProjectDoc* projectDoc );
 
-   bool GetRebuildExports() const { return m_RebuildExports; }
+  // bool GetRebuildExports() const { return m_RebuildExports; }
 
 protected:
 
@@ -126,7 +126,7 @@ protected:
    ProjectDoc*          m_Project;
    ProjectConfigArray   m_Configs;
    bool                 m_ConfigModified;
-   bool                 m_RebuildExports;
+   //bool                 m_RebuildExports;
 };
 
 #endif

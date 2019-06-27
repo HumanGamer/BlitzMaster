@@ -138,23 +138,23 @@ int ConfigDlg::ShowModal( ProjectConfig* config, ProjectConfigArray* configs, co
    
    wxString exe = m_Config->GetExe();
    id = m_PropGrid->Append( wxFileProperty(wxT("Executable"), wxPG_LABEL, exe ) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("The game executable for this configuration.") );
+   m_PropGrid->SetPropertyHelpString( id, wxT("The entry point script for this configuration.") );
    m_PropGrid->SetPropertyAttribute(wxT("Executable"), wxPG_FILE_INITIAL_PATH, m_BaseDir );
    m_PropGrid->SetPropertyAttribute(wxT("Executable"), wxPG_FILE_WILDCARD,
-                                 wxT("Executable files (*.exe)|*.exe"));
+                                 wxT("BlitzBasic Script files (*.bb)|*.bb"));
 
    id = m_PropGrid->Append( wxStringProperty(wxT("Arguments"), wxPG_LABEL, m_Config->GetArgs()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("The optional arguments to pass to the executable on launch.") );
-   m_PropGrid->Append( wxPropertyCategory(wxT("Debugging")) );
-   id = m_PropGrid->Append( wxBoolProperty(wxT("Enable Precompile"), wxPG_LABEL, m_Config->Precompile()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("This toggles the precompile step before execution of the configuration.") );
-   id = m_PropGrid->Append( wxBoolProperty(wxT("Enable setModPaths"), wxPG_LABEL, m_Config->UseSetModPaths()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("This will slow down the precompile step, but it is needed for some versions of Torque or when TORQUE_SHIPPING is defined.") );
-   id = m_PropGrid->Append( wxBoolProperty(wxT("OneClick Debugging"), wxPG_LABEL, m_Config->InjectDebugger()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("Enables automatic injection of the debugger startup hook in to the main entry script.") );
-   m_PropGrid->Append( wxPropertyCategory(wxT("ScriptSense")) );
-   id = m_PropGrid->Append( wxBoolProperty(wxT("Build Exports"), wxPG_LABEL, m_Config->HasExports()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("This enables extraction of the engine exports from this executable.") );
+   //m_PropGrid->Append( wxPropertyCategory(wxT("Debugging")) );
+   //id = m_PropGrid->Append( wxBoolProperty(wxT("Enable Precompile"), wxPG_LABEL, m_Config->Precompile()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("This toggles the precompile step before execution of the configuration.") );
+   //id = m_PropGrid->Append( wxBoolProperty(wxT("Enable setModPaths"), wxPG_LABEL, m_Config->UseSetModPaths()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("This will slow down the precompile step, but it is needed for some versions of Torque or when TORQUE_SHIPPING is defined.") );
+   //id = m_PropGrid->Append( wxBoolProperty(wxT("OneClick Debugging"), wxPG_LABEL, m_Config->InjectDebugger()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("Enables automatic injection of the debugger startup hook in to the main entry script.") );
+   //m_PropGrid->Append( wxPropertyCategory(wxT("ScriptSense")) );
+   //id = m_PropGrid->Append( wxBoolProperty(wxT("Build Exports"), wxPG_LABEL, m_Config->HasExports()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("This enables extraction of the engine exports from this executable.") );
 
    // Let's use checkboxes instead of a choice list.
    m_PropGrid->SetPropertyAttributeAll(wxPG_BOOL_USE_CHECKBOX,(long)1);
@@ -297,10 +297,10 @@ void ConfigDlg::OnOkClick( wxCommandEvent& event )
    m_Config->SetName( name );
    m_Config->SetExe( exec );
    m_Config->SetArgs( m_PropGrid->GetPropertyValue( "General.Arguments" ) );
-   m_Config->SetPrecompile( m_PropGrid->GetPropertyValueAsBool( "Debugging.Enable Precompile" ) );
-   m_Config->SetUseSetModPaths( m_PropGrid->GetPropertyValueAsBool( "Debugging.Enable setModPaths" ) );
-   m_Config->SetInjectDebugger( m_PropGrid->GetPropertyValueAsBool( "Debugging.OneClick Debugging" ) );
-   m_Config->SetExports( m_PropGrid->GetPropertyValueAsBool( "ScriptSense.Build Exports" ) );
+   //m_Config->SetPrecompile( m_PropGrid->GetPropertyValueAsBool( "Debugging.Enable Precompile" ) );
+   //m_Config->SetUseSetModPaths( m_PropGrid->GetPropertyValueAsBool( "Debugging.Enable setModPaths" ) );
+   //m_Config->SetInjectDebugger( m_PropGrid->GetPropertyValueAsBool( "Debugging.OneClick Debugging" ) );
+   //m_Config->SetExports( m_PropGrid->GetPropertyValueAsBool( "ScriptSense.Build Exports" ) );
 
    wxDialog::OnOK( event );
 }

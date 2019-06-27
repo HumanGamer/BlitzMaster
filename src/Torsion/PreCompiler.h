@@ -21,7 +21,7 @@ public:
                const wxArrayString& mods, 
                const wxString& activeScript, 
                bool clearDSOs, 
-               bool setModPaths, 
+               //bool setModPaths, 
                wxEvtHandler* outputWnd );
 
    void Stop();

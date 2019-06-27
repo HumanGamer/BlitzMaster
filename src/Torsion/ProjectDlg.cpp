@@ -222,7 +222,7 @@ int ProjectDlg::ShowModal( ProjectDoc* projectDoc )
    m_Project = projectDoc;
 
    m_ConfigModified = false;
-   m_RebuildExports = false;
+   //m_RebuildExports = false;
    m_Configs = m_Project->GetConfigs();
 
    // Fill all the controls.
@@ -386,7 +386,7 @@ void ProjectDlg::OnEditClick( wxCommandEvent& event )
    ProjectConfig* config = &m_Configs[sel];
 
    wxString name = config->GetName();
-   bool hasExports = config->HasExports();
+   //bool hasExports = config->HasExports();
    wxString exe = config->GetExe();
 
    // Spawn the new config dialog.
@@ -397,9 +397,9 @@ void ProjectDlg::OnEditClick( wxCommandEvent& event )
       m_PropGrid->GetPropertyValue( "General.Base Directory" ) ) == wxID_OK ) 
    {
       m_ConfigModified = true;
-      m_RebuildExports =   config->GetName() != name ||
+      /*m_RebuildExports =   config->GetName() != name ||
                            config->HasExports() != hasExports ||
-                           config->GetExe() != exe;
+                           config->GetExe() != exe;*/
       UpdateConfigList();
    }
 }
@@ -423,7 +423,7 @@ void ProjectDlg::OnNewClick( wxCommandEvent& event )
    {
       m_Configs.Add( config );
       m_ConfigModified = true;
-      m_RebuildExports = true;
+      //m_RebuildExports = true;
       UpdateConfigList();
    }
 }
@@ -443,7 +443,7 @@ void ProjectDlg::OnDeleteClick( wxCommandEvent& event )
    m_Configs.RemoveAt( sel );
 
    m_ConfigModified = true;
-   m_RebuildExports = true;
+   //m_RebuildExports = true;
    UpdateConfigList();
 }
 
@@ -473,7 +473,7 @@ void ProjectDlg::OnCopyClick( wxCommandEvent& event )
    {
       m_Configs.Add( config );
       m_ConfigModified = true;
-      m_RebuildExports = true;
+      //m_RebuildExports = true;
       UpdateConfigList();
    }
 }

@@ -7,21 +7,21 @@ class ProjectConfig
         ProjectConfig() 
            :   m_Name(),
                m_Executable(),
-               m_Arguments(),
+               m_Arguments()/*,
                m_HasExports( true ),
                m_Precompile( true ),
                m_InjectDebugger( true ),
-               m_UseSetModPaths( false )
+               m_UseSetModPaths( false )*/
         {}
 
         ProjectConfig( const ProjectConfig& config )
             :  m_Name( config.m_Name ),
                m_Executable( config.m_Executable ),            
-               m_Arguments( config.m_Arguments ),
+               m_Arguments( config.m_Arguments )/*,
                m_HasExports( config.m_HasExports ),
                m_Precompile( config.m_Precompile ),
                m_InjectDebugger( config.m_InjectDebugger ),
-               m_UseSetModPaths( config.m_UseSetModPaths )
+               m_UseSetModPaths( config.m_UseSetModPaths )*/
         {
         }
 
@@ -33,39 +33,39 @@ class ProjectConfig
         wxString GetRelativeExe( const wxString& path ) const;
         wxString GetExe() const;
 
-        bool HasExports() const        { return m_HasExports; }
+        /*bool HasExports() const        { return m_HasExports; }
         bool Precompile() const        { return m_Precompile; }
         bool InjectDebugger() const    { return m_InjectDebugger; }
-        bool UseSetModPaths() const    { return m_UseSetModPaths; }
+        bool UseSetModPaths() const    { return m_UseSetModPaths; }*/
 
         bool operator == ( const ProjectConfig& config ) const
         {
-            return   m_Name == config.m_Name &&
-                     m_Executable == config.m_Executable &&
-                     m_Arguments == config.m_Arguments &&
-                     m_HasExports == config.m_HasExports &&
+          return   m_Name == config.m_Name &&
+            m_Executable == config.m_Executable &&
+            m_Arguments == config.m_Arguments;//&&
+                     /*m_HasExports == config.m_HasExports &&
                      m_Precompile == config.m_Precompile &&
                      m_InjectDebugger == config.m_InjectDebugger &&
-                     m_UseSetModPaths == config.m_UseSetModPaths;
+                     m_UseSetModPaths == config.m_UseSetModPaths;*/
         }
 
         void SetName( const wxString& name ) { m_Name = name; }
         void SetArgs( const wxString& args ) { m_Arguments = args; }
         void SetExe( const wxString& exe );
-        void SetExports( bool value ) { m_HasExports = value; }
-        void SetPrecompile( bool value ) { m_Precompile = value; }
-        void SetInjectDebugger( bool value ) { m_InjectDebugger = value; }
-        void SetUseSetModPaths( bool use ) { m_UseSetModPaths = use; }
+        //void SetExports( bool value ) { m_HasExports = value; }
+        //void SetPrecompile( bool value ) { m_Precompile = value; }
+        //void SetInjectDebugger( bool value ) { m_InjectDebugger = value; }
+        //void SetUseSetModPaths( bool use ) { m_UseSetModPaths = use; }
 
    protected:
 
       wxString    m_Name;
       wxString    m_Executable;
       wxString    m_Arguments;
-      bool        m_HasExports;
-      bool        m_Precompile;
-      bool        m_InjectDebugger;
-      bool        m_UseSetModPaths;
+      //bool        m_HasExports;
+      //bool        m_Precompile;
+      //bool        m_InjectDebugger;
+      //bool        m_UseSetModPaths;
 };
 
 WX_DECLARE_OBJARRAY(ProjectConfig, ProjectConfigArray);
