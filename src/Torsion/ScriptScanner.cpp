@@ -17,7 +17,10 @@ ScriptScanner::ScriptScanner()
       m_Token( SSTOKEN_EOF )
 {
    // Setup reserved words.
-   m_ReservedWords.Add( "break" );
+   m_ReservedWords.Add("global");
+   m_ReservedWords.Add("function");
+
+   /*m_ReservedWords.Add( "break" );
    m_ReservedWords.Add( "case" );
    m_ReservedWords.Add( "continue" );
    m_ReservedWords.Add( "datablock" );
@@ -36,7 +39,7 @@ ScriptScanner::ScriptScanner()
    m_ReservedWords.Add( "switch" );
    m_ReservedWords.Add( "switch$" );
    m_ReservedWords.Add( "true" );
-   m_ReservedWords.Add( "while" );
+   m_ReservedWords.Add( "while" );*/
 
    m_ReservedMaxLen = 0;
    m_ReservedMinLen = 99999;

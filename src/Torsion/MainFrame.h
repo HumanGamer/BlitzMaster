@@ -209,6 +209,8 @@ public:
 
     tsMenu* GetWindowMenu() const { return m_WindowMenu; }
 
+    wxString GetBlitzCompiler() const { return m_BlitzCompiler; }
+
 protected:
 
     wxString GetSelectedText(bool AtCursor = false);

@@ -13,7 +13,7 @@
 
 const wxChar* AppPrefs::s_ReservedWords = 
    "break case continue datablock package default else false function if for new or package return " \
-   "switch switch$ true %this while singleton local";
+   "switch switch$ true %this while singleton local global";
 
 IMPLEMENT_CLASS(tsPrefsUpdateHint, wxObject)
 
