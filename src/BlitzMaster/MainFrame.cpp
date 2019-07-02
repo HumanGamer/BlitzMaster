@@ -17,7 +17,7 @@
 #include "ScriptFrame.h"
 #include "ProjectDoc.h"
 #include "ProjectView.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "WatchCtrl.h"
 #include "ProjectDlg.h"
 #include "AboutDlg.h"

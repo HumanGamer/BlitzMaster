@@ -68,7 +68,6 @@ set(BlitzMaster_SRC
 	src/BlitzMaster/ConfigDlg.cpp
 	src/BlitzMaster/ConnectDlg.cpp
 	src/BlitzMaster/CRC.cpp
-	src/BlitzMaster/Debugger.cpp
 	src/BlitzMaster/DirWatcher.cpp
 	src/BlitzMaster/DirWatcherWin9x.cpp
 	src/BlitzMaster/DirWatcherWinNT.cpp
@@ -152,7 +151,6 @@ set(BlitzMaster_SRC
 	src/BlitzMaster/ConfigDlg.h
 	src/BlitzMaster/ConnectDlg.h
 	src/BlitzMaster/CRC.h
-	src/BlitzMaster/Debugger.h
 	src/BlitzMaster/DirWatcher.h
 	src/BlitzMaster/DirWatcherWin9x.h
 	src/BlitzMaster/DirWatcherWinNT.h

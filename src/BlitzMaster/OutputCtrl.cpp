@@ -3,7 +3,7 @@
 
 #include "MainFrame.h"
 #include "BlitzMasterApp.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "tsMenu.h"
 
 #include "Icons.h"

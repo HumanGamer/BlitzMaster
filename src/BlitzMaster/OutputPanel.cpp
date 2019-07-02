@@ -21,7 +21,7 @@
 #include "OutputPanel.h"
 #include "BlitzMasterApp.h"
 #include "MainFrame.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "tsToolBar.h"
 #include "Icons.h"
 
