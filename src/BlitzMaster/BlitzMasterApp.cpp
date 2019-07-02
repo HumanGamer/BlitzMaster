@@ -1,5 +1,5 @@
 #include "PreCompiled.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 
 #include "MainFrame.h"
 #include "ScriptFrame.h"
@@ -58,15 +58,15 @@ class TorsionDDEServer : public wxDDEServer
       }
 };
 
-IMPLEMENT_APP(TorsionApp)
+IMPLEMENT_APP(BlitzMasterApp)
 
 
-BEGIN_EVENT_TABLE( TorsionApp, wxApp )
+BEGIN_EVENT_TABLE( BlitzMasterApp, wxApp )
    EVT_KEY_DOWN( OnKeyDown )
 END_EVENT_TABLE()
 
 
-TorsionApp::TorsionApp()
+BlitzMasterApp::BlitzMasterApp()
    :  wxApp(),
       m_DocManager( NULL ),
       m_Prefs(),
@@ -83,14 +83,14 @@ TorsionApp::TorsionApp()
    m_UserInstChecker = new wxSingleInstanceChecker( wxString::Format( "%s|%s", instName.c_str(), wxGetUserId().c_str() ) );
 }
 
-TorsionApp::~TorsionApp()
+BlitzMasterApp::~BlitzMasterApp()
 {
    // Don't delete the installer instance checker till the very end!
    wxDELETE( m_InstChecker );
    wxDELETE( m_UserInstChecker );
 }
 
-bool TorsionApp::OnInit()
+bool BlitzMasterApp::OnInit()
 {
    // Use the crash handler!
    #ifndef __WXDEBUG__
@@ -269,7 +269,7 @@ bool TorsionApp::OnInit()
    return true;
 }
 
-void TorsionApp::CleanUp()
+void BlitzMasterApp::CleanUp()
 {
    // We delete the DDE stuff at first exit
    // to protect against false opens.
@@ -295,14 +295,14 @@ void TorsionApp::CleanUp()
    wxApp::CleanUp();
 }
 
-int TorsionApp::OnExit()
+int BlitzMasterApp::OnExit()
 {
    // By this point the frame should be dead!
    ts_MainFrame = NULL;
    return 0;
 }
 
-bool TorsionApp::ProcessEvent( wxEvent& event )
+bool BlitzMasterApp::ProcessEvent( wxEvent& event )
 {
    wxKeyEvent* keyEvent = wxDynamicCast( &event, wxKeyEvent );
    if (  keyEvent && 
@@ -316,7 +316,7 @@ bool TorsionApp::ProcessEvent( wxEvent& event )
    return wxApp::ProcessEvent( event );
 }
 
-bool TorsionApp::CheckForUpdate( bool noUpdateMsg )
+bool BlitzMasterApp::CheckForUpdate( bool noUpdateMsg )
 {
    UpdateChecker checker;
 
@@ -348,7 +348,7 @@ bool TorsionApp::CheckForUpdate( bool noUpdateMsg )
    return true;
 }
 
-void TorsionApp::OnFatalException()
+void BlitzMasterApp::OnFatalException()
 {
    wxString address;
    wxString data;
@@ -373,7 +373,7 @@ void TorsionApp::OnFatalException()
    }
 }
 
-void TorsionApp::RegisterScriptExts()
+void BlitzMasterApp::RegisterScriptExts()
 {
    const wxArrayString& exts = m_Prefs.GetScriptExtensions();
 
@@ -415,7 +415,7 @@ void TorsionApp::RegisterScriptExts()
    }
 }
 
-void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
+void BlitzMasterApp::UnregisterScriptExts( const wxArrayString& exts )
 {
    for ( int i=0; i < exts.GetCount(); i++ )
    {
@@ -448,7 +448,7 @@ void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
    }
 }
 
-void TorsionApp::OnKeyDown( wxKeyEvent& event )
+void BlitzMasterApp::OnKeyDown( wxKeyEvent& event )
 {
    // Here we're trying to catch a few accelerators 
    // manually so we don't need to add bogus menu items.
@@ -474,7 +474,7 @@ void TorsionApp::OnKeyDown( wxKeyEvent& event )
 }
 
 /*
-bool TorsionApp::OnExceptionInMainLoop()
+bool BlitzMasterApp::OnExceptionInMainLoop()
 {
    return true;
 }

@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "ScriptView.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "ScriptCtrl.h"
 #include "ScriptPrintout.h"
 #include "MainFrame.h"

@@ -40,7 +40,7 @@ END
 
 3 TEXTINCLUDE 
 BEGIN
-    "#include ""torsion.rc2""\r\n"
+    "#include ""blitzmaster.rc2""\r\n"
     "\0"
 END
 
@@ -67,7 +67,7 @@ END
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-#include "torsion.rc2"
+#include "blitzmaster.rc2"
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED

@@ -17,7 +17,7 @@
 ////@end includes
 
 #include "FindSymbolDlg.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 
 ////@begin XPM images
 ////@end XPM images

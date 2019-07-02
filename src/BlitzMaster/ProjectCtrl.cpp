@@ -3,7 +3,7 @@
 
 #include "ProjectDoc.h"
 #include "MainFrame.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "FileTypeImageList.h"
 #include "Platform.h"
 #include "tsMenu.h"

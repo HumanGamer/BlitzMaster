@@ -2,7 +2,7 @@
 #include "OutputCtrl.h"
 
 #include "MainFrame.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "Debugger.h"
 #include "tsMenu.h"
 

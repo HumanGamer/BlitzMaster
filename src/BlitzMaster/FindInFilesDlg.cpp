@@ -21,7 +21,7 @@
 
 #include "FindInFilesDlg.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "ProjectDoc.h"
 #include "FindThread.h"

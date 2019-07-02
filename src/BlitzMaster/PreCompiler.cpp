@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "PreCompiler.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "OutputPanel.h"
 #include "Debugger.h"

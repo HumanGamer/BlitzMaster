@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "ProjectDoc.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "ProjectView.h"
 #include "XmlFile.h"

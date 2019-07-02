@@ -5,7 +5,7 @@
 #include "MainFrame.h"
 #include "shNotebook.h"
 #include "ScriptDoc.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "Debugger.h"
 #include "tsMenu.h"
 #include "Icons.h"

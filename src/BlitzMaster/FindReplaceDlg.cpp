@@ -17,7 +17,7 @@
 ////@end includes
 
 #include "FindReplaceDlg.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include <wx/fdrepdlg.h>
 
 ////@begin XPM images

@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "AutoCompManager.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "AutoCompExports.h"
 #include "AutoCompThread.h"
 #include "MainFrame.h"

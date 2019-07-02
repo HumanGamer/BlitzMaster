@@ -2,7 +2,7 @@
 #include "CodeBrowserCtrl.h"
 
 //#include "ProjectDoc.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "AutoComp.h"
 #include "AutoCompPage.h"
 #include "MainFrame.h"

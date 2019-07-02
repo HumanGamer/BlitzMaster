@@ -3,7 +3,7 @@
 
 #include "ProjectDoc.h"
 #include "ProjectPanel.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "Platform.h"
 #include "CodeBrowserPanel.h"

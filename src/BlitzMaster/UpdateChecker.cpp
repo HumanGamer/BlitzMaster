@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "UpdateChecker.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "BuildVersion.h"
 
 #include <wx/txtstrm.h>

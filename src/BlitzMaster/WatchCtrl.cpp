@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "WatchCtrl.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "Debugger.h"
 
 #include <wx/dnd.h>

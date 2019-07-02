@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "DocManager.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "ScriptDoc.h"
 #include "ScriptView.h"
 #include "ProjectDoc.h"

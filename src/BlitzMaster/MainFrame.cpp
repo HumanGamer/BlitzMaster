@@ -8,7 +8,7 @@
 #error You must set wxUSE_MDI_ARCHITECTURE to 1 in setup.h!
 #endif
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "AppPrefs.h"
 #include "MainFrame.h"
 #include "ClientWindow.h"

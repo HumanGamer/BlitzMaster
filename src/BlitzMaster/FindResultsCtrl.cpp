@@ -1,7 +1,7 @@
 #include "PreCompiled.h"
 #include "FindResultsCtrl.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "FindThread.h"
 #include "tsMenu.h"

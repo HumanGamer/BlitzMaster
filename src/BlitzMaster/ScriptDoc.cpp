@@ -4,7 +4,7 @@
 #include "ScriptView.h"
 #include "ScriptCtrl.h"
 
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 #include "AutoComp.h"
 #include "AutoCompText.h"
 #include "ScriptCtrl.h"

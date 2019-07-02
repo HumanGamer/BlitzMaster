@@ -17,7 +17,7 @@
 ////@end includes
 
 #include "SettingsDlg.h"
-#include "TorsionApp.h"
+#include "BlitzMasterApp.h"
 
 #include <wx/propgrid/propdev.h>
 #include <wx/propgrid/advprops.h>

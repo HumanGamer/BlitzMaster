@@ -16,11 +16,11 @@ class wxDocTemplate;
 #define COPYDATA_OPEN 554234
 
 
-class TorsionApp : public wxApp  
+class BlitzMasterApp : public wxApp  
 {
 public:
-	TorsionApp();
-	virtual ~TorsionApp();
+	BlitzMasterApp();
+	virtual ~BlitzMasterApp();
 
 	virtual bool OnInit();
    virtual void CleanUp();
@@ -63,7 +63,7 @@ protected:
    DECLARE_EVENT_TABLE()
 };
 
-DECLARE_APP(TorsionApp);
+DECLARE_APP(BlitzMasterApp);
 
 inline AppPrefs& tsGetPrefs() { return wxGetApp().GetPreferences(); }
 inline Debugger* tsGetDebugger() { return wxGetApp().GetDebugger(); }
