@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-project(Torsion C CXX)
+project(BlitzMaster C CXX)
 
 set(wxWidgets_ROOT_DIR src/wxWidgets)
 find_package(wxWidgets COMPONENTS base core adv net stc propgrid regex jpeg REQUIRED)
@@ -219,12 +219,12 @@ set(TORSION_SRC
 	src/tinyxml2/tinyxml2.h
 )
 
-add_executable(Torsion ${TORSION_SRC})
-target_link_libraries(Torsion ${wxWidgets_LIBRARIES} tinyxml2)
-# target_link_libraries(Torsion wxWidgets tinyxml2)
+add_executable(BlitzMaster ${TORSION_SRC})
+target_link_libraries(BlitzMaster ${wxWidgets_LIBRARIES} tinyxml2)
+# target_link_libraries(BlitzMaster wxWidgets tinyxml2)
 
 if (MSVC)
-	set_target_properties(Torsion PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
+	set_target_properties(BlitzMaster PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
 endif()
 
 # Install rules 
@@ -232,4 +232,4 @@ if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 	set (CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/install" CACHE PATH "default install path" FORCE)
 endif()
 
-install(TARGETS Torsion DESTINATION bin)
+install(TARGETS BlitzMaster DESTINATION bin)

@@ -78,7 +78,7 @@ TorsionApp::TorsionApp()
 {
    // We create two... one for the installer to check
    // for running instances.  Another for each user.
-   wxString instName( "Torsion.SickheadGames" );
+   wxString instName( INST_NAME );
    m_InstChecker = new wxSingleInstanceChecker( instName );
    m_UserInstChecker = new wxSingleInstanceChecker( wxString::Format( "%s|%s", instName.c_str(), wxGetUserId().c_str() ) );
 }
@@ -100,8 +100,8 @@ bool TorsionApp::OnInit()
    // We don't want error dialogs from the wxWindows runtime!
 	delete wxLog::SetActiveTarget( new wxLogStderr() );
 
-   SetAppName( "Torsion" );
-   SetVendorName( "Sickhead Games, LLC" );
+   SetAppName( APP_NAME );
+   SetVendorName( VENDOR_NAME );
 
    // Initialize the application path which is used
    // in various places for access to data like prefs,
@@ -163,7 +163,7 @@ bool TorsionApp::OnInit()
    if ( Files.GetCount() > 0 && m_UserInstChecker->IsAnotherRunning() ) 
    {
       wxDDEClient client;
-      wxDDEConnection* conn = wxDynamicCast( client.MakeConnection( "", "Torsion", "open" ), wxDDEConnection );
+      wxDDEConnection* conn = wxDynamicCast( client.MakeConnection( "", INTERNAL_NAME, "open" ), wxDDEConnection );
       if ( conn ) 
       {
          for ( int i=0; i < Files.GetCount(); i++ )
@@ -228,7 +228,7 @@ bool TorsionApp::OnInit()
 
    // Load the DDE server.
    m_DDEServer = new TorsionDDEServer;
-   m_DDEServer->Create( "Torsion" );
+   m_DDEServer->Create(INTERNAL_NAME);
 
    // Load the first project we got or the last
    // project if that is enabled and set.
@@ -331,14 +331,14 @@ bool TorsionApp::CheckForUpdate( bool noUpdateMsg )
          else
             msg = "You have the most current version.";
 
-         wxMessageDialog dlg( ts_MainFrame, msg, "Torsion for BlitzBasic", wxOK | wxICON_INFORMATION );
+         wxMessageDialog dlg( ts_MainFrame, msg, APP_NAME, wxOK | wxICON_INFORMATION );
          dlg.ShowModal();
       }
 
       return false;
    }
 
-   wxMessageDialog dlg( ts_MainFrame, "There is a new version of Torsion available.  Do you want to download it now?", "Torsion for BlitzBasic", wxYES_NO | wxICON_INFORMATION );
+   wxMessageDialog dlg( ts_MainFrame, "There is a new version of Torsion available.  Do you want to download it now?", APP_NAME, wxYES_NO | wxICON_INFORMATION );
    if ( dlg.ShowModal() == wxID_YES )
    {
       wxLaunchDefaultBrowser( "http://www.garagegames.com/myAccount/" );
@@ -356,7 +356,7 @@ void TorsionApp::OnFatalException()
    dump.Dump( &address, &data );
 
    if ( wxMessageBox( "Torsion has crashed!  Do you want to submit "
-         "the crash report?", "Torsion for BlitzBasic", wxYES_NO | wxICON_ERROR ) == wxYES )
+         "the crash report?", APP_NAME, wxYES_NO | wxICON_ERROR ) == wxYES )
    {
       wxString cmd;
       cmd << "http://mantis.sickheadgames.com/bug_report_page.php?project_id=2&severity=6&";
@@ -375,7 +375,7 @@ void TorsionApp::OnFatalException()
 
 void TorsionApp::RegisterScriptExts()
 {
-   /*const wxArrayString& exts = m_Prefs.GetScriptExtensions();
+   const wxArrayString& exts = m_Prefs.GetScriptExtensions();
 
    for ( int i=0; i < exts.GetCount(); i++ )
    {
@@ -388,7 +388,7 @@ void TorsionApp::RegisterScriptExts()
          // The extension does not exist... so we create 
          // it and own it.
          key.Create();
-         key.SetValue( NULL, "TorsionTorqueScript" );
+         key.SetValue( NULL, "BlitzMasterScript" );
          key.SetValue( "Content Type", "text/plain" );
          key.SetValue( "PerceivedType", "text" );
          continue;
@@ -399,9 +399,9 @@ void TorsionApp::RegisterScriptExts()
       // set to TorsionTorqueScript refresh it.
       wxString value;
       if (  key.QueryValue( NULL, value ) && 
-            ( value.IsEmpty() || value == "TorsionTorqueScript" ) )
+            ( value.IsEmpty() || value == "BlitzMasterScript" ) )
       {
-         key.SetValue( NULL, "TorsionTorqueScript" );
+         key.SetValue( NULL, "BlitzMasterScript" );
          key.SetValue( "Content Type", "text/plain" );
          key.SetValue( "PerceivedType", "text" );
          continue;
@@ -409,15 +409,15 @@ void TorsionApp::RegisterScriptExts()
 
       // Ok... someone is using this key, so all we can do
       // is add ourselves to the 'open with' list.
-      extKey << "\\OpenWithList\\torsion.exe";
+      extKey << "\\OpenWithList\\blitzmaster.exe";
       wxRegKey openWithList( extKey );
       openWithList.Create();
-   }*/
+   }
 }
 
 void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
 {
-   /*for ( int i=0; i < exts.GetCount(); i++ )
+   for ( int i=0; i < exts.GetCount(); i++ )
    {
       wxString extKey;
       extKey << "HKCR\\." << exts[i];
@@ -428,7 +428,7 @@ void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
       // Check the default key for our value 'TorsionTorqueScript'.
       wxString value;
       key.QueryValue( NULL, value );
-      if ( value == "TorsionTorqueScript" )
+      if ( value == "BlitzMasterScript" )
       {
          // We own this... delete stuff we put in it.
          key.DeleteValue( NULL );
@@ -437,7 +437,7 @@ void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
       }
 
       // Check the open with list for our key... and remove it.
-      extKey << "\\OpenWithList\\torsion.exe";
+      extKey << "\\OpenWithList\\blitzmaster.exe";
       wxRegKey openWithList( extKey );
       if ( openWithList.Exists() )
          openWithList.DeleteSelf();
@@ -445,7 +445,7 @@ void TorsionApp::UnregisterScriptExts( const wxArrayString& exts )
       // Delete it if its empty.
       if ( key.IsEmpty() )
          key.DeleteSelf();
-   }*/
+   }
 }
 
 void TorsionApp::OnKeyDown( wxKeyEvent& event )

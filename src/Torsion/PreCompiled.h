@@ -18,3 +18,9 @@
    #pragma warning( disable : 4018 ) // warning C4018: '<' : signed/unsigned mismatch
    #pragma warning( disable : 4267 ) // warning C4267: 'return' : conversion from 'size_t' to 'int', possible loss of data
 #endif
+
+#define APP_NAME "BlitzMaster"
+#define VENDOR_NAME "Blitz Community"
+
+#define INTERNAL_NAME "BlitzMaster"
+#define INST_NAME "BlitzMaster.BlitzCommunity"

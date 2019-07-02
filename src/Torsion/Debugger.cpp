@@ -267,7 +267,7 @@ void Debugger::Continue( const wxString& Command )
       // Do we need to ask about reloading?
       if ( reload )
       {
-         wxMessageDialog dlg( NULL, "There are changes to your script files.  Do you wish to reload them now?", "Torsion for BlitzBasic", wxYES_NO | wxICON_QUESTION );
+         wxMessageDialog dlg( NULL, "There are changes to your script files.  Do you wish to reload them now?", APP_NAME, wxYES_NO | wxICON_QUESTION );
          reload = dlg.ShowModal() == wxID_YES;
       }
 

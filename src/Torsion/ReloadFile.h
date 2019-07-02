@@ -3,6 +3,8 @@
 #ifndef _RELOADFILE_H_
 #define _RELOADFILE_H_
 
+#include "PreCompiled.h"
+
 #if defined(__GNUG__) && !defined(__APPLE__)
 #pragma interface "ReloadFile.cpp"
 #endif
@@ -28,7 +30,7 @@
 ////@begin control identifiers
 #define ID_DIALOG 10006
 #define SYMBOL_RELOADFILEDLG_STYLE wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxCLOSE_BOX
-#define SYMBOL_RELOADFILEDLG_TITLE _("Torsion for BlitzBasic")
+#define SYMBOL_RELOADFILEDLG_TITLE _(APP_NAME)
 #define SYMBOL_RELOADFILEDLG_IDNAME ID_DIALOG
 #define SYMBOL_RELOADFILEDLG_SIZE wxSize(400, 300)
 #define SYMBOL_RELOADFILEDLG_POSITION wxDefaultPosition

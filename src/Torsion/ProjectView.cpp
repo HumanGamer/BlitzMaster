@@ -434,7 +434,7 @@ void ProjectView::OnBookmarkClearAll( wxCommandEvent& event )
    ProjectDoc* doc = (ProjectDoc*)GetDocument();
    wxASSERT( doc );
    
-   wxMessageDialog dialog( tsGetMainFrame(), "Are you sure you want to delete all of the bookmarks?", "Torsion for BlitzBasic", wxYES_NO );
+   wxMessageDialog dialog( tsGetMainFrame(), "Are you sure you want to delete all of the bookmarks?", APP_NAME, wxYES_NO );
 	if ( dialog.ShowModal() != wxID_YES )
       return;
 
