@@ -3,7 +3,7 @@
 #include "AppPrefs.h"
 
 class DocManager;
-class Debugger;
+//class Debugger;
 class wxFileType;
 class wxSingleInstanceChecker;
 class TorsionDDEServer;
@@ -30,7 +30,7 @@ public:
    virtual void OnFatalException();
    //virtual bool OnExceptionInMainLoop();
 
-	Debugger*            GetDebugger() { return m_Debugger; }
+	//Debugger*            GetDebugger() { return m_Debugger; }
 	AutoCompManager*     GetAutoCompManager() { return m_AutoCompManager; }
 
    const AppPrefs& GetPreferences() const { return m_Prefs; }
@@ -57,7 +57,7 @@ protected:
 
    AppPrefs          m_Prefs;
    DocManager*       m_DocManager;
-	Debugger*		   m_Debugger;
+	//Debugger*		   m_Debugger;
    AutoCompManager*  m_AutoCompManager;
 
    DECLARE_EVENT_TABLE()
@@ -66,5 +66,5 @@ protected:
 DECLARE_APP(BlitzMasterApp);
 
 inline AppPrefs& tsGetPrefs() { return wxGetApp().GetPreferences(); }
-inline Debugger* tsGetDebugger() { return wxGetApp().GetDebugger(); }
+//inline Debugger* tsGetDebugger() { return wxGetApp().GetDebugger(); }
 inline AutoCompManager* tsGetAutoComp() { return wxGetApp().GetAutoCompManager(); }

@@ -421,7 +421,7 @@ bool ProjectDoc::OnNewDocument()
 
 void ProjectDoc::LoadOptions()
 {
-   wxASSERT( tsGetDebugger() );
+   //wxASSERT( tsGetDebugger() );
    wxASSERT( tsGetMainFrame() );
 
    // Now load the project state file.
@@ -552,7 +552,7 @@ void ProjectDoc::LoadOptions()
 
 void ProjectDoc::SaveOptions()
 {
-   if ( GetFilename().IsEmpty() || !tsGetDebugger() || !tsGetMainFrame() )
+   if ( GetFilename().IsEmpty()/* || !tsGetDebugger()*/ || !tsGetMainFrame() )
       return;
 
    // We use the project name with 'state' appended.
@@ -588,8 +588,8 @@ void ProjectDoc::SaveOptions()
 
          wxASSERT( !wxFileName( breakpoints[i]->GetFile() ).IsAbsolute() );
          Xml.AddElem( "File", breakpoints[i]->GetFile() );
-         Xml.AddElem( "Line", itoa( breakpoints[i]->GetLine(), temp, 10 ) );
-         Xml.AddElem( "Pass", itoa( breakpoints[i]->GetPass(), temp, 10 ) );
+         Xml.AddElem( "Line", _itoa( breakpoints[i]->GetLine(), temp, 10 ) );
+         Xml.AddElem( "Pass", _itoa( breakpoints[i]->GetPass(), temp, 10 ) );
          Xml.AddElem( "Condition", breakpoints[i]->GetCondition() );
 
          if ( breakpoints[i]->GetEnabled() )
@@ -609,7 +609,7 @@ void ProjectDoc::SaveOptions()
 
          wxASSERT( !wxFileName( bookmarks[i]->GetFile() ).IsAbsolute() );
          Xml.AddElem( "File", bookmarks[i]->GetFile() );
-         Xml.AddElem( "Line", itoa( bookmarks[i]->GetLine(), temp, 10 ) );
+         Xml.AddElem( "Line", _itoa( bookmarks[i]->GetLine(), temp, 10 ) );
 
       Xml.OutOfElem();
    }
@@ -625,8 +625,8 @@ void ProjectDoc::SaveOptions()
       wxString File = m_OpenFiles[i].Name;
       wxASSERT( !File.IsEmpty() && wxFileName( File ).IsAbsolute() );
       Xml.AddElem( "File", MakeReleativeTo( File ) );
-      Xml.AddAttrib( "ScrollX", itoa( m_OpenFiles[i].Offset.x, temp, 10 ) );
-      Xml.AddAttrib( "ScrollY", itoa( m_OpenFiles[i].Offset.y, temp, 10 ) );
+      Xml.AddAttrib( "ScrollX", _itoa( m_OpenFiles[i].Offset.x, temp, 10 ) );
+      Xml.AddAttrib( "ScrollY", _itoa( m_OpenFiles[i].Offset.y, temp, 10 ) );
       if ( m_ActiveOpenFile == i )
          Xml.AddAttrib( "Active", "true" );
    }
@@ -993,8 +993,8 @@ void ProjectDoc::BreakpointNotify( BreakpointEvent& event )
    tsGetMainFrame()->GetBreakpointsPanel()->ProcessEvent( event );
 
    // Finally let the debugger know.
-   wxASSERT( tsGetDebugger() );
-   tsGetDebugger()->ProcessEvent( event );
+   //wxASSERT( tsGetDebugger() );
+   //tsGetDebugger()->ProcessEvent( event );
 }
 
 void ProjectDoc::AddBreakpoint( const wxString& File, int Line, int Pass, const wxString& Condition, bool Enabled )

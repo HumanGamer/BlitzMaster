@@ -526,7 +526,7 @@ void ListCtrl::OnChar( wxKeyEvent& Event )
 
 void ListCtrl::BeginEdit( int Row, int Col )
 {
-	WatchVarArray& Vars = m_WatchCtrl->m_Vars;
+/*	WatchVarArray& Vars = m_WatchCtrl->m_Vars;
 
    // We never allow editing when not at a breakpoint!
    wxASSERT( tsGetDebugger() );
@@ -556,7 +556,7 @@ void ListCtrl::BeginEdit( int Row, int Col )
 	Rect.Inflate( 0, 2 );
 
 	m_EditCtrl = new ListCtrlEdit( this, Rect, Row, Col, Value );  
-	m_EditCtrl->SetFocus();
+	m_EditCtrl->SetFocus();*/
 }
 
 void ListCtrl::OnMouse( wxMouseEvent& Event )
@@ -664,7 +664,7 @@ bool ListCtrl::HitTest( const wxPoint& Point, int& Row, int& Column ) const
 
 void ListCtrl::_OnVarEdit( int Row, int Col, const wxString& Value )
 {
-   wxASSERT( Row == m_Selected );
+   /*wxASSERT( Row == m_Selected );
 
    wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
 
@@ -714,7 +714,7 @@ void ListCtrl::_OnVarEdit( int Row, int Col, const wxString& Value )
 		}
 	}
 
-	OnChanged();
+	OnChanged();*/
 }
 
 void ListCtrl::OnChanged()
@@ -1039,7 +1039,7 @@ END_EVENT_TABLE()
 
 void WatchCtrl::AddVar( const wxString& Name )
 {
-	if ( !m_EditableRow ) {
+	/*if ( !m_EditableRow ) {
 		return;
 	}
 
@@ -1051,7 +1051,7 @@ void WatchCtrl::AddVar( const wxString& Name )
 		tsGetDebugger()->UpdateVar( Var );
 	}
 
-	m_ListCtrl->OnChanged();
+	m_ListCtrl->OnChanged();*/
 }
 
 void WatchCtrl::ClearAll()
@@ -1078,7 +1078,7 @@ void WatchCtrl::ClearAll()
 
 void WatchCtrl::_ToggleExpanded( int Row )
 {
-	WatchVar* ExpandVar = m_Vars[ Row ];
+	/*WatchVar* ExpandVar = m_Vars[ Row ];
 	wxASSERT( ExpandVar );
 	wxASSERT( ExpandVar->IsExpandable() );
 
@@ -1114,40 +1114,40 @@ void WatchCtrl::_ToggleExpanded( int Row )
 	// Insert the expand the children in place.
 	_InsertVars( Row + 1, ExpandVar->GetVars() );
 
-	m_ListCtrl->OnChanged();
+	m_ListCtrl->OnChanged();*/
 }
 
 void WatchCtrl::UpdateWatch()
 {
-	if ( !tsGetDebugger()->IsAtBreakpoint() ) {
+	//if ( !tsGetDebugger()->IsAtBreakpoint() ) {
 
-		/*
-		for ( int i=0; i < m_Vars.GetCount(); ++i ) {
-			WatchVar* Var = m_Vars[i];
-			Var->SetValue( "<error: not found!>" );
-			Var->SetType( "" );
-		}
-		*/
+	//	/*
+	//	for ( int i=0; i < m_Vars.GetCount(); ++i ) {
+	//		WatchVar* Var = m_Vars[i];
+	//		Var->SetValue( "<error: not found!>" );
+	//		Var->SetType( "" );
+	//	}
+	//	*/
 
-		return;
-	}
+	//	return;
+	//}
 
-	for ( int i=0; i < m_Vars.GetCount(); ++i ) {
-        
-		WatchVar* Var = m_Vars[i];
+	//for ( int i=0; i < m_Vars.GetCount(); ++i ) {
+ //       
+	//	WatchVar* Var = m_Vars[i];
 
-		if ( !Var->GetParent() && !Var->GetName().IsEmpty() ) {
+	//	if ( !Var->GetParent() && !Var->GetName().IsEmpty() ) {
 
-         tsGetDebugger()->UpdateVar( Var );
+ //        tsGetDebugger()->UpdateVar( Var );
 
-			if ( Var->IsExpanded() ) {
-            tsGetDebugger()->UpdateExpanded( Var );
-			}
-		}
-	}
+	//		if ( Var->IsExpanded() ) {
+ //           tsGetDebugger()->UpdateExpanded( Var );
+	//		}
+	//	}
+	//}
 
-	wxASSERT( m_ListCtrl );
-	m_ListCtrl->Refresh();
+	//wxASSERT( m_ListCtrl );
+	//m_ListCtrl->Refresh();
 }
 
 void WatchCtrl::SetFunctionCall( FunctionCall* Call )

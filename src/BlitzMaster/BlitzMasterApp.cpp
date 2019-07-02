@@ -70,7 +70,7 @@ BlitzMasterApp::BlitzMasterApp()
    :  wxApp(),
       m_DocManager( NULL ),
       m_Prefs(),
-      m_Debugger( NULL ),
+      //m_Debugger( NULL ),
       m_AutoCompManager( NULL ),
       m_InstChecker( NULL ),
       m_UserInstChecker( NULL ),
@@ -188,7 +188,7 @@ bool BlitzMasterApp::OnInit()
    wxSocketBase::Initialize();
 
    // Init the debugger.
-   m_Debugger = new Debugger();
+   //m_Debugger = new Debugger();
 
    // TODO: This is broken in wxMSW
    // wxThread::SetConcurrency( 2 ); 
@@ -284,7 +284,7 @@ void BlitzMasterApp::CleanUp()
       wxDELETE( m_DocManager );
    }
 
-   wxDELETE( m_Debugger );
+   //wxDELETE( m_Debugger );
    wxDELETE( m_AutoCompManager );
 
    // Save the app prefs.

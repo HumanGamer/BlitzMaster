@@ -400,8 +400,8 @@ void OutputPanel::OnConsoleCommand( wxCommandEvent& event )
 {
    wxASSERT( m_CmdLine == event.GetEventObject() );
 
-   if ( tsGetDebugger()->IsRunning() && !tsGetDebugger()->IsAtBreakpoint() ) 
-		tsGetDebugger()->Eval( m_CmdLine->GetLabel() );
+   //if ( tsGetDebugger()->IsRunning() && !tsGetDebugger()->IsAtBreakpoint() ) 
+   //    tsGetDebugger()->Eval( m_CmdLine->GetLabel() );
 
    // Stick the command into the list.
    m_CmdLine->Insert( m_CmdLine->GetLabel(), 0 );
@@ -417,7 +417,7 @@ void OutputPanel::OnConsoleCommand( wxCommandEvent& event )
 
 void OutputPanel::OnConsoleCommandUpdateUI( wxUpdateUIEvent& event )
 {
-   event.Enable( tsGetDebugger()->IsRunning() && !tsGetDebugger()->IsAtBreakpoint() );
+   //event.Enable( tsGetDebugger()->IsRunning() && !tsGetDebugger()->IsAtBreakpoint() );
 }
 
 const ErrorArray& OutputPanel::GetErrors() const

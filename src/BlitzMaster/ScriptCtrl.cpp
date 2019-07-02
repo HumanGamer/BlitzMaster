@@ -1504,7 +1504,7 @@ void ScriptCtrl::OnHoverStart( wxStyledTextEvent& event )
 
       // If this is a local and our breakpoint is in the active 
       // file then we can safely try to evaluate it.
-      wxASSERT( tsGetDebugger() );
+      /*wxASSERT( tsGetDebugger() );
       wxString brfile; int brline;
       if (  word[0] == '%' && !isFunction &&
             tsGetDebugger()->GetBreakpointFileAndLine( brfile, brline ) && 
@@ -1528,7 +1528,7 @@ void ScriptCtrl::OnHoverStart( wxStyledTextEvent& event )
       {
          tsGetDebugger()->EvalCallTip( word );
          return;
-      }
+      }*/
 
       const AutoCompData* data = tsGetAutoComp()->Lock();
 
@@ -2555,13 +2555,13 @@ void ScriptCtrl::OnContextMenu( wxContextMenuEvent& event )
          
          bool addSep = true;
 
-         if ( tsGetDebugger()->IsRunning() )
+         /*if ( tsGetDebugger()->IsRunning() )
          {
             m_WatchText = word;
             menu->AppendSeparator();
             menu->Append( tsID_ADD_WATCH, _T( "Add &Watch" ) );
             addSep = false;
-         }
+         }*/
 
          if ( !m_DefPaths.IsEmpty() ) 
          {
@@ -2575,13 +2575,13 @@ void ScriptCtrl::OnContextMenu( wxContextMenuEvent& event )
       }
    }
 
-   if ( tsGetDebugger()->IsRunning() )
+   /*if ( tsGetDebugger()->IsRunning() )
    {
       menu->AppendSeparator();
       menu->AppendIconItem( tsID_MOVE_INSTPTR, _T( "Set &Next Statement" ), ts_currentline16 );
       // TODO: Run to cursor (aka temporary invisible breakpoint).
       menu->Append( tsID_RELOAD_SCRIPT, _T( "&Reload Script" ) );
-   }
+   }*/
 
    menu->AppendSeparator();
    tsMenu* folding = new tsMenu;

@@ -865,39 +865,39 @@ void ScriptView::OnUpdateLineWrap( wxUpdateUIEvent& event )
 
 void ScriptView::OnMoveInstPtr( wxCommandEvent& event )
 {
-   wxASSERT( tsGetDebugger() );
+   /*wxASSERT( tsGetDebugger() );
    wxASSERT( tsGetDebugger()->IsRunning() );
    wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
 
    wxASSERT( m_ScriptCtrl );
    int line = m_ScriptCtrl->LineFromPosition( m_ScriptCtrl->GetSelectionStart() );
 
-   tsGetDebugger()->MoveInstPtr( GetDocument()->GetFilename(), line+1 );
+   tsGetDebugger()->MoveInstPtr( GetDocument()->GetFilename(), line+1 );*/
 }
 
 void ScriptView::OnUpdateMoveInstPtr( wxUpdateUIEvent& event )
 {
-   wxASSERT( tsGetDebugger() );
-   event.Enable( tsGetDebugger()->IsAtBreakpoint() );      
+   //wxASSERT( tsGetDebugger() );
+   //event.Enable( tsGetDebugger()->IsAtBreakpoint() );      
 }
 
 void ScriptView::OnReloadScript( wxCommandEvent& event )
 {
-   wxASSERT( tsGetDebugger() );
+   /*wxASSERT( tsGetDebugger() );
    wxASSERT( tsGetDebugger()->IsRunning() );
    if ( GetDocument()->Save() )
    {
       wxArrayString scripts;
       scripts.Add( GetDocument()->GetFilename() );
       tsGetDebugger()->ReloadScripts( scripts );
-   }
+   }*/
 }
 
 void ScriptView::OnUpdateReloadScript( wxUpdateUIEvent& event )
 {
-   wxASSERT( tsGetDebugger() );
+   /*wxASSERT( tsGetDebugger() );
    ScriptDoc* doc = (ScriptDoc*)GetDocument();
-   event.Enable( tsGetDebugger()->IsRunning() && doc->IsModified() && !doc->GetFilename().IsEmpty() );      
+   event.Enable( tsGetDebugger()->IsRunning() && doc->IsModified() && !doc->GetFilename().IsEmpty() );      */
 }
 
 void ScriptView::OnOpenWith( wxCommandEvent& event )

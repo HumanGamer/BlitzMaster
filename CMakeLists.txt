@@ -225,6 +225,7 @@ target_link_libraries(BlitzMaster ${wxWidgets_LIBRARIES} tinyxml2)
 
 if (MSVC)
 	set_target_properties(BlitzMaster PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif()
 
 # Install rules 

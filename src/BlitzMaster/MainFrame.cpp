@@ -672,7 +672,7 @@ void MainFrame::OnCloseWindow(wxCloseEvent& event)
            OnPrecompileStop( wxCommandEvent() );
         }*/
 
-        wxASSERT(tsGetDebugger());
+        /*wxASSERT(tsGetDebugger());
         if (tsGetDebugger()->IsRunning())
         {
             wxMessageDialog dlg(this, "Do you want to stop debugging?", APP_NAME, wxYES_NO | wxICON_QUESTION);
@@ -680,7 +680,7 @@ void MainFrame::OnCloseWindow(wxCloseEvent& event)
                 return;
 
             OnDebugStop(wxCommandEvent());
-        }
+        }*/
 
         if (m_ProjectDoc->Close())
         {
@@ -778,8 +778,8 @@ void MainFrame::OnNewProject(wxCommandEvent& event)
 
 void MainFrame::OnNewProjectUpdateUI(wxUpdateUIEvent& event)
 {
-    wxASSERT(tsGetDebugger());
-    event.Enable(!tsGetDebugger()->IsRunning() && !m_PreCompiler);
+    //wxASSERT(tsGetDebugger());
+    event.Enable(/*!tsGetDebugger()->IsRunning() && */!m_PreCompiler);
 }
 
 void MainFrame::OnOpenProject(wxCommandEvent& event)
@@ -1349,8 +1349,8 @@ void MainFrame::OnMenuOpen( wxMenuEvent& event )
 
 void MainFrame::OnUpdateProjectClose(wxUpdateUIEvent& event)
 {
-    wxASSERT(tsGetDebugger());
-    event.Enable(m_ProjectDoc != NULL && !tsGetDebugger()->IsRunning() && !m_PreCompiler);
+    //wxASSERT(tsGetDebugger());
+    event.Enable(m_ProjectDoc != NULL/* && !tsGetDebugger()->IsRunning()*/ && !m_PreCompiler);
 }
 
 void MainFrame::OnProjectRefresh(wxCommandEvent& event)
@@ -2209,7 +2209,7 @@ void MainFrame::OnDisableAllBreakpoints(wxCommandEvent& event)
 
 void MainFrame::OnBreakpointUpdateUI(wxUpdateUIEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    //wxASSERT(tsGetDebugger());
 
     if (event.GetId() == tsID_DEBUG_NEWBREAKPOINT) {
         event.Enable(GetProjectDoc() != NULL);
@@ -2231,11 +2231,11 @@ void MainFrame::UpdateDebugMenu()
 {
     wxASSERT(m_DebugMenu);
     wxASSERT(GetToolBar());
-    wxASSERT(tsGetDebugger());
+    //wxASSERT(tsGetDebugger());
 
     bool Realize = false;
 
-    if (tsGetDebugger()->IsAtBreakpoint()) {
+    /*if (tsGetDebugger()->IsAtBreakpoint()) {
 
         m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start"));
         m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Continue\tF5"));
@@ -2277,7 +2277,7 @@ void MainFrame::UpdateDebugMenu()
 
         m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start\tF5"));
         m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Break\tCtrl+Alt+Break"));
-    }
+    }*/
 
     if (Realize)
         GetToolBar()->Realize();
@@ -2289,11 +2289,11 @@ void MainFrame::UpdateDebugMenu()
 
 void MainFrame::OnDebugStartBreak(wxCommandEvent& event)
 {
-    if (tsGetDebugger()->IsAtBreakpoint() || tsGetDebugger()->IsRunning())
+    /*if (tsGetDebugger()->IsAtBreakpoint() || tsGetDebugger()->IsRunning())
         OnDebugBreak(event);
     else {
         OnDebugStart(event);
-    }
+    }*/
 }
 
 void MainFrame::OnDebugStart(wxCommandEvent& event)
@@ -2309,8 +2309,8 @@ void MainFrame::OnDebugStart(wxCommandEvent& event)
 
 void MainFrame::StartDebug(const wxString& command)//, bool doPrecompile )
 {
-    wxASSERT(tsGetDebugger());
-    wxASSERT(!tsGetDebugger()->IsRunning());
+    //wxASSERT(tsGetDebugger());
+    //wxASSERT(!tsGetDebugger()->IsRunning());
 
     wxASSERT(GetProjectDoc());
 
@@ -2573,8 +2573,8 @@ void RunSeparate(wxString cwd, wxString blitzCompiler, wxString cmd)
 
 void MainFrame::StartRun(bool debug)// bool doPrecompile )
 {
-    wxASSERT(tsGetDebugger());
-    wxASSERT(!tsGetDebugger()->IsRunning());
+    //wxASSERT(tsGetDebugger());
+    //wxASSERT(!tsGetDebugger()->IsRunning());
 
     // Do we need to precompile the scripts?
     /*if ( doPrecompile )
@@ -2618,8 +2618,8 @@ void MainFrame::StartRun(bool debug)// bool doPrecompile )
 
 void MainFrame::OnDebugConnect(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
-    wxASSERT(!tsGetDebugger()->IsRunning());
+    //wxASSERT(tsGetDebugger());
+    //wxASSERT(!tsGetDebugger()->IsRunning());
 
     wxASSERT(GetProjectDoc());
 
@@ -2642,18 +2642,18 @@ void MainFrame::OnDebugConnect(wxCommandEvent& event)
 
 void MainFrame::OnDebugStop(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    /*wxASSERT(tsGetDebugger());
     if (tsGetDebugger()->IsRunning())
     {
         tsGetDebugger()->Stop();
         UpdateDebugMenu();
         UpdateTitle();
-    }
+    }*/
 }
 
 void MainFrame::OnDebugRestart(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    /*wxASSERT(tsGetDebugger());
     if (tsGetDebugger()->IsRunning())
     {
         tsGetDebugger()->Stop();
@@ -2661,12 +2661,12 @@ void MainFrame::OnDebugRestart(wxCommandEvent& event)
         UpdateTitle();
 
         OnDebugStart(event);
-    }
+    }*/
 }
 
 void MainFrame::OnDebugBreak(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    /*wxASSERT(tsGetDebugger());
     wxASSERT(tsGetDebugger()->IsRunning());
 
     if (tsGetDebugger()->IsAtBreakpoint()) {
@@ -2676,7 +2676,7 @@ void MainFrame::OnDebugBreak(wxCommandEvent& event)
         tsGetDebugger()->Break();
     }
     UpdateDebugMenu();
-    UpdateTitle();
+    UpdateTitle();*/
 }
 
 void MainFrame::OnDebugStep(wxCommandEvent& event)
@@ -2727,16 +2727,16 @@ void MainFrame::OnDebugStepOver(wxCommandEvent& event)
 
 void MainFrame::OnDebugStepOut(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    /*wxASSERT(tsGetDebugger());
     wxASSERT(tsGetDebugger()->IsRunning());
     wxASSERT(tsGetDebugger()->IsAtBreakpoint());
     tsGetDebugger()->StepOut();
-    UpdateDebugMenu();
+    UpdateDebugMenu();*/
 }
 
 void MainFrame::OnDebugUpdateUI(wxUpdateUIEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    //wxASSERT(tsGetDebugger());
 
     if (!GetProjectDoc() || m_PreCompiler)
     {
@@ -2748,7 +2748,7 @@ void MainFrame::OnDebugUpdateUI(wxUpdateUIEvent& event)
     {
         event.Enable(true);
     }
-    else if (event.GetId() == tsID_DEBUG_START ||
+    /*else if (event.GetId() == tsID_DEBUG_START ||
         event.GetId() == tsID_DEBUG_START_WITHOUT_DEBUGGING ||
         event.GetId() == tsID_DEBUG_CONNECT)
     {
@@ -2768,7 +2768,7 @@ void MainFrame::OnDebugUpdateUI(wxUpdateUIEvent& event)
     else if (event.GetId() == tsID_DEBUG_STEP_OUT)
     {
         event.Enable(tsGetDebugger()->IsRunning() && tsGetDebugger()->IsAtBreakpoint());
-    }
+    }*/
 }
 
 void MainFrame::OnDebuggerStop()
@@ -2792,7 +2792,7 @@ void MainFrame::OnDebuggerStop()
 
 void MainFrame::OnReloadScripts(wxCommandEvent& event)
 {
-    wxASSERT(tsGetDebugger());
+    //wxASSERT(tsGetDebugger());
 
     ScriptDocArray scripts;
     GetChangedScripts(scripts);
@@ -2806,15 +2806,15 @@ void MainFrame::OnReloadScripts(wxCommandEvent& event)
         files.Add(scripts[i]->GetFilename());
     }
 
-    if (files.GetCount() > 0)
-        tsGetDebugger()->ReloadScripts(files);
+    //if (files.GetCount() > 0)
+    //    tsGetDebugger()->ReloadScripts(files);
 }
 
 void MainFrame::OnUpdateReloadScripts(wxUpdateUIEvent& event)
 {
-    wxASSERT(tsGetDebugger());
-    ScriptDocArray scripts;
-    event.Enable(tsGetDebugger()->IsRunning() && GetChangedScripts(scripts) > 0);
+    //wxASSERT(tsGetDebugger());
+    //ScriptDocArray scripts;
+    //event.Enable(tsGetDebugger()->IsRunning() && GetChangedScripts(scripts) > 0);
 }
 
 void MainFrame::SetCallStack(const FunctionCallArray& CallStack, int Level)
@@ -2914,7 +2914,7 @@ void MainFrame::UpdateTitle()
     }
 
     // Add the mode.
-    if (Project) {
+    /*if (Project) {
 
         wxASSERT(tsGetDebugger());
 
@@ -2932,19 +2932,19 @@ void MainFrame::UpdateTitle()
 
             //Title << " [stopped]";
         }
-    }
+    }*/
 
     SetTitle(Title);
 }
 
 void MainFrame::OnCallStackActivated(wxListEvent& event)
 {
-    if (!tsGetDebugger()->IsRunning())
+    /*if (!tsGetDebugger()->IsRunning())
         return;
 
     if (tsGetDebugger()->IsAtBreakpoint()) {
         tsGetDebugger()->SetStackLevel(event.GetIndex());
-    }
+    }*/
 }
 
 void MainFrame::OnHelp(wxHelpEvent& event)

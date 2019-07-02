@@ -75,7 +75,7 @@ private:
 
 inline bool XmlFile::StringToBool( const wxChar* boolean )
 {
-   return stricmp( boolean, "true" ) == 0 || atoi( boolean );
+   return _stricmp( boolean, "true" ) == 0 || atoi( boolean );
 }
 
 inline int XmlFile::StringToInt( const wxChar* integer )
@@ -90,5 +90,5 @@ inline wxString XmlFile::BoolToString( bool value )
 
 inline wxString XmlFile::IntToString( int value )
 {
-   return itoa( value, s_Temp, 10 ); 
+   return _itoa( value, s_Temp, 10 ); 
 }
