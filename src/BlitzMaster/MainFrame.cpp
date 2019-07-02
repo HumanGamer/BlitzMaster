@@ -105,10 +105,10 @@ EVT_UPDATE_UI( tsID_PROJECT_PRECOMPILEALL, OnUpdatePrecompile )*/
 
 EVT_MENU_RANGE(tsID_PROJECT1, tsID_PROJECT5, OnMRUProject)
 
-EVT_MENU(tsID_CLEARDSO, OnClearDSO)
-EVT_UPDATE_UI(tsID_CLEARDSO, OnUpdateHasDSO)
-EVT_MENU(tsID_CLEARDSOS, OnClearDSOs)
-EVT_UPDATE_UI(tsID_CLEARDSOS, OnUpdateProjectClose)
+//EVT_MENU(tsID_CLEARDSO, OnClearDSO)
+//EVT_UPDATE_UI(tsID_CLEARDSO, OnUpdateHasDSO)
+//EVT_MENU(tsID_CLEARDSOS, OnClearDSOs)
+//EVT_UPDATE_UI(tsID_CLEARDSOS, OnUpdateProjectClose)
 
 EVT_MENU(wxID_CLOSE, OnFileClose)
 EVT_UPDATE_UI(wxID_CLOSE, OnUpdateFileClose)
@@ -611,7 +611,7 @@ bool MainFrame::Create(DocManager* manager, wxFrame* frame, const wxString& titl
     m_BottomNotebook->SetSelection(0);
 
     wxFileName chmFile(wxGetApp().GetAppPath());
-    chmFile.SetFullName("Torsion.chm");
+    chmFile.SetFullName("BlitzMaster.chm");
     m_HelpController.Initialize(chmFile.GetFullPath());
 
     return true;
@@ -1499,7 +1499,7 @@ void MainFrame::OnUpdateDisabled(wxUpdateUIEvent& event)
 }
 
 // TODO: Move this to it's own implementation file.
-class DeleteDSOsTraverser : public wxDirTraverser
+/*class DeleteDSOsTraverser : public wxDirTraverser
 {
 public:
 
@@ -1543,9 +1543,9 @@ public:
     OutputPanel* m_Ctrl;
     int m_Files;
     int m_Skipped;
-};
+};*/
 
-void MainFrame::OnClearDSOs(wxCommandEvent& event)
+/*void MainFrame::OnClearDSOs(wxCommandEvent& event)
 {
     wxASSERT(m_OutputPanel);
     m_OutputPanel->Clear();
@@ -1612,7 +1612,7 @@ void MainFrame::OnUpdateHasDSO(wxUpdateUIEvent& event)
 
     event.Enable(!tsGetPrefs().GetDSOForScript(
         GetDocumentManager()->GetCurrentDocument()->GetFilename()).IsEmpty());
-}
+}*/
 
 shNotebook* MainFrame::ShowProjectSash(bool show)
 {

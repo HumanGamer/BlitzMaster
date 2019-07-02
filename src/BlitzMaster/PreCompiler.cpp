@@ -44,13 +44,13 @@ protected:
    wxString m_Exec;
    wxString m_ActiveScript;
    wxArrayString m_Mods;
-   bool     m_ClearDSOs;
+   //bool     m_ClearDSOs;
    //bool     m_SetModPaths;
    wxEvtHandler*  m_OutputWnd;
 
    wxFileName m_Script;
 
-   wxArrayString m_DSOExts;
+   //wxArrayString m_DSOExts;
    wxArrayString m_Scripts;
    wxArrayString m_ExcludedFolders;
    wxArrayString m_ScriptExts;
@@ -92,7 +92,7 @@ wxDirTraverseResult ScriptCollector::OnFile( const wxString& name )
       return wxDIR_CONTINUE;
 
    // If we're rebuilding all then delete the DSOs.
-   if ( m_PC.m_ClearDSOs )
+   /*if ( m_PC.m_ClearDSOs )
    {
       for ( int i=0; i < m_PC.m_DSOExts.GetCount(); i++ )
       {
@@ -111,7 +111,7 @@ wxDirTraverseResult ScriptCollector::OnFile( const wxString& name )
                dsoName.GetModificationTime().IsLaterThan( script.GetModificationTime() ))
             return wxDIR_CONTINUE;
       }
-   }
+   }*/
 
    script.MakeRelativeTo( m_PC.m_WorkingDir );
    m_PC.m_Scripts.Add( script.GetFullPath() );
@@ -162,7 +162,7 @@ PreCompiler::~PreCompiler()
    }
 }
 
-bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const wxArrayString& mods, const wxString& activeScript, bool clearDSOs/*, bool setModPaths*/, wxEvtHandler* outputWnd )
+bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const wxArrayString& mods, const wxString& activeScript/*, bool clearDSOs, bool setModPaths*/, wxEvtHandler* outputWnd )
 {
    wxASSERT( !m_Thread );
 
@@ -179,12 +179,12 @@ bool PreCompiler::Run( const wxString& workingDir, const wxString& exec, const w
    // Init the data we'll need in the thread.
    m_Thread->m_WorkingDir = workingDir;
    m_Thread->m_Exec = exec;
-   m_Thread->m_ClearDSOs = clearDSOs;
+   //m_Thread->m_ClearDSOs = clearDSOs;
    m_Thread->m_ScriptExts = tsGetPrefs().GetScriptExtensions();
    m_Thread->m_ActiveScript = activeScript;
    m_Thread->m_Mods = mods;
    m_Thread->m_ExcludedFolders = tsGetPrefs().GetExcludedFolders();
-   m_Thread->m_DSOExts = tsGetPrefs().GetDSOExts();
+   //m_Thread->m_DSOExts = tsGetPrefs().GetDSOExts();
    m_Thread->m_OutputWnd = outputWnd;
    //m_Thread->m_SetModPaths = setModPaths;
 

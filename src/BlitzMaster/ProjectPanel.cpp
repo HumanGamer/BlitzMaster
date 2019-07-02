@@ -106,9 +106,9 @@ void ProjectPanel::CreateControls()
    wxBitmap itemtool6Bitmap(itemPanel1->GetBitmapResource(wxT("icons/filter_nonscript16.xpm")));
    wxBitmap itemtool6BitmapDisabled;
    itemToolBar4->AddTool(tsID_PROJECT_SHOWALLFILES, _T(""), itemtool6Bitmap, itemtool6BitmapDisabled, wxITEM_CHECK, _("Show All Files"), wxEmptyString);
-   wxBitmap itemtool7Bitmap(itemPanel1->GetBitmapResource(wxT("icons/deletedso16.xpm")));
-   wxBitmap itemtool7BitmapDisabled;
-   itemToolBar4->AddTool(tsID_CLEARDSOS, _T(""), itemtool7Bitmap, itemtool7BitmapDisabled, wxITEM_NORMAL, _("Delete DSOs"), wxEmptyString);
+   //wxBitmap itemtool7Bitmap(itemPanel1->GetBitmapResource(wxT("icons/deletedso16.xpm")));
+   //wxBitmap itemtool7BitmapDisabled;
+   //itemToolBar4->AddTool(tsID_CLEARDSOS, _T(""), itemtool7Bitmap, itemtool7BitmapDisabled, wxITEM_NORMAL, _("Delete DSOs"), wxEmptyString);
    wxBitmap itemtool8Bitmap(itemPanel1->GetBitmapResource(wxT("icons/sync_tree16.xpm")));
    wxBitmap itemtool8BitmapDisabled;
    itemToolBar4->AddTool(tsID_PROJECT_SYNCTREE, _T(""), itemtool8Bitmap, itemtool8BitmapDisabled, wxITEM_CHECK, _("Sync With Editor"), wxEmptyString);

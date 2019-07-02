@@ -170,12 +170,12 @@ public:
    wxString GetScriptExtsString() const;
    bool SetScriptExtsString( const wxString& exts );
 
-   const wxArrayString& GetDSOExts() const { return m_DSOExts; }
-   wxString GetDSOExtsString() const;
-   bool SetDSOExtsString( const wxString& exts );
-   bool IsDSOExt( const wxString& ext ) const;
-   bool IsDSO( const wxString& file ) const;
-   wxString GetDSOForScript( const wxString& script ) const;
+   //const wxArrayString& GetDSOExts() const { return m_DSOExts; }
+   //wxString GetDSOExtsString() const;
+   //bool SetDSOExtsString( const wxString& exts );
+   //bool IsDSOExt( const wxString& ext ) const;
+   //bool IsDSO( const wxString& file ) const;
+   //wxString GetDSOForScript( const wxString& script ) const;
 
    bool IsExcludedFile( const wxString& name ) const;
    bool IsExcludedFolder( const wxString& name ) const;
@@ -272,7 +272,7 @@ protected:
 
 	wxString	m_Reserved;
 
-   wxArrayString m_DSOExts;
+   //wxArrayString m_DSOExts;
    wxArrayString m_ScriptExts;
    wxArrayString m_TextExts;
    wxArrayString m_ExcludedFiles;

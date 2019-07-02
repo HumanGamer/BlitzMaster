@@ -209,7 +209,7 @@ bool ProjectDoc::OnSaveDocument( const wxString& filename )
    working.MakeRelativeTo( filePath );
 
 	XmlFile Xml;
-	Xml.AddElem( "TorsionProject" );
+	Xml.AddElem( "BlitzMasterProject" );
 	Xml.IntoElem();
 	Xml.AddElem( "Name", m_Name );
 	Xml.AddElem( "WorkingDir", working.GetFullPath() );
@@ -283,7 +283,7 @@ bool ProjectDoc::OnOpenDocument( const wxString& filename )
 	   delete [] Buffer;
    }
 
-   if ( !Xml.FindElem( "TorsionProject" ) ) 
+   if ( !Xml.FindElem( "BlitzMasterProject" ) ) 
    {
       wxMessageBox(_("Sorry, this project file is corrupt."), wxTheApp->GetAppName(), wxOK|wxICON_EXCLAMATION,
                         GetDocumentWindow());
@@ -439,7 +439,7 @@ void ProjectDoc::LoadOptions()
 	   delete [] Buffer;
    }
 
-   if ( !Xml.FindElem( "TorsionProjectOptions" ) )
+   if ( !Xml.FindElem( "BlitzMasterProjectOptions" ) )
 		return;
 
    Xml.IntoElem();
@@ -567,7 +567,7 @@ void ProjectDoc::SaveOptions()
    char temp[MAX_PATH];
 
 	XmlFile Xml;
-	Xml.AddElem( "TorsionProjectOptions" );
+	Xml.AddElem( "BlitzMasterProjectOptions" );
 	Xml.IntoElem();
 
 	//Xml.AddElem( "Address", m_Address );

@@ -26,8 +26,8 @@
 #define tsID_SAVEALL                   6010
 #define tsID_NEXTVIEW                  6011
 #define tsID_PREVIOUSVIEW              6012
-#define tsID_CLEARDSO                  6013
-#define tsID_CLEARDSOS                 6014
+//#define tsID_CLEARDSO                  6013
+//#define tsID_CLEARDSOS                 6014
 #define tsID_CLOSE_OTHERS              6015
 #define tsID_SHOW_LEFTPANE             6016
 #define tsID_SHOW_BOTTOMPANE           6017

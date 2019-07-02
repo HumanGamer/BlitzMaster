@@ -312,7 +312,7 @@ void ScriptFrame::OnContextMenu( wxContextMenuEvent& event )
    menu->Append( tsID_PROJECT_OPENWITH, _T( "Open Wit&h..." ) );
    menu->AppendIconItem( tsID_EXPLORE,   _T( "&Open Containing Folder" ), ts_explorer16 );
    menu->AppendSeparator();
-   menu->AppendIconItem( tsID_CLEARDSO, _T( "&Delete DSO" ), ts_delete16 );
+   //menu->AppendIconItem( tsID_CLEARDSO, _T( "&Delete DSO" ), ts_delete16 );
    menu->AppendIconItem( tsID_RELOAD_SCRIPT, _T( "&Reload Script" ), ts_refreshpage16 );
    PopupMenu( menu, pt );   
    delete menu;

@@ -163,9 +163,9 @@ public:
 
     //void DoPrecompile( int eventId );
 
-    void OnClearDSOs(wxCommandEvent& event);
-    void OnClearDSO(wxCommandEvent& event);
-    void OnUpdateHasDSO(wxUpdateUIEvent& event);
+    //void OnClearDSOs(wxCommandEvent& event);
+    //void OnClearDSO(wxCommandEvent& event);
+    //void OnUpdateHasDSO(wxUpdateUIEvent& event);
 
     void OnShowLeftPane(wxCommandEvent& event);
     void OnUpdateShowLeftPane(wxUpdateUIEvent& event);

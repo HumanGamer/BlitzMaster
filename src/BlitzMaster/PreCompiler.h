@@ -20,7 +20,7 @@ public:
                const wxString& exec, 
                const wxArrayString& mods, 
                const wxString& activeScript, 
-               bool clearDSOs, 
+               //bool clearDSOs, 
                //bool setModPaths, 
                wxEvtHandler* outputWnd );
 

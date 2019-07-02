@@ -66,7 +66,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
 {
    XmlFile Xml( Buffer );
 
-	Xml.FindElem( "TorsionPrefs" );
+	Xml.FindElem( "BlitzMasterPrefs" );
 	Xml.IntoElem();
 	wxString test = m_DefaultFont.GetNativeFontInfoDesc();
 
@@ -163,9 +163,9 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
    wxString exts = Xml.GetStringElem( "ScriptExtensions", "bb,bmx" );
    SetScriptExtsString( exts );
 
-   m_DSOExts.Empty();
-   exts = Xml.GetStringElem( "DSOExts", "dso,edso" );
-   SetDSOExtsString( exts );
+   //m_DSOExts.Empty();
+   //exts = Xml.GetStringElem( "DSOExts", "dso,edso" );
+   //SetDSOExtsString( exts );
 
    m_ExcludedFiles.Empty();
    if ( Xml.GetArrayStringElems( m_ExcludedFiles, "ExcludedFileNames", "Name" ) == -1 ) 
@@ -180,6 +180,8 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
       m_ExcludedFiles.Add( ".tmp" );
       m_ExcludedFiles.Add( ".ilk" );
       m_ExcludedFiles.Add( ".pdb" );
+      m_ExcludedFiles.Add( ".bb_bak1" );
+      m_ExcludedFiles.Add( ".bb_bak2" );
    }
 
    m_ExcludedFolders.Empty();
@@ -266,7 +268,7 @@ bool AppPrefs::Save( const wxString& Path )
 	}
 
 	XmlFile Xml;
-	Xml.AddElem( "TorsionPrefs" );
+	Xml.AddElem( "BlitzMasterPrefs" );
 	Xml.IntoElem();
 
    Xml.AddElem( "DefaultFont", m_DefaultFont.GetNativeFontInfoDesc() );
@@ -345,7 +347,7 @@ bool AppPrefs::Save( const wxString& Path )
    Xml.AddElem( "LastProject", m_LastProject );
 
    Xml.AddElem( "ScriptExtensions", GetScriptExtsString() );
-   Xml.AddElem( "DSOExts", GetDSOExtsString() );
+   //Xml.AddElem( "DSOExts", GetDSOExtsString() );
    Xml.AddArrayStringElems( "ExcludedFileNames", "Name", m_ExcludedFiles );
    Xml.AddArrayStringElems( "ExcludedFolderNames", "Name", m_ExcludedFolders );
    Xml.AddArrayStringElems( "TextExts", "Ext", m_TextExts );
@@ -759,7 +761,7 @@ wxString AppPrefs::GetExcludedFoldersString() const
    return exclude;
 }
 
-bool AppPrefs::SetDSOExtsString( const wxString& value )
+/*bool AppPrefs::SetDSOExtsString( const wxString& value )
 {
 	wxStringTokenizer toker( value, ",;", wxTOKEN_STRTOK );
    wxArrayString exts;
@@ -833,7 +835,7 @@ wxString AppPrefs::GetDSOForScript( const wxString& script ) const
    }
 
    return wxEmptyString;
-}
+}*/
 
 bool AppPrefs::SetToolCommands( const ToolCommandArray& cmds )
 {

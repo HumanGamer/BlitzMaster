@@ -246,12 +246,12 @@ public:
          return wxDIR_CONTINUE;
 
       // If this is a DSO skip it if the script exists.
-      if ( tsGetPrefs().IsDSOExt( file.GetExt() ) )
+      /*if ( tsGetPrefs().IsDSOExt( file.GetExt() ) )
       {
          wxString script = filename.BeforeLast( '.' );
          if ( wxFileName::FileExists( script ) )
             return wxDIR_CONTINUE;
-      }
+      }*/
 
       // Check if we're filtering non-script files.
       if ( !m_ShowAllFiles && !tsGetPrefs().IsScriptFile( filename ) )
@@ -927,8 +927,8 @@ void ProjectCtrl::OnItemMenu( wxTreeEvent& Event )
       menu->AppendSeparator();
       menu->Append( tsID_NEW_FILE, _T( "New Script" ) );
       menu->Append( tsID_NEW_FOLDER, _T( "New Folder" ) );
-      menu->AppendSeparator();
-      menu->Append( tsID_CLEARDSOS, _T( "&Delete DSOs" ) );
+      //menu->AppendSeparator();
+      //menu->Append( tsID_CLEARDSOS, _T( "&Delete DSOs" ) );
       menu->AppendSeparator();
       menu->Append( tsID_PROJECT_PROPERTIES, _T( "&Properties" ) );
 
@@ -952,7 +952,8 @@ void ProjectCtrl::OnItemMenu( wxTreeEvent& Event )
    }
 
    // Get some counts on the number of files and folder selected.
-   size_t DSOs = 0; size_t files = 0; size_t folders = 0;
+   //size_t DSOs = 0; 
+   size_t files = 0; size_t folders = 0;
    {
       wxString path;
       for ( int i=0; i < selected.GetCount(); i++ )
@@ -963,11 +964,11 @@ void ProjectCtrl::OnItemMenu( wxTreeEvent& Event )
          else
          {
             ++files;
-            if ( tsGetPrefs().IsScriptFile( path ) )
-            {
-               if ( !tsGetPrefs().GetDSOForScript( path ).IsEmpty() )
-                  ++DSOs;
-            }
+            //if ( tsGetPrefs().IsScriptFile( path ) )
+            //{
+            //   if ( !tsGetPrefs().GetDSOForScript( path ).IsEmpty() )
+            //      ++DSOs;
+            //}
          }
       }
    }
@@ -980,8 +981,8 @@ void ProjectCtrl::OnItemMenu( wxTreeEvent& Event )
       if ( files == 1 )
          menu->Append( tsID_PROJECT_OPENWITH, _T( "Open Wit&h..." ) );
 
-      if ( DSOs )
-         menu->Append( tsID_CLEARDSO, _T( "Delete DSO" ) );
+      //if ( DSOs )
+      //   menu->Append( tsID_CLEARDSO, _T( "Delete DSO" ) );
 
       if ( files == 1 )
          menu->AppendIconItem( tsID_EXPLORE, _T( "E&xplore" ), ts_explorer16 );

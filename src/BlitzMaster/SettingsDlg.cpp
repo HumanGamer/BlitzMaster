@@ -176,8 +176,8 @@ void SettingsDlg::CreateControls()
    m_PropGrid->Append( wxPropertyCategory(wxT("File System")) );
    wxPGId id = m_PropGrid->Append( wxStringProperty(wxT("Script Extensions"), wxPG_LABEL, tsGetPrefs().GetScriptExtsString()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("A semicolon seperated list of extensions of TorqueScript files to associate and open with Torsion.") );
-   id = m_PropGrid->Append( wxStringProperty(wxT("DSO Extensions"), wxPG_LABEL, tsGetPrefs().GetDSOExtsString()) );
-   m_PropGrid->SetPropertyHelpString( id, wxT("Set the extensions used for compiled script files.") );
+   //id = m_PropGrid->Append( wxStringProperty(wxT("DSO Extensions"), wxPG_LABEL, tsGetPrefs().GetDSOExtsString()) );
+   //m_PropGrid->SetPropertyHelpString( id, wxT("Set the extensions used for compiled script files.") );
    id = m_PropGrid->Append( wxStringProperty(wxT("Excluded Files"), wxPG_LABEL, tsGetPrefs().GetExcludedFilesString()) );
    m_PropGrid->SetPropertyHelpString( id, wxT("A semicolon separated list of the files and file extensions which are always excluded from the project tree view.") );
    id = m_PropGrid->Append( wxStringProperty(wxT("Excluded Folders"), wxPG_LABEL, tsGetPrefs().GetExcludedFoldersString()) );
@@ -372,7 +372,7 @@ void SettingsDlg::OnOkClick( wxCommandEvent& event )
    tsGetPrefs().SetCheckForUpdates( m_PropGrid->GetPropertyValue( "Misc.Check For Updates" ).GetBool() );
 
    tsGetPrefs().SetScriptExtsString( m_PropGrid->GetPropertyValue( "File System.Script Extensions" ) );
-   tsGetPrefs().SetDSOExtsString( m_PropGrid->GetPropertyValue( "File System.DSO Extensions" ) );
+   //tsGetPrefs().SetDSOExtsString( m_PropGrid->GetPropertyValue( "File System.DSO Extensions" ) );
    tsGetPrefs().SetExcludedFiles( m_PropGrid->GetPropertyValue( "File System.Excluded Files" ) );
    tsGetPrefs().SetExcludedFolders( m_PropGrid->GetPropertyValue( "File System.Excluded Folders" ) );
 

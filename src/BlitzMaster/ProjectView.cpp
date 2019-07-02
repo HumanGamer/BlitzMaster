@@ -262,12 +262,12 @@ void ProjectView::OnDelete( wxCommandEvent& event )
       files.Add( path );
 
       // If this script has a DSO add it to the deletion array.
-      if ( tsGetPrefs().IsScriptFile( path ) )
+      /*if ( tsGetPrefs().IsScriptFile( path ) )
       {
          wxString dsoPath = tsGetPrefs().GetDSOForScript( path );
          if ( !dsoPath.IsEmpty() )
             files.Add( dsoPath );
-      }
+      }*/
    }
 
    // We use the recycle bin... or OSX/Linux equivelent

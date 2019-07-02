@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by Torsion.rc
+// Used by BlitzMaster.rc
 //
 #define IDI_MAINFRAME                   101
 #define IDI_TORQUESCRIPT                103

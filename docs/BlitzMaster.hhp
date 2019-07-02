@@ -1,13 +1,13 @@
 [OPTIONS]
 Compatibility=1.1 or later
-Compiled file=..\media\Torsion.chm
+Compiled file=..\media\BlitzMaster.chm
 Contents file=Table of Contents.hhc
 Default Font=MS Sans Serif,8,0
 Default topic=index.html
 Display compile progress=No
 Full-text search=Yes
 Language=0x809 English (United Kingdom)
-Title=Torsion Help
+Title=BlitzMaster Help
 
 
 [FILES]
