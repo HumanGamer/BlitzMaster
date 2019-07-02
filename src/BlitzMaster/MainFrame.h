@@ -211,7 +211,11 @@ public:
 
     wxString GetBlitzCompiler() const { return m_BlitzCompiler; }
 
+    const wxString& GetKeywords();
+
 protected:
+
+  wxString m_keywords;
 
     wxString GetSelectedText(bool AtCursor = false);
 

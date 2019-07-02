@@ -11,9 +11,9 @@
    #define new DEBUG_NEW 
 #endif 
 
-const wxChar* AppPrefs::s_ReservedWords = 
+/*const wxChar* AppPrefs::s_ReservedWords = 
    "break case continue datablock package default else false function if for new or package return " \
-   "switch switch$ true %this while singleton local global";
+   "switch switch$ true %this while singleton local global";*/
 
 IMPLEMENT_CLASS(tsPrefsUpdateHint, wxObject)
 
@@ -73,8 +73,8 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
    wxString fontInfo = Xml.GetStringElem( "DefaultFont", m_DefaultFont.GetNativeFontInfoDesc() );
    m_DefaultFont.SetNativeFontInfo( fontInfo );
 
-   m_Reserved = Xml.GetStringElem( "ReservedWords", s_ReservedWords );
-	ReformatWords( m_Reserved );
+   //m_Reserved = Xml.GetStringElem( "ReservedWords", s_ReservedWords );
+	//ReformatWords( m_Reserved );
    m_ReservedColor = Xml.GetColorAttrib( "ReservedWords", "color", wxColour( 0, 0, 255 ) );
 
    m_LabelColor = Xml.GetColorElem( "LabelColor", wxColour( 0, 0, 128 ) );
@@ -273,7 +273,7 @@ bool AppPrefs::Save( const wxString& Path )
 
    Xml.AddElem( "DefaultFont", m_DefaultFont.GetNativeFontInfoDesc() );
 
-   Xml.AddElem( "ReservedWords", m_Reserved );
+   //Xml.AddElem( "ReservedWords", m_Reserved );
 	Xml.AddAttrib( "color", Xml.ColorToString( m_ReservedColor ) );
 
 	Xml.AddElem( "LabelColor", Xml.ColorToString( m_LabelColor ) );

@@ -5,6 +5,9 @@
 #include "AutoCompExports.h"
 #include "AutoCompUtil.h"
 
+#include "MainFrame.h"
+
+#include <wx\tokenzr.h>
 
 #ifdef _DEBUG 
    #define new DEBUG_NEW 
@@ -230,7 +233,7 @@ void AutoCompData::Build( const AutoCompPageArray& files, AutoCompExports* expor
    }
 
    // Add in the reserved words.
-   m_TempArray.Add( "break?8" );
+   /*m_TempArray.Add( "break?8" );
    m_TempArray.Add( "case?8" );
    m_TempArray.Add( "continue?8" );
    m_TempArray.Add( "datablock?8" );
@@ -249,7 +252,19 @@ void AutoCompData::Build( const AutoCompPageArray& files, AutoCompExports* expor
    m_TempArray.Add( "switch?8" );
    m_TempArray.Add( "switch$?8" );
    m_TempArray.Add( "true?8" );
-   m_TempArray.Add( "while?8" );
+   m_TempArray.Add( "while?8" );*/
+
+   // Use extracted blitz keywords
+   wxString keywords = tsGetMainFrame()->GetKeywords();
+
+   wxStringTokenizer tokenizer(keywords, " ");
+   while (tokenizer.HasMoreTokens())
+   {
+     wxString token = tokenizer.GetNextToken();
+
+     // Add the keyword to the array
+     m_TempArray.Add(token + "?8");
+   }
 
    BuildString( m_TempArray, &m_CompList, &m_CompIndex );
 }

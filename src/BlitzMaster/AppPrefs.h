@@ -21,7 +21,7 @@ public:
 	const wxFont& GetDefaultFont() const { return m_DefaultFont; }
    void SetDefaultFont( const wxFont& font ) { SetAndDirtyProp( m_DefaultFont, font ); }
 
-	const wxString& GetReservedWords() const		   { return m_Reserved; }
+	//const wxString& GetReservedWords() const		   { return m_Reserved; }
 
 	const wxColour& GetDefaultColor() const { return m_DefaultColor; }
    void SetDefaultColor( const wxColour& color ) { SetAndDirtyProp( m_DefaultColor, color ); }
@@ -222,7 +222,7 @@ protected:
 
    void LoadFromString( const wxChar* Buffer );
 
-   static const wxChar* s_ReservedWords;
+   //static const wxChar* s_ReservedWords;
    static const wxChar* s_LibraryWords;
    static const wxChar* s_GlobalWords;
 
@@ -270,7 +270,7 @@ protected:
    bool     m_CodeCompletion;
    bool     m_EnhancedCompletion;
 
-	wxString	m_Reserved;
+	//wxString	m_Reserved;
 
    //wxArrayString m_DSOExts;
    wxArrayString m_ScriptExts;

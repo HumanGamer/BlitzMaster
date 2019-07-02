@@ -43,8 +43,8 @@ ScriptCtrl::ScriptCtrl()
       m_ScriptView( NULL ),
       m_LastModify( false ),
       m_Loading( false ),
-      m_IsGlobalFullups( false ),
-      m_keywords("")
+      m_IsGlobalFullups( false )//,
+      //m_keywords("")
 {
 }
 
@@ -2799,137 +2799,6 @@ void ScriptCtrl::OnMouseLeftUp( wxMouseEvent& evt )
 }
 */
 
-wxString GetReturnValue(wxString cmd)
-{
-  SECURITY_ATTRIBUTES saAttr;
-  // Set the bInheritHandle flag so pipe handles are inherited.
-
-  saAttr.nLength = sizeof(SECURITY_ATTRIBUTES);
-  saAttr.bInheritHandle = TRUE;
-  saAttr.lpSecurityDescriptor = nullptr;
-
-  //HANDLE g_hChildStd_IN_Rd = nullptr;
-  //HANDLE g_hChildStd_IN_Wr = nullptr;
-  HANDLE g_hChildStd_OUT_Rd = nullptr;
-  HANDLE g_hChildStd_OUT_Wr = nullptr;
-
-  // Create a pipe for the child process's STDOUT.
-
-  if (!CreatePipe(&g_hChildStd_OUT_Rd, &g_hChildStd_OUT_Wr, &saAttr, 0))
-  {
-    wxMessageDialog MessageBox(tsGetMainFrame(), "Failed to create output pipe!", "Error", wxOK);
-    MessageBox.ShowModal();
-  }
-
-  // Ensure the read handle to the pipe for STDOUT is not inherited.
-
-  if (!SetHandleInformation(g_hChildStd_OUT_Rd, HANDLE_FLAG_INHERIT, 0))
-  {
-
-    wxMessageDialog MessageBox(tsGetMainFrame(), "Failed to set handle information for output pipe!", "Error", wxOK);
-    MessageBox.ShowModal();
-  }
-
-  PROCESS_INFORMATION piProcInfo;
-  STARTUPINFO siStartInfo;
-  BOOL bSuccess = FALSE;
-
-  // Set up members of the PROCESS_INFORMATION structure.
-
-  ZeroMemory(&piProcInfo, sizeof(PROCESS_INFORMATION));
-
-  // Set up members of the STARTUPINFO structure.
-  // This structure specifies the STDIN and STDOUT handles for redirection.
-
-  ZeroMemory(&siStartInfo, sizeof(STARTUPINFO));
-  siStartInfo.cb = sizeof(STARTUPINFO);
-  siStartInfo.hStdError = g_hChildStd_OUT_Wr;
-  siStartInfo.hStdOutput = g_hChildStd_OUT_Wr;
-  //siStartInfo.hStdInput = g_hChildStd_IN_Rd;
-  siStartInfo.dwFlags |= STARTF_USESTDHANDLES;
-
-  // Create the child process.
-
-  bSuccess = CreateProcess(NULL,
-    const_cast<LPSTR>((cmd).c_str()),     // command line
-    NULL,          // process security attributes
-    NULL,          // primary thread security attributes
-    TRUE,          // handles are inherited
-    CREATE_NO_WINDOW,             // creation flags
-    NULL,          // use parent's environment
-    NULL,          // use parent's current directory
-    &siStartInfo,  // STARTUPINFO pointer
-    &piProcInfo);  // receives PROCESS_INFORMATION
-
-// If an error occurs, exit the application.
-  if (!bSuccess)
-  {
-    wxMessageDialog MessageBox(tsGetMainFrame(), "Failed to run compiler!", "Error", wxOK);
-    MessageBox.ShowModal();
-    CloseHandle(g_hChildStd_OUT_Rd);
-    CloseHandle(g_hChildStd_OUT_Wr);
-    return "";
-  }
-
-
-  wxString result;
-
-  // Read output from the child process's pipe for STDOUT
-  // and write to the parent process's pipe for STDOUT.
-  // Stop when there is no more data.
-  {
-    DWORD dwRead;
-    CHAR chBuf[4096];
-    BOOL bSuccess = FALSE;
-    //HANDLE hParentStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-
-
-    DWORD exitCode = 0;
-    bool stillRunning = true;
-    while (stillRunning)
-    {
-      DWORD bytesAvail = 0;
-      do {
-        GetExitCodeProcess(piProcInfo.hProcess, &exitCode);
-        if (exitCode != STILL_ACTIVE)
-          stillRunning = false;
-
-        PeekNamedPipe(g_hChildStd_OUT_Rd, NULL, 0, NULL, &bytesAvail, NULL);
-      } while (bytesAvail == 0 && stillRunning);
-
-      if (bytesAvail) {
-        bSuccess = ReadFile(g_hChildStd_OUT_Rd, chBuf, bytesAvail, &dwRead, NULL);
-        if (!bSuccess || dwRead == 0) break;
-
-        chBuf[dwRead] = '\0';
-
-        result.Append(wxString(chBuf));
-      }
-    }
-  }
-
-  CloseHandle(piProcInfo.hProcess);
-  CloseHandle(piProcInfo.hThread);
-
-  if (g_hChildStd_OUT_Rd)
-    CloseHandle(g_hChildStd_OUT_Rd);
-  if (g_hChildStd_OUT_Wr)
-    CloseHandle(g_hChildStd_OUT_Wr);
-
-  return result;
-}
-
-const wxString& ScriptCtrl::GetKeywords()
-{
-  wxString compiler = tsGetMainFrame()->GetBlitzCompiler();
-  m_keywords = GetReturnValue(compiler + " -k");
-  m_keywords.Replace("\r\n", "\n");
-  m_keywords.Replace("\n", " ");
-  m_keywords.MakeLower();
-  OutputDebugString(m_keywords.c_str());
-  return m_keywords;
-}
-
 void ScriptCtrl::UpdatePrefs( bool refresh )
 {
    //ClearDocumentStyle();
@@ -2975,7 +2844,7 @@ void ScriptCtrl::UpdatePrefs( bool refresh )
    // are fetched from the autocomp system which builds these from 
    // the engine exports only available if your project is setup
    // generate them.  If not... no exports colored for you!
-   SetKeyWords(0, GetKeywords());//tsGetPrefs().GetReservedWords() );
+   SetKeyWords(0, tsGetMainFrame()->GetKeywords().Lower());//tsGetPrefs().GetReservedWords() );
    wxASSERT( tsGetAutoComp() );
    SetKeyWords( 1, tsGetAutoComp()->GetExportedFunctionsString() );
    SetKeyWords( 2, tsGetAutoComp()->GetExportedVarsString()  );

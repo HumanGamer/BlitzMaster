@@ -98,11 +98,11 @@ class ScriptCtrl : public wxStyledTextCtrl
 
       void Cut();
 
-      const wxString& GetKeywords();
+      //const wxString GetKeywords();
 
    protected:
 
-     wxString m_keywords;
+     //wxString m_keywords;
 
       void OnListMembers( wxCommandEvent& event );
       bool ListMembers( bool forced );
