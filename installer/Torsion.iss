@@ -65,7 +65,7 @@ Filename: "{app}\blitzmaster.exe"; WorkingDir: "{app}"; Parameters: "-exts"; Fla
 [Registry]
 
 ; Add Torsion to the App Paths key.
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\blitzmaster.exe"; ValueType: string; ValueData: "{app}\torsion.exe"; Flags: uninsdeletevalue uninsdeletekeyifempty
+Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\blitzmaster.exe"; ValueType: string; ValueData: "{app}\blitzmaster.exe"; Flags: uninsdeletevalue uninsdeletekeyifempty
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\blitzmaster.exe"; ValueName: "Path"; ValueType: string; ValueData: "{app}\"; Flags: uninsdeletevalue uninsdeletekeyifempty
 
 ; Associate .torsion to torsion.exe
