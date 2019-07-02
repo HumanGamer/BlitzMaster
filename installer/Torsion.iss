@@ -37,7 +37,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "..\media\blitzmaster.exe"; DestName: "blitzmaster.exe";  DestDir: "{app}"; Flags: ignoreversion
 ;Source: "..\media\msvcr71.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;Source: "..\media\msvcp71.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\media\torsion.chm"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\media\blitzmaster.chm"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\torsion_exports.cs"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\torsion_precompile.cs"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\LICENSE.txt"; DestName: "Torsion EULA.txt"; DestDir: "{app}"; Flags: ignoreversion
