@@ -6,7 +6,7 @@
 #include "shNotebook.h"
 #include "ScriptDoc.h"
 #include "BlitzMasterApp.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "tsMenu.h"
 #include "Icons.h"
 

@@ -4,7 +4,7 @@
 #include "MainFrame.h"
 #include "ScriptFrame.h"
 #include "DocManager.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "AutoComp.h"
 #include "BuildVersion.h"
 #include "Platform.h"

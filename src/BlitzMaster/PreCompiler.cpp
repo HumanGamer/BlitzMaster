@@ -4,7 +4,7 @@
 #include "BlitzMasterApp.h"
 #include "MainFrame.h"
 #include "OutputPanel.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "Platform.h"
 
 #include <wx/textfile.h>

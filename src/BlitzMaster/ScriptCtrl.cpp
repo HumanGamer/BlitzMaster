@@ -5,7 +5,7 @@
 #include "MainFrame.h"
 #include "ScriptView.h"
 #include "ProjectDoc.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "AutoComp.h"
 #include "AutoCompText.h"
 #include "BreakpointPropertyDlg.h"

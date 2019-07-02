@@ -5,7 +5,7 @@
 #include "MainFrame.h"
 #include "ProjectView.h"
 #include "XmlFile.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "ScriptDoc.h"
 #include "ScriptView.h"
 #include "AutoComp.h"

@@ -9,7 +9,7 @@
 #include "ReloadFile.h"
 #include "Breakpoint.h"
 #include "Bookmark.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 #include "Platform.h"
 #include "AutoComp.h"
 #include "tsToolBar.h"
