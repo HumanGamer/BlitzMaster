@@ -103,7 +103,7 @@ void AboutDlg::CreateControls()
    wxBoxSizer* itemBoxSizer6 = new wxBoxSizer(wxHORIZONTAL);
    itemBoxSizer2->Add(itemBoxSizer6, 0, wxGROW, 0);
 
-   wxStaticText* itemStaticText7 = new wxStaticText( itemDialog1, wxID_ANY, _("(c) 2008 Sickhead Games, LLC"), wxDefaultPosition, wxDefaultSize, 0 );
+   wxStaticText* itemStaticText7 = new wxStaticText( itemDialog1, wxID_ANY, _("(c) 2019 Blitz Community AND Sickhead Games, LLC"), wxDefaultPosition, wxDefaultSize, 0 );
    itemBoxSizer6->Add(itemStaticText7, 0, wxALIGN_CENTER_VERTICAL|wxALL|wxADJUST_MINSIZE, 7);
 
    itemBoxSizer6->Add(19, 19, 1, wxGROW|wxFIXED_MINSIZE, 0);
