@@ -35,8 +35,8 @@ public:
 	const wxColour&   GetReservedColor() const { return m_ReservedColor; }
    void SetReservedColor( const wxColour& color ) { SetAndDirtyProp( m_ReservedColor, color ); }
 
-	const wxColour& GetExportsColor() const { return m_ExportsColor; }
-   void SetExportsColor( const wxColour& color ) { SetAndDirtyProp( m_ExportsColor, color ); }
+	const wxColour& GetLabelColor() const { return m_LabelColor; }
+   void SetLabelColor( const wxColour& color ) { SetAndDirtyProp( m_LabelColor, color ); }
  
 	const wxColour& GetNumberColor() const { return m_NumberColor; }
    void SetNumberColor( const wxColour& color ) { SetAndDirtyProp( m_NumberColor, color ); }
@@ -44,11 +44,11 @@ public:
 	const wxColour& GetStringColor() const { return m_StringColor; }
    void SetStringColor( const wxColour& color ) { SetAndDirtyProp( m_StringColor, color ); }
 
-   const wxColour& GetLocalsColor() const { return m_LocalsColor; }
-   void SetLocalsColor( const wxColour& color ) { SetAndDirtyProp( m_LocalsColor, color ); }
+   //const wxColour& GetLocalsColor() const { return m_LocalsColor; }
+   //void SetLocalsColor( const wxColour& color ) { SetAndDirtyProp( m_LocalsColor, color ); }
 
-   const wxColour& GetGlobalsColor() const { return m_GlobalsColor; }
-   void SetGlobalsColor( const wxColour& color ) { SetAndDirtyProp( m_GlobalsColor, color ); }
+   //const wxColour& GetGlobalsColor() const { return m_GlobalsColor; }
+   //void SetGlobalsColor( const wxColour& color ) { SetAndDirtyProp( m_GlobalsColor, color ); }
 
 	const wxColour& GetOperatorsColor() const { return m_OperatorsColor; }
    void SetOperatorsColor( const wxColour& color ) { SetAndDirtyProp( m_OperatorsColor, color ); }
@@ -244,11 +244,11 @@ protected:
 	wxColour	m_NumberColor;
 	wxColour	m_StringColor;
 	wxColour	m_OperatorsColor;
-	wxColour	m_LocalsColor;
-   wxColour m_GlobalsColor;
+	//wxColour	m_LocalsColor;
+   //wxColour m_GlobalsColor;
 
 	wxColour	m_ReservedColor;
-	wxColour	m_ExportsColor;
+	wxColour	m_LabelColor;
 
    wxColour	m_MarginColor;
    wxColour	m_MarginTextColor;

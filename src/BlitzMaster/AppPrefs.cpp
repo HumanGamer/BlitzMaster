@@ -77,7 +77,7 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
 	ReformatWords( m_Reserved );
    m_ReservedColor = Xml.GetColorAttrib( "ReservedWords", "color", wxColour( 0, 0, 255 ) );
 
-   m_ExportsColor = Xml.GetColorElem( "ExportsColor", wxColour( 0, 0, 128 ) );
+   m_LabelColor = Xml.GetColorElem( "LabelColor", wxColour( 0, 0, 128 ) );
 
    m_BgColor = Xml.GetColorElem( "BgColor", wxColour( 255,255,255 ) );
 
@@ -86,8 +86,8 @@ void AppPrefs::LoadFromString( const wxChar* Buffer )
    m_NumberColor = Xml.GetColorElem( "NumberColor", wxColour( 0,0,0 ) );
    m_StringColor = Xml.GetColorElem( "StringColor", wxColour( 128,0,128 ) );
    m_OperatorsColor = Xml.GetColorElem( "OperatorsColor", wxColour( 128,128,0 ) );
-   m_LocalsColor = Xml.GetColorElem( "LocalsColor", wxColour( 0,128,128 ) );
-   m_GlobalsColor = Xml.GetColorElem( "GlobalsColor", wxColour( 196,92,0 ) );
+   //m_LocalsColor = Xml.GetColorElem( "LocalsColor", wxColour( 0,128,128 ) );
+   //m_GlobalsColor = Xml.GetColorElem( "GlobalsColor", wxColour( 196,92,0 ) );
 
    m_SelColor = Xml.GetColorElem( "SelColor", wxColour( 255,255,255 ) );
    m_SelBgColor = Xml.GetColorElem( "SelBgColor", wxColour( 49,106,197 ) );
@@ -276,7 +276,7 @@ bool AppPrefs::Save( const wxString& Path )
    Xml.AddElem( "ReservedWords", m_Reserved );
 	Xml.AddAttrib( "color", Xml.ColorToString( m_ReservedColor ) );
 
-	Xml.AddElem( "ExportsColor", Xml.ColorToString( m_ExportsColor ) );
+	Xml.AddElem( "LabelColor", Xml.ColorToString( m_LabelColor ) );
 
    Xml.AddColorElem( "BgColor", m_BgColor );
 
@@ -285,8 +285,8 @@ bool AppPrefs::Save( const wxString& Path )
    Xml.AddColorElem( "StringColor", m_StringColor );
    Xml.AddColorElem( "NumberColor", m_NumberColor );
    Xml.AddColorElem( "OperatorsColor", m_OperatorsColor );
-   Xml.AddColorElem( "LocalsColor", m_LocalsColor );
-   Xml.AddColorElem( "GlobalsColor", m_GlobalsColor );
+   //Xml.AddColorElem( "LocalsColor", m_LocalsColor );
+   //Xml.AddColorElem( "GlobalsColor", m_GlobalsColor );
 
    Xml.AddColorElem( "SelColor", m_SelColor );
    Xml.AddColorElem( "SelBgColor", m_SelBgColor );
