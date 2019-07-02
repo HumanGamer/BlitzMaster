@@ -25,7 +25,7 @@ EnableDirDoesntExistWarning=no
 DirExistsWarning=no
 AppendDefaultDirName=no
 ChangesAssociations=yes
-SetupIconFile=..\code\Torsion\icons\torsion.ico
+SetupIconFile=..\src\BlitzMaster\icons\torsion.ico
 WizardImageFile=installerimage.bmp
 WizardSmallImageFile=installerimagesmall_a.bmp
 
