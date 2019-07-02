@@ -391,20 +391,20 @@ bool MainFrame::Create(DocManager* manager, wxFrame* frame, const wxString& titl
     {
         m_DebugMenu->AppendIconItem(tsID_DEBUG_START, _T("&Start\tF5"), ts_start16);
         m_DebugMenu->AppendIconItem(tsID_DEBUG_START_WITHOUT_DEBUGGING, _T("Start Without Debu&gging\tCtrl+F5"), ts_startnodebug16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_CONNECT, _T("Connect"), ts_debugconnect16);
-        m_DebugMenu->Append(tsID_DEBUG_RESTART, _T("&Restart\tCtrl+Shift+F5"));
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_STOP, _T("&Stop\tShift+F5"), ts_stop16);
-        m_DebugMenu->AppendSeparator();
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_BREAK, _T("&Break\tCtrl+Alt+Break"), ts_break16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP, _T("&Step\tF11"), ts_stepin16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP_OVER, _T("Step &Over\tF10"), ts_stepover16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP_OUT, _T("Step O&ut\tShift+F11"), ts_stepout16);
-        m_DebugMenu->AppendSeparator();
-        m_DebugMenu->Append(tsID_RELOAD_SCRIPTS, _T("Re&load Scripts\tCtrl+Shift+R"));
-        m_DebugMenu->AppendSeparator();
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_NEWBREAKPOINT, _T("New Breakpoint...\tCtrl+B"), ts_newbreak16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_CLEARALLBREAKPOINTS, _T("Delete All Breakpoints\tCtrl+Shift+F9"), ts_breakclearall16);
-        m_DebugMenu->AppendIconItem(tsID_DEBUG_DISABLEALLBREAKPOINTS, _T("Disable All Breakpoints"), ts_breakdisableall16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_CONNECT, _T("Connect"), ts_debugconnect16);
+        //m_DebugMenu->Append(tsID_DEBUG_RESTART, _T("&Restart\tCtrl+Shift+F5"));
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_STOP, _T("&Stop\tShift+F5"), ts_stop16);
+        //m_DebugMenu->AppendSeparator();
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_BREAK, _T("&Break\tCtrl+Alt+Break"), ts_break16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP, _T("&Step\tF11"), ts_stepin16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP_OVER, _T("Step &Over\tF10"), ts_stepover16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_STEP_OUT, _T("Step O&ut\tShift+F11"), ts_stepout16);
+        //m_DebugMenu->AppendSeparator();
+        //m_DebugMenu->Append(tsID_RELOAD_SCRIPTS, _T("Re&load Scripts\tCtrl+Shift+R"));
+        //m_DebugMenu->AppendSeparator();
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_NEWBREAKPOINT, _T("New Breakpoint...\tCtrl+B"), ts_newbreak16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_CLEARALLBREAKPOINTS, _T("Delete All Breakpoints\tCtrl+Shift+F9"), ts_breakclearall16);
+        //m_DebugMenu->AppendIconItem(tsID_DEBUG_DISABLEALLBREAKPOINTS, _T("Disable All Breakpoints"), ts_breakdisableall16);
     }
 
     m_ToolsMenu = new tsMenu;
@@ -474,7 +474,12 @@ bool MainFrame::Create(DocManager* manager, wxFrame* frame, const wxString& titl
     toolBar->AddTool(wxID_REDO, _T("Redo"), ts_redo16, _T("Redo (Ctrl+Y)"));
     toolBar->AddSeparator();
 
-    m_StartToolButton = toolBar->AddTool(tsID_DEBUG_STARTBREAK, _T("Start"), ts_start16, _T("Start (F5)"));
+    toolBar->AddTool(tsID_FINDINFILES, _T("Find in Files"), ts_findinfiles16, _T("Find in Files (Ctrl+Shift+F)"));
+    m_FindComboBox = new wxComboBox(toolBar, tsID_FINDCOMBO, "", wxDefaultPosition, wxSize(175, wxDefaultCoord), 0, NULL, wxSTATIC_BORDER);
+    AppPrefs::AddStringsToCombo(m_FindComboBox, tsGetPrefs().GetFindStrings());
+    toolBar->AddControl(m_FindComboBox);
+
+    toolBar->AddSeparator();
 
     /*
     m_BreakTool = toolBar->AddTool( tsID_DEBUG_BREAK, _T( "Break" ), wxBitmap( break16_xpm ), _T( "Break (Ctrl+Alt+Break)" ) );
@@ -485,16 +490,17 @@ bool MainFrame::Create(DocManager* manager, wxFrame* frame, const wxString& titl
     toolBar->RemoveTool( tsID_DEBUG_BREAK );
     */
 
-    toolBar->AddTool(tsID_DEBUG_STEP, _T("Step"), ts_stepin16, _T("Step (F11)"));
-    toolBar->AddTool(tsID_DEBUG_STEP_OVER, _T("Step Over"), ts_stepover16, _T("Step Over (F10)"));
-    toolBar->AddTool(tsID_DEBUG_STEP_OUT, _T("Step Out"), ts_stepout16, _T("Step Out (Shift+F11)"));
+    //toolBar->AddTool(tsID_DEBUG_STEP, _T("Step"), ts_stepin16, _T("Step (F11)"));
+    //toolBar->AddTool(tsID_DEBUG_STEP_OVER, _T("Step Over"), ts_stepover16, _T("Step Over (F10)"));
+    //toolBar->AddTool(tsID_DEBUG_STEP_OUT, _T("Step Out"), ts_stepout16, _T("Step Out (Shift+F11)"));
     m_ConfigComboBox = new wxComboBox(toolBar, tsID_CONFIGCOMBO, "", wxDefaultPosition, wxSize(160, wxDefaultCoord), 0, NULL, wxSTATIC_BORDER | wxCB_DROPDOWN | wxCB_READONLY | wxCB_SORT);
     toolBar->AddControl(m_ConfigComboBox);
-    toolBar->AddSeparator();
-    toolBar->AddTool(tsID_FINDINFILES, _T("Find in Files"), ts_findinfiles16, _T("Find in Files (Ctrl+Shift+F)"));
-    m_FindComboBox = new wxComboBox(toolBar, tsID_FINDCOMBO, "", wxDefaultPosition, wxSize(175, wxDefaultCoord), 0, NULL, wxSTATIC_BORDER);
-    AppPrefs::AddStringsToCombo(m_FindComboBox, tsGetPrefs().GetFindStrings());
-    toolBar->AddControl(m_FindComboBox);
+
+
+    m_StartToolButton = toolBar->AddTool(tsID_DEBUG_START, _T("Start"), ts_start16, _T("Start (F5)"));
+    m_StartWithoutDebuggingToolButton = toolBar->AddTool(tsID_DEBUG_START_WITHOUT_DEBUGGING, _T("Start Without Debu&gging\tCtrl+F5"), ts_startnodebug16, _T("Start Without Debugging (Ctrl+F5)"));
+
+    
     //toolBar->AddTool( tsID_FINDPREV, _T( "Find Previous" ), wxBitmap( search_prev16_xpm ), _T( "Find Previous (Shift+F3)" ) );
     //toolBar->AddTool( tsID_FINDNEXT, _T( "Find Next" ), wxBitmap( search_next16_xpm ), _T( "Find Next (F3)" ) );
     toolBar->Realize();

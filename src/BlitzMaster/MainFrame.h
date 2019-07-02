@@ -220,6 +220,7 @@ protected:
     wxComboBox* m_FindComboBox;
 
     wxToolBarToolBase* m_StartToolButton;
+    wxToolBarToolBase* m_StartWithoutDebuggingToolButton;
 
     ProjectDoc* m_ProjectDoc;
     wxComboBox* m_ConfigComboBox;
