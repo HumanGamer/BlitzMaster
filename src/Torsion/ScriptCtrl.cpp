@@ -2968,7 +2968,7 @@ void ScriptCtrl::UpdatePrefs( bool refresh )
    SetStyle( wxSTC_B_STRINGEOL, tsGetPrefs().GetBraceMatchErrColor(), tsGetPrefs().GetBraceMatchBgColor() );
    SetStyle( wxSTC_B_KEYWORD, tsGetPrefs().GetReservedColor(), tsGetPrefs().GetBgColor() );
    SetStyle( wxSTC_B_KEYWORD2, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
-   //SetStyle( wxSTC_TCS_GLOBALCLASS, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
+   SetStyle( wxSTC_B_LABEL, tsGetPrefs().GetExportsColor(), tsGetPrefs().GetBgColor() );
   // SetStyle( wxSTC_TCS_FOLDED, tsGetPrefs().GetDefaultColor(), tsGetPrefs().GetMarginColor() );
 
    // Set the keywords up... note that the functions and var words
@@ -3116,7 +3116,7 @@ void ScriptCtrl::CommentSel( bool comment )
       else
       {
          if ( text.StartsWith( ";" ) )
-            text.Remove( 0, 2 );    
+            text.Remove( 0, 1 );    
          text.Prepend( white );
       }
 
