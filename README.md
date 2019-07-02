@@ -1,6 +1,6 @@
-# Torsion for BlitzBasic
+# BlitzMaster
 
-Torsion for BlitzBasic is a modification of [Torsion](https://github.com/SickheadGames/Torsion) by Sickhead Games.
+BlitzMaster is a modification of [Torsion](https://github.com/SickheadGames/Torsion) by Sickhead Games.
 
 The goal of this project is to make a better IDE for Blitz3D.
 
