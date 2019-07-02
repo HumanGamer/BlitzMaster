@@ -2,7 +2,7 @@
 #include "WatchCtrl.h"
 
 #include "BlitzMasterApp.h"
-#include "Debugger.h"
+//#include "Debugger.h"
 
 #include <wx/dnd.h>
 #include <wx/dcbuffer.h>
