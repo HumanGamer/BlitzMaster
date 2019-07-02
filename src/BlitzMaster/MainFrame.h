@@ -118,7 +118,7 @@ public:
 
     void OnDebugStart(wxCommandEvent& event);
     void OnDebugStartWithoutDebugging(wxCommandEvent& event);
-    void OnDebugConnect(wxCommandEvent& event);
+    /*void OnDebugConnect(wxCommandEvent& event);
     void OnDebugStop(wxCommandEvent& event);
     void OnDebugRestart(wxCommandEvent& event);
     void OnDebugBreak(wxCommandEvent& event);
@@ -135,11 +135,11 @@ public:
     void OnNewBreakpoint(wxCommandEvent& event);
     void OnClearAllBreakpoints(wxCommandEvent& event);
     void OnDisableAllBreakpoints(wxCommandEvent& event);
-    void OnBreakpointUpdateUI(wxUpdateUIEvent& event);
+    void OnBreakpointUpdateUI(wxUpdateUIEvent& event);*/
 
     void OnUpdateBookmarks(wxUpdateUIEvent& event);
 
-    void OnCallStackActivated(wxListEvent& event);
+    //void OnCallStackActivated(wxListEvent& event);
 
     shNotebook* ShowProjectSash(bool show);
 
@@ -177,12 +177,12 @@ public:
     ProjectDoc* GetProjectDoc() { return m_ProjectDoc; }
     ProjectView* GetProjectView();
 
-    void OnDebugCallTip(const wxString& Expression, const wxString& Value);
+    //void OnDebugCallTip(const wxString& Expression, const wxString& Value);
 
-    void SetCallStack(const FunctionCallArray& CallStack, int Level);
+    //void SetCallStack(const FunctionCallArray& CallStack, int Level);
     void SetBreakline(const wxString& Filename, int Line);
     void ClearBreaklines();
-    void OnDebuggerStop();
+    //void OnDebuggerStop();
 
     OutputPanel* GetOutputPanel() { return m_OutputPanel; }
     WatchCtrl* GetWatchWindow() { return m_WatchWindow; }

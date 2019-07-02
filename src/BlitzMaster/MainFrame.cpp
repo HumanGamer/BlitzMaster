@@ -159,23 +159,23 @@ EVT_SASH_DRAGGED_RANGE(tsID_PROJECTSASH, tsID_BOTTOMSASH, OnSashDrag)
 
 EVT_MENU(tsID_DEBUG_START, OnDebugStart)
 EVT_MENU(tsID_DEBUG_START_WITHOUT_DEBUGGING, OnDebugStartWithoutDebugging)
-EVT_MENU(tsID_DEBUG_CONNECT, OnDebugConnect)
-EVT_MENU(tsID_DEBUG_STOP, OnDebugStop)
-EVT_MENU(tsID_DEBUG_RESTART, OnDebugRestart)
-EVT_MENU(tsID_DEBUG_BREAK, OnDebugBreak)
-EVT_MENU(tsID_DEBUG_STARTBREAK, OnDebugStartBreak)
-EVT_MENU(tsID_DEBUG_STEP, OnDebugStep)
-EVT_MENU(tsID_DEBUG_STEP_OVER, OnDebugStepOver)
-EVT_MENU(tsID_DEBUG_STEP_OUT, OnDebugStepOut)
-EVT_UPDATE_UI_RANGE(tsID_DEBUG_START, tsID_DEBUG_RESTART, OnDebugUpdateUI)
-
-EVT_MENU(tsID_RELOAD_SCRIPTS, OnReloadScripts)
-EVT_UPDATE_UI(tsID_RELOAD_SCRIPTS, OnUpdateReloadScripts)
-
-EVT_MENU(tsID_DEBUG_NEWBREAKPOINT, OnNewBreakpoint)
-EVT_MENU(tsID_DEBUG_CLEARALLBREAKPOINTS, OnClearAllBreakpoints)
-EVT_MENU(tsID_DEBUG_DISABLEALLBREAKPOINTS, OnDisableAllBreakpoints)
-EVT_UPDATE_UI_RANGE(tsID_DEBUG_NEWBREAKPOINT, tsID_DEBUG_DISABLEALLBREAKPOINTS, OnBreakpointUpdateUI)
+//EVT_MENU(tsID_DEBUG_CONNECT, OnDebugConnect)
+//EVT_MENU(tsID_DEBUG_STOP, OnDebugStop)
+//EVT_MENU(tsID_DEBUG_RESTART, OnDebugRestart)
+//EVT_MENU(tsID_DEBUG_BREAK, OnDebugBreak)
+//EVT_MENU(tsID_DEBUG_STARTBREAK, OnDebugStartBreak)
+//EVT_MENU(tsID_DEBUG_STEP, OnDebugStep)
+//EVT_MENU(tsID_DEBUG_STEP_OVER, OnDebugStepOver)
+//EVT_MENU(tsID_DEBUG_STEP_OUT, OnDebugStepOut)
+//EVT_UPDATE_UI_RANGE(tsID_DEBUG_START, tsID_DEBUG_RESTART, OnDebugUpdateUI)
+//
+//EVT_MENU(tsID_RELOAD_SCRIPTS, OnReloadScripts)
+//EVT_UPDATE_UI(tsID_RELOAD_SCRIPTS, OnUpdateReloadScripts)
+//
+//EVT_MENU(tsID_DEBUG_NEWBREAKPOINT, OnNewBreakpoint)
+//EVT_MENU(tsID_DEBUG_CLEARALLBREAKPOINTS, OnClearAllBreakpoints)
+//EVT_MENU(tsID_DEBUG_DISABLEALLBREAKPOINTS, OnDisableAllBreakpoints)
+//EVT_UPDATE_UI_RANGE(tsID_DEBUG_NEWBREAKPOINT, tsID_DEBUG_DISABLEALLBREAKPOINTS, OnBreakpointUpdateUI)
 
 EVT_MENU(tsID_NEXTVIEW, OnNextView)
 EVT_MENU(tsID_PREVIOUSVIEW, OnPreviousView)
@@ -201,7 +201,7 @@ EVT_CLOSE(OnCloseWindow)
 EVT_SYS_COLOUR_CHANGED(OnSysColourChanged)
 
 //EVT_LIST_ITEM_ACTIVATED( tsID_FINDWINDOW, OnFindActivated )
-EVT_LIST_ITEM_ACTIVATED(tsID_CALLSTACK, OnCallStackActivated)
+//EVT_LIST_ITEM_ACTIVATED(tsID_CALLSTACK, OnCallStackActivated)
 
 //EVT_COMMAND(wxID_ANY, tsEVT_PRECOMPILER_OUTPUT, MainFrame::OnPrecompileOutput )
 //EVT_COMMAND(wxID_ANY, tsEVT_PRECOMPILER_DONE, MainFrame::OnPrecompileDone )
@@ -2189,41 +2189,41 @@ void MainFrame::OnFindComboChanged(wxCommandEvent& event)
     */
 }
 
-void MainFrame::OnNewBreakpoint(wxCommandEvent& event)
-{
-    wxASSERT(GetProjectDoc());
-
-    Breakpoint bp(wxEmptyString, 1, 0, wxEmptyString);
-
-    BreakpointPropertyDlg dlg;
-    dlg.Create(this, &bp);
-    if (dlg.ShowModal() == wxID_OK)
-        GetProjectDoc()->AddBreakpoint(bp.GetFile(), bp.GetLine(), bp.GetPass(), bp.GetCondition(), true);
-}
-
-void MainFrame::OnClearAllBreakpoints(wxCommandEvent& event)
-{
-    wxASSERT(GetProjectDoc());
-    GetProjectDoc()->DeleteAllBreakpoints();
-}
-
-void MainFrame::OnDisableAllBreakpoints(wxCommandEvent& event)
-{
-    wxASSERT(GetProjectDoc());
-    GetProjectDoc()->EnableAllBreakpoints(false);
-}
-
-void MainFrame::OnBreakpointUpdateUI(wxUpdateUIEvent& event)
-{
-    //wxASSERT(tsGetDebugger());
-
-    if (event.GetId() == tsID_DEBUG_NEWBREAKPOINT) {
-        event.Enable(GetProjectDoc() != NULL);
-        return;
-    }
-
-    event.Enable(GetProjectDoc() && GetProjectDoc()->GetBreakpoints().GetCount() > 0);
-}
+//void MainFrame::OnNewBreakpoint(wxCommandEvent& event)
+//{
+//    wxASSERT(GetProjectDoc());
+//
+//    Breakpoint bp(wxEmptyString, 1, 0, wxEmptyString);
+//
+//    BreakpointPropertyDlg dlg;
+//    dlg.Create(this, &bp);
+//    if (dlg.ShowModal() == wxID_OK)
+//        GetProjectDoc()->AddBreakpoint(bp.GetFile(), bp.GetLine(), bp.GetPass(), bp.GetCondition(), true);
+//}
+//
+//void MainFrame::OnClearAllBreakpoints(wxCommandEvent& event)
+//{
+//    wxASSERT(GetProjectDoc());
+//    GetProjectDoc()->DeleteAllBreakpoints();
+//}
+//
+//void MainFrame::OnDisableAllBreakpoints(wxCommandEvent& event)
+//{
+//    wxASSERT(GetProjectDoc());
+//    GetProjectDoc()->EnableAllBreakpoints(false);
+//}
+//
+//void MainFrame::OnBreakpointUpdateUI(wxUpdateUIEvent& event)
+//{
+//    //wxASSERT(tsGetDebugger());
+//
+//    if (event.GetId() == tsID_DEBUG_NEWBREAKPOINT) {
+//        event.Enable(GetProjectDoc() != NULL);
+//        return;
+//    }
+//
+//    event.Enable(GetProjectDoc() && GetProjectDoc()->GetBreakpoints().GetCount() > 0);
+//}
 
 void MainFrame::OnUpdateBookmarks(wxUpdateUIEvent& event)
 {
@@ -2233,74 +2233,74 @@ void MainFrame::OnUpdateBookmarks(wxUpdateUIEvent& event)
     event.Enable(false);
 }
 
-void MainFrame::UpdateDebugMenu()
-{
-    wxASSERT(m_DebugMenu);
-    wxASSERT(GetToolBar());
-    //wxASSERT(tsGetDebugger());
-
-    bool Realize = false;
-
-    /*if (tsGetDebugger()->IsAtBreakpoint()) {
-
-        m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start"));
-        m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Continue\tF5"));
-
-        if (m_StartToolButton->GetLabel() == "Break") {
-
-            Realize = true;
-            m_StartToolButton->SetNormalBitmap(ts_start16);
-        }
-
-        m_StartToolButton->SetLabel(_T("Continue"));
-        m_StartToolButton->SetShortHelp(_T("Continue (F5)"));
-
-    }
-    else {
-
-        if (tsGetDebugger()->IsRunning()) {
-
-            if (m_StartToolButton->GetLabel() != "Break") {
-
-                Realize = true;
-                m_StartToolButton->SetNormalBitmap(ts_break16);
-            }
-
-            m_StartToolButton->SetLabel(_T("Break"));
-            m_StartToolButton->SetShortHelp(_T("Break (Ctrl+Alt+Break)"));
-
-        }
-        else {
-
-            if (m_StartToolButton->GetLabel() == "Break") {
-                Realize = true;
-                m_StartToolButton->SetNormalBitmap(ts_start16);
-            }
-
-            m_StartToolButton->SetLabel(_T("Start"));
-            m_StartToolButton->SetShortHelp(_T("Start (F5)"));
-        }
-
-        m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start\tF5"));
-        m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Break\tCtrl+Alt+Break"));
-    }*/
-
-    if (Realize)
-        GetToolBar()->Realize();
-
-    // Now update the accel table.
-    GetMenuBar()->RebuildAccelTable();
-    SetAcceleratorTable(GetMenuBar()->GetAccelTable());
-}
-
-void MainFrame::OnDebugStartBreak(wxCommandEvent& event)
-{
-    /*if (tsGetDebugger()->IsAtBreakpoint() || tsGetDebugger()->IsRunning())
-        OnDebugBreak(event);
-    else {
-        OnDebugStart(event);
-    }*/
-}
+//void MainFrame::UpdateDebugMenu()
+//{
+//    wxASSERT(m_DebugMenu);
+//    wxASSERT(GetToolBar());
+//    //wxASSERT(tsGetDebugger());
+//
+//    bool Realize = false;
+//
+//    /*if (tsGetDebugger()->IsAtBreakpoint()) {
+//
+//        m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start"));
+//        m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Continue\tF5"));
+//
+//        if (m_StartToolButton->GetLabel() == "Break") {
+//
+//            Realize = true;
+//            m_StartToolButton->SetNormalBitmap(ts_start16);
+//        }
+//
+//        m_StartToolButton->SetLabel(_T("Continue"));
+//        m_StartToolButton->SetShortHelp(_T("Continue (F5)"));
+//
+//    }
+//    else {
+//
+//        if (tsGetDebugger()->IsRunning()) {
+//
+//            if (m_StartToolButton->GetLabel() != "Break") {
+//
+//                Realize = true;
+//                m_StartToolButton->SetNormalBitmap(ts_break16);
+//            }
+//
+//            m_StartToolButton->SetLabel(_T("Break"));
+//            m_StartToolButton->SetShortHelp(_T("Break (Ctrl+Alt+Break)"));
+//
+//        }
+//        else {
+//
+//            if (m_StartToolButton->GetLabel() == "Break") {
+//                Realize = true;
+//                m_StartToolButton->SetNormalBitmap(ts_start16);
+//            }
+//
+//            m_StartToolButton->SetLabel(_T("Start"));
+//            m_StartToolButton->SetShortHelp(_T("Start (F5)"));
+//        }
+//
+//        m_DebugMenu->SetLabel(tsID_DEBUG_START, _T("&Start\tF5"));
+//        m_DebugMenu->SetLabel(tsID_DEBUG_BREAK, _T("&Break\tCtrl+Alt+Break"));
+//    }*/
+//
+//    if (Realize)
+//        GetToolBar()->Realize();
+//
+//    // Now update the accel table.
+//    GetMenuBar()->RebuildAccelTable();
+//    SetAcceleratorTable(GetMenuBar()->GetAccelTable());
+//}
+//
+//void MainFrame::OnDebugStartBreak(wxCommandEvent& event)
+//{
+//    /*if (tsGetDebugger()->IsAtBreakpoint() || tsGetDebugger()->IsRunning())
+//        OnDebugBreak(event);
+//    else {
+//        OnDebugStart(event);
+//    }*/
+//}
 
 void MainFrame::OnDebugStart(wxCommandEvent& event)
 {
@@ -2365,7 +2365,7 @@ void MainFrame::StartDebug(const wxString& command)//, bool doPrecompile )
 
     StartRun(true);
 
-    UpdateDebugMenu();
+    //UpdateDebugMenu();
     UpdateTitle();
 }
 
@@ -2548,7 +2548,9 @@ void RunIntegrated(wxString cmd)
             }
 
             char buf[128];
-            wxString finalError = errorText + "\n\n" + file + "\nLine: " + wxString(_itoa(lineNumber, buf, 10)) + ":" + wxString(_itoa(colNumber, buf, 10));
+            wxString finalError = errorText;// +"\n\n" + file + "\nLine: " + wxString(_itoa(lineNumber, buf, 10)) + ":" + wxString(_itoa(colNumber, buf, 10));
+
+            tsGetMainFrame()->SetBreakline(file, lineNumber);
 
             wxMessageDialog MessageBox(tsGetMainFrame(), finalError, "Error", wxOK);
             MessageBox.ShowModal();
@@ -2608,255 +2610,255 @@ void MainFrame::StartRun(bool debug)// bool doPrecompile )
 
     // Grab the cwd, exe, and arguments for launching the executable.
     wxString cwd = project->GetWorkingDir();
-    wxString exe = config->GetExe();
+    wxString exe = "\"" + config->GetExe() + "\"";
     wxString args = config->GetArgs();
 
     wxString cmd = exe;
     if (debug)
         cmd = "-d " + cmd;
 
-    RunIntegrated(m_BlitzCompiler + " " + cmd);
+    RunIntegrated("\"" + m_BlitzCompiler + "\" " + cmd);
     //RunSeparate(cwd, m_BlitzCompiler, cmd);
     
-    UpdateDebugMenu();
+    //UpdateDebugMenu();
     UpdateTitle();
 }
 
-void MainFrame::OnDebugConnect(wxCommandEvent& event)
-{
-    //wxASSERT(tsGetDebugger());
-    //wxASSERT(!tsGetDebugger()->IsRunning());
+//void MainFrame::OnDebugConnect(wxCommandEvent& event)
+//{
+//    //wxASSERT(tsGetDebugger());
+//    //wxASSERT(!tsGetDebugger()->IsRunning());
+//
+//    wxASSERT(GetProjectDoc());
+//
+//    wxASSERT(m_OutputPanel);
+//    m_OutputPanel->Clear();
+//
+//    /*// Launch the debugger.
+//         if ( !tsGetDebugger()->Connect(  GetProjectDoc()->GetAddress(),
+//                                     GetProjectDoc()->GetPort(),
+//                                     GetProjectDoc()->GetPassword(),
+//                                     wxEmptyString ) )
+//    {
+//          // TODO: Implement error return from debugger and do message.
+//         }*/
+//
+//    UpdateDebugMenu();
+//    UpdateTitle();
+//
+//}
+//
+//void MainFrame::OnDebugStop(wxCommandEvent& event)
+//{
+//    /*wxASSERT(tsGetDebugger());
+//    if (tsGetDebugger()->IsRunning())
+//    {
+//        tsGetDebugger()->Stop();
+//        UpdateDebugMenu();
+//        UpdateTitle();
+//    }*/
+//}
+//
+//void MainFrame::OnDebugRestart(wxCommandEvent& event)
+//{
+//    /*wxASSERT(tsGetDebugger());
+//    if (tsGetDebugger()->IsRunning())
+//    {
+//        tsGetDebugger()->Stop();
+//        UpdateDebugMenu();
+//        UpdateTitle();
+//
+//        OnDebugStart(event);
+//    }*/
+//}
+//
+//void MainFrame::OnDebugBreak(wxCommandEvent& event)
+//{
+//    /*wxASSERT(tsGetDebugger());
+//    wxASSERT(tsGetDebugger()->IsRunning());
+//
+//    if (tsGetDebugger()->IsAtBreakpoint()) {
+//        tsGetDebugger()->Continue();
+//    }
+//    else {
+//        tsGetDebugger()->Break();
+//    }
+//    UpdateDebugMenu();
+//    UpdateTitle();*/
+//}
+//
+//void MainFrame::OnDebugStep(wxCommandEvent& event)
+//{
+//    /*	wxASSERT( tsGetDebugger() );
+//
+//       if ( !tsGetDebugger()->IsRunning() ) {
+//
+//          wxASSERT( GetProjectDoc() );
+//          wxASSERT( m_ConfigComboBox );
+//
+//          wxString configName = m_ConfigComboBox->GetValue();
+//          const ProjectConfig* config = GetProjectDoc()->GetConfig( configName );
+//
+//          StartDebug( "STEPIN", config && config->Precompile() );
+//          return;
+//       }
+//
+//       wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
+//            tsGetDebugger()->Step();
+//            */
+//    UpdateDebugMenu();
+//    UpdateTitle();
+//}
+//
+//void MainFrame::OnDebugStepOver(wxCommandEvent& event)
+//{
+//    /*	wxASSERT( tsGetDebugger() );
+//
+//       if ( !tsGetDebugger()->IsRunning() ) {
+//
+//          wxASSERT( GetProjectDoc() );
+//          wxASSERT( m_ConfigComboBox );
+//
+//          wxString configName = m_ConfigComboBox->GetValue();
+//          const ProjectConfig* config = GetProjectDoc()->GetConfig( configName );
+//
+//          StartDebug( "STEPIN", config && config->Precompile() );
+//          return;
+//       }
+//
+//       wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
+//       tsGetDebugger()->StepOver();*/
+//
+//    UpdateDebugMenu();
+//    UpdateTitle();
+//}
+//
+//void MainFrame::OnDebugStepOut(wxCommandEvent& event)
+//{
+//    /*wxASSERT(tsGetDebugger());
+//    wxASSERT(tsGetDebugger()->IsRunning());
+//    wxASSERT(tsGetDebugger()->IsAtBreakpoint());
+//    tsGetDebugger()->StepOut();
+//    UpdateDebugMenu();*/
+//}
+//
+//void MainFrame::OnDebugUpdateUI(wxUpdateUIEvent& event)
+//{
+//    //wxASSERT(tsGetDebugger());
+//
+//    if (!GetProjectDoc() || m_PreCompiler)
+//    {
+//        event.Enable(false);
+//        return;
+//    }
+//
+//    if (event.GetId() == tsID_DEBUG_STARTBREAK)
+//    {
+//        event.Enable(true);
+//    }
+//    /*else if (event.GetId() == tsID_DEBUG_START ||
+//        event.GetId() == tsID_DEBUG_START_WITHOUT_DEBUGGING ||
+//        event.GetId() == tsID_DEBUG_CONNECT)
+//    {
+//        event.Enable(!tsGetDebugger()->IsRunning());
+//    }
+//    else if (event.GetId() == tsID_DEBUG_STOP ||
+//        event.GetId() == tsID_DEBUG_RESTART ||
+//        event.GetId() == tsID_DEBUG_BREAK)
+//    {
+//        event.Enable(tsGetDebugger()->IsRunning());
+//    }
+//    else if (event.GetId() == tsID_DEBUG_STEP ||
+//        event.GetId() == tsID_DEBUG_STEP_OVER)
+//    {
+//        event.Enable(!tsGetDebugger()->IsRunning() || tsGetDebugger()->IsAtBreakpoint());
+//    }
+//    else if (event.GetId() == tsID_DEBUG_STEP_OUT)
+//    {
+//        event.Enable(tsGetDebugger()->IsRunning() && tsGetDebugger()->IsAtBreakpoint());
+//    }*/
+//}
+//
+//void MainFrame::OnDebuggerStop()
+//{
+//    ClearBreaklines();
+//
+//    wxASSERT(m_CallStack);
+//    m_CallStack->DeleteAllItems();
+//
+//    // Update the locals window.
+//    //wxASSERT( m_LocalsWindow );
+//  //m_LocalsWindow->ClearAll();
+//
+//       // Update the globals window.
+//    wxASSERT(m_WatchWindow);
+//    m_WatchWindow->UpdateWatch();
+//
+//    UpdateDebugMenu();
+//    UpdateTitle();
+//}
 
-    wxASSERT(GetProjectDoc());
+//void MainFrame::OnReloadScripts(wxCommandEvent& event)
+//{
+//    //wxASSERT(tsGetDebugger());
+//
+//    ScriptDocArray scripts;
+//    GetChangedScripts(scripts);
+//
+//    wxArrayString files;
+//    for (int i = 0; i < scripts.GetCount(); i++)
+//    {
+//        if (!scripts[i]->Save())
+//            return;
+//
+//        files.Add(scripts[i]->GetFilename());
+//    }
+//
+//    //if (files.GetCount() > 0)
+//    //    tsGetDebugger()->ReloadScripts(files);
+//}
 
-    wxASSERT(m_OutputPanel);
-    m_OutputPanel->Clear();
+//void MainFrame::OnUpdateReloadScripts(wxUpdateUIEvent& event)
+//{
+//    //wxASSERT(tsGetDebugger());
+//    //ScriptDocArray scripts;
+//    //event.Enable(tsGetDebugger()->IsRunning() && GetChangedScripts(scripts) > 0);
+//}
 
-    /*// Launch the debugger.
-         if ( !tsGetDebugger()->Connect(  GetProjectDoc()->GetAddress(),
-                                     GetProjectDoc()->GetPort(),
-                                     GetProjectDoc()->GetPassword(),
-                                     wxEmptyString ) )
-    {
-          // TODO: Implement error return from debugger and do message.
-         }*/
-
-    UpdateDebugMenu();
-    UpdateTitle();
-
-}
-
-void MainFrame::OnDebugStop(wxCommandEvent& event)
-{
-    /*wxASSERT(tsGetDebugger());
-    if (tsGetDebugger()->IsRunning())
-    {
-        tsGetDebugger()->Stop();
-        UpdateDebugMenu();
-        UpdateTitle();
-    }*/
-}
-
-void MainFrame::OnDebugRestart(wxCommandEvent& event)
-{
-    /*wxASSERT(tsGetDebugger());
-    if (tsGetDebugger()->IsRunning())
-    {
-        tsGetDebugger()->Stop();
-        UpdateDebugMenu();
-        UpdateTitle();
-
-        OnDebugStart(event);
-    }*/
-}
-
-void MainFrame::OnDebugBreak(wxCommandEvent& event)
-{
-    /*wxASSERT(tsGetDebugger());
-    wxASSERT(tsGetDebugger()->IsRunning());
-
-    if (tsGetDebugger()->IsAtBreakpoint()) {
-        tsGetDebugger()->Continue();
-    }
-    else {
-        tsGetDebugger()->Break();
-    }
-    UpdateDebugMenu();
-    UpdateTitle();*/
-}
-
-void MainFrame::OnDebugStep(wxCommandEvent& event)
-{
-    /*	wxASSERT( tsGetDebugger() );
-
-       if ( !tsGetDebugger()->IsRunning() ) {
-
-          wxASSERT( GetProjectDoc() );
-          wxASSERT( m_ConfigComboBox );
-
-          wxString configName = m_ConfigComboBox->GetValue();
-          const ProjectConfig* config = GetProjectDoc()->GetConfig( configName );
-
-          StartDebug( "STEPIN", config && config->Precompile() );
-          return;
-       }
-
-       wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
-            tsGetDebugger()->Step();
-            */
-    UpdateDebugMenu();
-    UpdateTitle();
-}
-
-void MainFrame::OnDebugStepOver(wxCommandEvent& event)
-{
-    /*	wxASSERT( tsGetDebugger() );
-
-       if ( !tsGetDebugger()->IsRunning() ) {
-
-          wxASSERT( GetProjectDoc() );
-          wxASSERT( m_ConfigComboBox );
-
-          wxString configName = m_ConfigComboBox->GetValue();
-          const ProjectConfig* config = GetProjectDoc()->GetConfig( configName );
-
-          StartDebug( "STEPIN", config && config->Precompile() );
-          return;
-       }
-
-       wxASSERT( tsGetDebugger()->IsAtBreakpoint() );
-       tsGetDebugger()->StepOver();*/
-
-    UpdateDebugMenu();
-    UpdateTitle();
-}
-
-void MainFrame::OnDebugStepOut(wxCommandEvent& event)
-{
-    /*wxASSERT(tsGetDebugger());
-    wxASSERT(tsGetDebugger()->IsRunning());
-    wxASSERT(tsGetDebugger()->IsAtBreakpoint());
-    tsGetDebugger()->StepOut();
-    UpdateDebugMenu();*/
-}
-
-void MainFrame::OnDebugUpdateUI(wxUpdateUIEvent& event)
-{
-    //wxASSERT(tsGetDebugger());
-
-    if (!GetProjectDoc() || m_PreCompiler)
-    {
-        event.Enable(false);
-        return;
-    }
-
-    if (event.GetId() == tsID_DEBUG_STARTBREAK)
-    {
-        event.Enable(true);
-    }
-    /*else if (event.GetId() == tsID_DEBUG_START ||
-        event.GetId() == tsID_DEBUG_START_WITHOUT_DEBUGGING ||
-        event.GetId() == tsID_DEBUG_CONNECT)
-    {
-        event.Enable(!tsGetDebugger()->IsRunning());
-    }
-    else if (event.GetId() == tsID_DEBUG_STOP ||
-        event.GetId() == tsID_DEBUG_RESTART ||
-        event.GetId() == tsID_DEBUG_BREAK)
-    {
-        event.Enable(tsGetDebugger()->IsRunning());
-    }
-    else if (event.GetId() == tsID_DEBUG_STEP ||
-        event.GetId() == tsID_DEBUG_STEP_OVER)
-    {
-        event.Enable(!tsGetDebugger()->IsRunning() || tsGetDebugger()->IsAtBreakpoint());
-    }
-    else if (event.GetId() == tsID_DEBUG_STEP_OUT)
-    {
-        event.Enable(tsGetDebugger()->IsRunning() && tsGetDebugger()->IsAtBreakpoint());
-    }*/
-}
-
-void MainFrame::OnDebuggerStop()
-{
-    ClearBreaklines();
-
-    wxASSERT(m_CallStack);
-    m_CallStack->DeleteAllItems();
-
-    // Update the locals window.
-    //wxASSERT( m_LocalsWindow );
-  //m_LocalsWindow->ClearAll();
-
-       // Update the globals window.
-    wxASSERT(m_WatchWindow);
-    m_WatchWindow->UpdateWatch();
-
-    UpdateDebugMenu();
-    UpdateTitle();
-}
-
-void MainFrame::OnReloadScripts(wxCommandEvent& event)
-{
-    //wxASSERT(tsGetDebugger());
-
-    ScriptDocArray scripts;
-    GetChangedScripts(scripts);
-
-    wxArrayString files;
-    for (int i = 0; i < scripts.GetCount(); i++)
-    {
-        if (!scripts[i]->Save())
-            return;
-
-        files.Add(scripts[i]->GetFilename());
-    }
-
-    //if (files.GetCount() > 0)
-    //    tsGetDebugger()->ReloadScripts(files);
-}
-
-void MainFrame::OnUpdateReloadScripts(wxUpdateUIEvent& event)
-{
-    //wxASSERT(tsGetDebugger());
-    //ScriptDocArray scripts;
-    //event.Enable(tsGetDebugger()->IsRunning() && GetChangedScripts(scripts) > 0);
-}
-
-void MainFrame::SetCallStack(const FunctionCallArray& CallStack, int Level)
-{
-    wxASSERT(CallStack.GetCount() > 0);
-
-    wxASSERT(m_CallStack);
-    m_CallStack->Freeze();
-    long Sel = m_CallStack->GetFirstSelected();
-    m_CallStack->DeleteAllItems();
-    for (int i = 0; i < CallStack.GetCount(); i++) {
-
-        wxASSERT(CallStack[i]);
-
-        long Item = m_CallStack->InsertItem(m_CallStack->GetItemCount(), CallStack[i]->GetFunction());
-        m_CallStack->SetItem(Item, 1, CallStack[i]->GetFile());
-        wxString Line;
-        Line << CallStack[i]->GetLine();
-        m_CallStack->SetItem(Item, 2, Line);
-    }
-    m_CallStack->Select(Sel);
-    m_CallStack->Thaw();
-
-    // Update the locals window.
-  //wxASSERT( m_LocalsWindow );
-       //m_LocalsWindow->SetFunctionCall( CallStack[Level] );
-
-       // Update the globals window.
-    wxASSERT(m_WatchWindow);
-    m_WatchWindow->UpdateWatch();
-
-    UpdateDebugMenu();
-    UpdateTitle();
-
-    SetBreakline(CallStack[Level]->GetFile(), CallStack[Level]->GetLine());
-}
+//void MainFrame::SetCallStack(const FunctionCallArray& CallStack, int Level)
+//{
+//    wxASSERT(CallStack.GetCount() > 0);
+//
+//    wxASSERT(m_CallStack);
+//    m_CallStack->Freeze();
+//    long Sel = m_CallStack->GetFirstSelected();
+//    m_CallStack->DeleteAllItems();
+//    for (int i = 0; i < CallStack.GetCount(); i++) {
+//
+//        wxASSERT(CallStack[i]);
+//
+//        long Item = m_CallStack->InsertItem(m_CallStack->GetItemCount(), CallStack[i]->GetFunction());
+//        m_CallStack->SetItem(Item, 1, CallStack[i]->GetFile());
+//        wxString Line;
+//        Line << CallStack[i]->GetLine();
+//        m_CallStack->SetItem(Item, 2, Line);
+//    }
+//    m_CallStack->Select(Sel);
+//    m_CallStack->Thaw();
+//
+//    // Update the locals window.
+//  //wxASSERT( m_LocalsWindow );
+//       //m_LocalsWindow->SetFunctionCall( CallStack[Level] );
+//
+//       // Update the globals window.
+//    wxASSERT(m_WatchWindow);
+//    m_WatchWindow->UpdateWatch();
+//
+//    UpdateDebugMenu();
+//    UpdateTitle();
+//
+//    SetBreakline(CallStack[Level]->GetFile(), CallStack[Level]->GetLine());
+//}
 
 
 void MainFrame::ClearBreaklines()
@@ -2876,7 +2878,7 @@ void MainFrame::ClearBreaklines()
         node = node->GetNext();
     }
 
-    UpdateDebugMenu();
+    //UpdateDebugMenu();
     UpdateTitle();
 }
 
@@ -2943,15 +2945,15 @@ void MainFrame::UpdateTitle()
     SetTitle(Title);
 }
 
-void MainFrame::OnCallStackActivated(wxListEvent& event)
-{
-    /*if (!tsGetDebugger()->IsRunning())
-        return;
-
-    if (tsGetDebugger()->IsAtBreakpoint()) {
-        tsGetDebugger()->SetStackLevel(event.GetIndex());
-    }*/
-}
+//void MainFrame::OnCallStackActivated(wxListEvent& event)
+//{
+//    /*if (!tsGetDebugger()->IsRunning())
+//        return;
+//
+//    if (tsGetDebugger()->IsAtBreakpoint()) {
+//        tsGetDebugger()->SetStackLevel(event.GetIndex());
+//    }*/
+//}
 
 void MainFrame::OnHelp(wxHelpEvent& event)
 {
@@ -2990,14 +2992,14 @@ void MainFrame::OnBugTracker(wxCommandEvent& event)
         wxLaunchDefaultBrowser("http://mantis.sickheadgames.com/bug_report_page.php?project_id=2");
 }
 
-void MainFrame::OnDebugCallTip(const wxString& Expression, const wxString& Value)
-{
-    ScriptView* view = ScriptFrame::GetFrame()->GetSelectedView();
-    if (!view)
-        return;
-
-    view->OnDebugCallTip(Expression, Value);
-}
+//void MainFrame::OnDebugCallTip(const wxString& Expression, const wxString& Value)
+//{
+//    ScriptView* view = ScriptFrame::GetFrame()->GetSelectedView();
+//    if (!view)
+//        return;
+//
+//    view->OnDebugCallTip(Expression, Value);
+//}
 
 int MainFrame::GetChangedScripts(ScriptDocArray& scripts)
 {
