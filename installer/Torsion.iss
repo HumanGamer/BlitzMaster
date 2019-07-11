@@ -1,4 +1,4 @@
-; Torsion TorqueScript IDE - Copyright (C) Sickhead Games, LLC
+; BlitzMaster IDE - Copyright (C) Sickhead Games, LLC
 ; This file is subject to the terms and conditions defined in
 ; file 'LICENSE.txt', which is part of this source code package.
 
@@ -7,9 +7,9 @@ AppName=BlitzMaster
 AppVerName=BlitzMaster 1.0.0000
 AppPublisher= Blitz Community
 AppPublisherURL=http://www.sickheadgames.com/
-AppSupportURL=https://github.com/SickheadGames/Torsion/issues
-AppUpdatesURL=https://github.com/SickheadGames/Torsion
-AppCopyright=Copyright (C) Sickhead Games, LLC
+AppSupportURL=https://github.com/HumanGamer/BlitzMaster/issues
+AppUpdatesURL=https://github.com/HumanGamer/BlitzMaster
+AppCopyright=Copyright (C) Blitz Community & Sickhead Games, LLC
 AppMutex=BlitzMaster.BlitzCommunity
 UsePreviousAppDir=yes
 DefaultGroupName=BlitzMaster
@@ -38,9 +38,7 @@ Source: "..\media\blitzmaster.exe"; DestName: "blitzmaster.exe";  DestDir: "{app
 ;Source: "..\media\msvcr71.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;Source: "..\media\msvcp71.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\media\blitzmaster.chm"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\media\torsion_exports.cs"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\media\torsion_precompile.cs"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\LICENSE.txt"; DestName: "Torsion EULA.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\LICENSE.txt"; DestName: "BlitzMaster EULA.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
@@ -50,32 +48,32 @@ Filename: "{app}\Torsion Forums.url"; Section: "InternetShortcut"; Key: "URL"; S
 
 [Icons]
 Name: "{group}\BlitzMaster"; Filename: "{app}\blitzmaster.exe"; WorkingDir: "{app}"; Comment: "BlitzMaster BlitzBasic IDE"
-Name: "{group}\BlitzMaster Help"; Filename: "{app}\torsion.chm"; WorkingDir: "{app}"; Comment: "BlitzMaster Help"
+Name: "{group}\BlitzMaster Help"; Filename: "{app}\blitzmaster.chm"; WorkingDir: "{app}"; Comment: "BlitzMaster Help"
 Name: "{group}\BlitzMaster Product Page"; Filename: "{app}\Torsion Product Page.url"; Comment: "BlitzMaster Product Page"
 Name: "{group}\BlitzMaster Forums"; Filename: "{app}\Torsion Forums.url"; Comment: "BlitzMaster Forums"
 Name: "{group}\{cm:UninstallProgram,Torsion}"; Filename: "{uninstallexe}"; Comment: "Uninstall BlitzMaster"
-Name: "{userdesktop}\BlitzMaster"; Filename: "{app}\torsion.exe"; Tasks: desktopicon; Comment: "BlitzMaster BlitzBasic IDE"
+Name: "{userdesktop}\BlitzMaster"; Filename: "{app}\blitzmaster.exe"; Tasks: desktopicon; Comment: "BlitzMaster BlitzBasic IDE"
 
 [Run]
-Filename: "{app}\blitzmaster.exe"; Description: "{cm:LaunchProgram,Torsion}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\blitzmaster.exe"; Description: "{cm:LaunchProgram,BlitzMaster}"; Flags: nowait postinstall skipifsilent
 
-; Let Torsion register the script extensions itself.
+; Let BlitzMaster register the script extensions itself.
 Filename: "{app}\blitzmaster.exe"; WorkingDir: "{app}"; Parameters: "-exts"; Flags: waituntilterminated
 
 [Registry]
 
-; Add Torsion to the App Paths key.
+; Add BlitzMaster to the App Paths key.
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\blitzmaster.exe"; ValueType: string; ValueData: "{app}\blitzmaster.exe"; Flags: uninsdeletevalue uninsdeletekeyifempty
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\App Paths\blitzmaster.exe"; ValueName: "Path"; ValueType: string; ValueData: "{app}\"; Flags: uninsdeletevalue uninsdeletekeyifempty
 
-; Associate .torsion to torsion.exe
+; Associate .bproj to blitzmaster.exe
 Root: HKCR; Subkey: ".bproj"; ValueType: string; ValueData: "BlitzMasterProject";
 Root: HKCR; Subkey: "BlitzMasterProject"; ValueType: string; ValueData: "BlitzMaster Project File";
 Root: HKCR; Subkey: "BlitzMasterProject\DefaultIcon"; ValueType: string; ValueData: "blitzmaster.exe,1"
 Root: HKCR; Subkey: "BlitzMasterProject\shell\open\command"; ValueType: string; ValueData: "blitzmaster.exe ""%1"""
 
-; Torsion itself does the associations which point script extensions
-; (.cs,.gui,.mis,etc...) to TorsionTorqueScript.
+; BlitzMaster itself does the associations which point script extensions
+; (.bb,.bmx,etc...) to BlitzMasterScript.
 Root: HKCR; Subkey: "BlitzMasterScript"; ValueType: string; ValueData: "BlitzBasic Script";
 Root: HKCR; Subkey: "BlitzMasterScript\DefaultIcon"; ValueType: string; ValueData: "blitzmaster.exe,2"
 Root: HKCR; Subkey: "BlitzMasterScript\shell\open\command"; ValueType: string; ValueData: "blitzmaster.exe ""%1"""
@@ -87,7 +85,7 @@ Type: files; Name: "{app}\preferences.xml"
 
 [UninstallRun]
  
-; Let Torsion unregister the script extensions.
+; Let BlitzMaster unregister the script extensions.
 Filename: "{app}\blitzmaster.exe"; WorkingDir: "{app}"; Parameters: "-unexts"; Flags: waituntilterminated
 
 
